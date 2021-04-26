@@ -1,6 +1,6 @@
 ---
-title: 첫번째 포스트
 layout: post
+title: "첫번째 포스트"
 author: Shin Kyubum
 categories: diary
 ---
