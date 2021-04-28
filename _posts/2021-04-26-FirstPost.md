@@ -5,6 +5,7 @@ author: Kyubum Shin
 use_math: true
 categories: 
   - diary
+classes: wide
 ---
 ## 깃허브 블로그를 시작합니다
  저번주부터 프로그래머스 K-Digital 시작하면서 tistory, velog, 깃블로그 등등 여러가지 기록할 수 있는 블로그들 중에서 어디에 기록을 할까 고민을 했었는데 여러가지 시행착오를 거쳐서 깃블로그로 결정했습니다!
