@@ -1,5 +1,5 @@
 module.exports = {
-  title: `Bee starter`,
+  title: `Kyubum's Dev Blog`,
   description: `Blog posted about ...`,
   author: `Kyubum Shin`,
   introduction: `I explain with words and code. I explain with words and code. I explain with words and code.`,
@@ -16,13 +16,10 @@ module.exports = {
   keywords: [`blog`],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
-    utterances: 'JaeYeopHan/gatsby-starter-bee', // Your repository for archive comment
+    utterances: 'KyubumShin/kyubumshin.github.io', // Your repository for archive comment
   },
   configs: {
     countOfInitialPost: 10, // Config your initial count of post
-  },
-  sponsor: {
-    buyMeACoffeeId: 'jbee',
   },
   share: {
     facebookAppId: '', // Add facebookAppId for using facebook share feature v3.2
