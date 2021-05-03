@@ -41,7 +41,7 @@ def solution(array, commands):
     return answer
 ```
 
-아래의 코드는 List Comprehension 이용하여 파이써닉하게 푼 코드 위와 과정은 똑같다
+아래의 코드는 List Comprehension 이용하여 파이써닉하게 푼 코드. 위와 과정은 똑같다
 ```python
 def solution(array, commands):
     return [sorted(array[i[0]-1:i[1]])[i[2]-1] for i in commands]
