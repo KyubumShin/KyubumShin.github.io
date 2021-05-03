@@ -24,6 +24,9 @@ draft: false
 * commands의 길이는 1 이상 50 이하입니다.
 * commands의 각 원소는 길이가 3입니다.
 
+[문제 출처 - 프로그래머스](https://programmers.co.kr/learn/courses/30/lessons/42748)
+
+
 * * *
 ## 풀이
 어렵게 생각할것은 없다. 리스트를 자르고 sort()하고 n번째 인덱스의 수를 꺼내서 추가해주면 된다.
