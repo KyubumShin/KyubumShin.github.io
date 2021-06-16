@@ -25,7 +25,7 @@ $$
 ### 연속 확률변수
 * 누적 분포함수 $F(x)$를 가진 확률변수 $X$에 대하여 $f(x)$가 존재한다면(구간내에서  연속이라면) $X$를 연속확률 변수라고 부르고, $f(x)$를 $X$의 확률밀도함수(Probability density function, PDF)라고 부른다
 $$
-F(x) = \int_{-\inf}^{x}f(t)dt
+F(x) = \int_{-\infty}^{x}f(t)dt
 $$
 
 ### 확률변수의 성질
