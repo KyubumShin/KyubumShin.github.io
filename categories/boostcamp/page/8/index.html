@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>카테고리: boostcamp - KyuBum&#039;s Dev Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="KyuBum Shin"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="KyuBum Shin"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="KyuBum&#039;s Dev Blog"><meta property="og:url" content="https://kyubumshin.github.io/"><meta property="og:site_name" content="KyuBum&#039;s Dev Blog"><meta property="og:locale" content="ko_KR"><meta property="og:image" content="https://kyubumshin.github.io/img/og_image.png"><meta property="article:author" content="KyuBum Shin"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://kyubumshin.github.io"},"headline":"KyuBum's Dev Blog","image":["https://kyubumshin.github.io/img/og_image.png"],"author":{"@type":"Person","name":"KyuBum Shin"},"publisher":{"@type":"Organization","name":"KyuBum's Dev Blog","logo":{"@type":"ImageObject","url":"https://kyubumshin.github.io/img/logo.svg"}},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="KyuBum&#039;s Dev Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-9-tablet is-9-desktop is-9-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">카테고리</a></li><li class="is-active"><a href="#" aria-current="page">boostcamp</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-01-18T23:57:41.000Z" title="2022. 1. 19. 오전 8:57:41">2022-01-19</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-01-26T06:21:32.640Z" title="2022. 1. 26. 오후 3:21:32">2022-01-26</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/%EC%9D%BC%EC%83%81/">일상</a><span> / </span><a class="link-muted" href="/categories/%EC%9D%BC%EC%83%81/TIL/">TIL</a><span> / </span><a class="link-muted" href="/categories/boostcamp/Dairy/">Dairy</a></span><span class="level-item">1분안에 읽기 (약 169 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/01/19/boostcamp/Dairy/Day3/">Week1 - Day 3 Review</a></h1><div class="content"><hr>
+<h2 id="오늘-하루-한-것"><a href="#오늘-하루-한-것" class="headerlink" title="오늘 하루 한 것"></a>오늘 하루 한 것</h2><ul>
+<li>강의듣기<ul>
+<li>Ai Math 5강까지</li>
+</ul>
+</li>
+<li>과제<ul>
+<li>Gradient Descent 완료</li>
+</ul>
+</li>
+<li>정리<ul>
+<li>경사하강법 완료</li>
+<li>python 5-1까지 정리 완료</li>
+</ul>
+</li>
+</ul>
+<h2 id="피어세션"><a href="#피어세션" class="headerlink" title="피어세션"></a>피어세션</h2><ul>
+<li>numpy dtype float32 최대 최소값에 관해서<ul>
+<li>int형은 단순 비트계산이지만 float형은 부동소수점형으로 지수비트와 유효자리비트로 나뉘어있기 때문에</li>
+<li>int형 -&gt; 정확함</li>
+<li>float형 -&gt; 자세히보면 잘라먹음</li>
+</ul>
+</li>
+</ul>
+<h2 id="내일-할것"><a href="#내일-할것" class="headerlink" title="내일 할것"></a>내일 할것</h2><ul>
+<li>역전파, 통계, CNN, RNN 정리</li>
+<li>심화과제 2, 3</li>
+</ul>
+<h2 id="주말에-할-것"><a href="#주말에-할-것" class="headerlink" title="주말에 할 것"></a>주말에 할 것</h2><ul>
+<li>추가 정리<ul>
+<li>정규식</li>
+<li>pickles</li>
+<li>__init__.py, __main__.py</li>
+<li>numpy, pandas 정리</li>
+</ul>
+</li>
+</ul>
+<h2 id="느낀점"><a href="#느낀점" class="headerlink" title="느낀점"></a>느낀점</h2><ul>
+<li>아직도 할게 많다… 정리 빨리 끝내고싶다</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-01-18T23:57:34.000Z" title="2022. 1. 19. 오전 8:57:34">2022-01-19</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-01-24T01:16:43.743Z" title="2022. 1. 24. 오전 10:16:43">2022-01-24</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">6분안에 읽기 (약 921 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/01/19/boostcamp/week/week1/python-7/">부스트 캠프 ai tech 1주 3일차 Python Basic for AI (7)</a></h1><div class="content"><hr>
+<h2 id="11-Object-Oriented-Programming-객체-지향적-프로그래밍-OOP"><a href="#11-Object-Oriented-Programming-객체-지향적-프로그래밍-OOP" class="headerlink" title="11. Object Oriented Programming (객체 지향적 프로그래밍, OOP)"></a>11. Object Oriented Programming (객체 지향적 프로그래밍, OOP)</h2><ul>
+<li><code>객체(Object)란?</code><br>프로그램에서 사용되는 데이터 또는 식별자에 의해 참조되는 공간, 독립된 단위를 의미한다</li>
+<li>OOP는 여러개의 독립된 객체들의 모임으로 프로그램을 구성하는것을 이야기한다</li>
+</ul>
+<h3 id="11-1-Object-in-Python"><a href="#11-1-Object-in-Python" class="headerlink" title="11.1 Object in Python"></a>11.1 Object in Python</h3><ul>
+<li><p>Python에서의 객체는 class로 선언이 가능하다</p>
+</li>
+<li><p>class는 속성(Attribute)와 명령어(Method)을 가지고 있다</p>
+<ul>
+<li>Attribute<br>해당 class가 가지고 있는 특별한 변수를 말한다. 이 변수는 다른 객체가 될 수도 있다. __init__(self) 메서드로 속성을 미리 설계할 수 있다</li>
+<li>Method<br>해당 class가 내장하고 있는 함수들을 지칭한다. 메서드는 class 안에 기존 함수와 같은 방식으로 정의가 가능하나, 반드시 self를 추가해야 메서드로 인정된다. 또한 python에는 특별한 메서드 들이 존재한다</li>
+</ul>
+</li>
+<li><p>class의 이름 선언과 함께 __init__메서드에 parameter 값들을 입력하면 객체를 생성 할 수 있다</p>
+</li>
+<li><p>class_name.method_name()과 같은 형식으로 객체의 메서드를 호출 할 수 있다</p>
+</li>
+<li><p>예시 축구선수</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SoccerPlayer</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, name, position, back_number</span>):</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.position = position</span><br><span class="line">        self.back_number = back_number</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">change_back_number</span>(<span class="params">self, new_number</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;선수의 등번호를 변경합니다 : From %d to %d&quot;</span> % (self.back_number, new_number))</span><br><span class="line">        self.back_number = new_number</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">kick</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">heading</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">moving</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">jinhyun = SoccerPlayer(<span class="string">&quot;Jinhyun&quot;</span>, <span class="string">&quot;MF&quot;</span>, <span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;현재 선수의 등번호는 :&quot;</span>, jinhyun.back_number)</span><br><span class="line">jinhyun.change_back_number(<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;현재 선수의 등번호는 :&quot;</span>, jinhyun.back_number)</span><br><span class="line">==================================================</span><br><span class="line">output:</span><br><span class="line">현재 선수의 등번호는 : <span class="number">10</span></span><br><span class="line">선수의 등번호를 변경합니다 : From <span class="number">10</span> to <span class="number">5</span></span><br><span class="line">현재 선수의 등번호는 : <span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="11-1-1-Special-method"><a href="#11-1-1-Special-method" class="headerlink" title="11.1.1 Special method"></a>11.1.1 Special method</h3><ul>
+<li>class에는 __init__ 과 같이 특정한 일을 전담하는 정해진 메서드들이 존재하고 이것들을 Special method라고 부른다</li>
+<li>class 내부에 Special method를 정의하면 객체간의 operator 연산 등 여러가지를 할 수 있다.</li>
+<li>자세한 내용은 링크로 남기고 생략한다.</li>
+<li><a target="_blank" rel="noopener" href="https://www.informit.com/articles/article.aspx?p=453682&seqNum=6">여러가지 스페셜 메서드</a></li>
+</ul>
+<h3 id="11-2-OOP의-특징"><a href="#11-2-OOP의-특징" class="headerlink" title="11.2 OOP의 특징"></a>11.2 OOP의 특징</h3><ul>
+<li><code>Visibility</code> 가시성<ul>
+<li><code>객체의 정보를 볼수 있는 레벨을 조절한다</code></li>
+<li>유저에게 필요한 부분은 보여주고(<code>추상화</code>), 노출할 필요가 없는 정보들은 숨긴다(<code>캡슐화</code>)</li>
+<li>__ 를 속성이나 메서드 앞에 붙여서 객체 외부에서 접근할 수 없게 한다 </li>
+<li><del>결론 : docstring 잘 쓰는게 중요하다</del></li>
+</ul>
+</li>
+<li><code>Inheritance</code> 상속<ul>
+<li>부모클래스로부터 속성과 Method를 물려받은 자식클래스를 생성 하는 것을 말한다</li>
+<li>super를 통해 부모클래스의 메서드를 호출 할 수 있다</li>
+<li>코드의 재사용이 목적이다</li>
+</ul>
+</li>
+<li><code>polymorphism</code> 다형성<ul>
+<li>같은 이름의 메서드의 내부로직을 다르게 사용할 수 있다.</li>
+<li>자식클래스에서 메서드를 재정의(overiding)하여 새로 맞춰서 사용이 가능하다</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TeamAPlayer</span>(<span class="params">SoccerPlayer</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, regular</span>):</span></span><br><span class="line">        <span class="built_in">super</span>().__init__(name, position, back_number)</span><br><span class="line">        self.regular = regular</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">is_regular</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(self.name, <span class="string">&#x27;선수는 주전&#x27;</span>, <span class="string">&#x27;입니다&#x27;</span> <span class="keyword">if</span> self.regular <span class="keyword">else</span> <span class="string">&#x27;이 아닙니다&#x27;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">change_back_number</span>(<span class="params">self, new_number</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;팀 A <span class="subst">&#123;self.name&#125;</span>선수의 등번호를 변경합니다&quot;</span>)</span><br><span class="line">        <span class="built_in">super</span>().change_back_number()</span><br><span class="line">        self.back_number = new_number</span><br><span class="line"></span><br><span class="line">jinhyun = TeamAPlayer(<span class="string">&quot;Jinhyun&quot;</span>, <span class="string">&quot;MF&quot;</span>, <span class="number">10</span>, <span class="literal">False</span>)</span><br><span class="line">jinhyun.is_regular()</span><br><span class="line">jinhyun.change_back_number(<span class="number">5</span>)</span><br><span class="line">=============================</span><br><span class="line">output:</span><br><span class="line">Jinhyun 선수는 주전 이 아닙니다</span><br><span class="line">팀 A Jinhyun선수의 등번호를 변경합니다</span><br><span class="line">선수의 등번호를 변경합니다 : From <span class="number">10</span> to <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="참고-자료"><a href="#참고-자료" class="headerlink" title="참고 자료"></a>참고 자료</h2><p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Object-oriented_programming">객체 지향 프로그래밍 - wikipedia</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-01-18T09:40:28.000Z" title="2022. 1. 18. 오후 6:40:28">2022-01-18</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-01-24T01:16:42.114Z" title="2022. 1. 24. 오전 10:16:42">2022-01-24</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">9분안에 읽기 (약 1294 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/01/18/boostcamp/week/week1/python-6/">부스트 캠프 ai tech 1주 2일차 Python Basic for AI (6)</a></h1><div class="content"><hr>
+<h2 id="10-Pythonic-Code"><a href="#10-Pythonic-Code" class="headerlink" title="10. Pythonic Code"></a>10. Pythonic Code</h2><ul>
+<li>Python 스타일의 효율적인 코딩기법</li>
+<li><code>사용하면 코드를 간결하고 이쁘게 작성할 수 있다. 그리고 잘하는 사람처럼 보인다</code><ul>
+<li>그러니 모두 잘 익히고 사용하자  </li>
+</ul>
+</li>
+</ul>
+<h3 id="10-1-List-comprehension"><a href="#10-1-List-comprehension" class="headerlink" title="10.1 List comprehension"></a>10.1 <strong><code>List comprehension</code></strong></h3><ul>
+<li>기존의 list를 사용하여 간단한 list를 만드는 기법</li>
+<li>for 문 + list.append 보다 속도가 빠르다</li>
+<li>조건문과 함께 더 다양한 list를 표현 가능하다<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 기존 방법</span></span><br><span class="line">a = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    a.append(i)</span><br><span class="line"><span class="comment"># list comprehension</span></span><br><span class="line">a = [i <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)] </span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="10-2-enumerate-amp-zip"><a href="#10-2-enumerate-amp-zip" class="headerlink" title="10.2 enumerate &amp; zip"></a>10.2 <strong>enumerate &amp; zip</strong></h3><ul>
+<li><code>enumerate</code> <ul>
+<li>for 문에서 iterable object의 element를 추출할 때 인덱스 번호와 함께 추출<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i, x <span class="keyword">in</span> <span class="built_in">enumerate</span>(<span class="string">&#x27;apple&#x27;</span>):</span><br><span class="line">    <span class="built_in">print</span>(i, x) <span class="comment"># 0 a, 1 p, ... , 4 e</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">list</span>(<span class="built_in">enumerate</span>(<span class="string">&#x27;apple&#x27;</span>))</span><br><span class="line">output = [(<span class="number">0</span>, <span class="string">&#x27;a&#x27;</span>), (<span class="number">1</span>, <span class="string">&#x27;p&#x27;</span>), (<span class="number">2</span>, <span class="string">&#x27;p&#x27;</span>), (<span class="number">3</span>, <span class="string">&#x27;l&#x27;</span>), (<span class="number">4</span>, <span class="string">&#x27;e&#x27;</span>)]</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><code>zip</code><ul>
+<li>여러개의 list값을 병렬적으로 추출해서 하나의 list로 재결합 시킨다.<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">b = (<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(<span class="built_in">zip</span>(a, b)))</span><br><span class="line"><span class="comment">######################</span></span><br><span class="line">[(<span class="number">1</span>, <span class="number">4</span>), (<span class="number">2</span>, <span class="number">5</span>), (<span class="number">3</span>, <span class="number">6</span>)]</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="10-3-map-amp-lambda-amp-reduce"><a href="#10-3-map-amp-lambda-amp-reduce" class="headerlink" title="10.3 map &amp; lambda &amp; reduce"></a>10.3 map &amp; lambda &amp; reduce</h3><ul>
+<li><code>map</code><ul>
+<li>iterable object의 element에 각각 특정한 함수를 적용할 수 있는 함수</li>
+<li>아래의 lambda와 병행하여 자주, 많이 쓰인다</li>
+<li>실행시점의 값을 생성해서 메모리를 효율적으로 사용한다<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">function</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x**<span class="number">2</span></span><br><span class="line"></span><br><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(<span class="built_in">map</span>(function, a)))</span><br><span class="line"><span class="comment">#############################</span></span><br><span class="line">output =&gt; [<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><code>lambda</code><ul>
+<li>함수를 따로 정의할 필요 없이 사용할 수 있는 익명 함수</li>
+<li>PEP8에서 권장하지는 않지만 아직도 많이쓰고 스스로도 많이 쓰고있다<ul>
+<li>어려운 문법, 테스트하기 힘듬, docstring 지원안함, 코드해석이 어려움 등등의 문제가 있다</li>
+</ul>
+</li>
+<li>간단한 명령문인 경우 따로 정의하지 않고 lambda를 사용하는 편이다<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x**<span class="number">2</span>, a)))</span><br><span class="line"><span class="comment">#############################</span></span><br><span class="line">output =&gt; [<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>reduce<ul>
+<li>map과 비슷한 동작으로 list에 똑같은 함수를 적용해서 합쳐나간다</li>
+<li><del>2년 넘게 공부하면서 한번도 쓴적이 없다</del></li>
+<li>python3 버전에서 lambda와 같이 사용을 권장하지 않는다<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="built_in">print</span>(reduce(<span class="keyword">lambda</span> x, y: x+y, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]))</span><br></pre></td></tr></table></figure>
+<center></li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/reduce.png" alt="reduce 이미지"></p>
+</center>
+
+<h3 id="10-4-iterable-object"><a href="#10-4-iterable-object" class="headerlink" title="10.4 iterable object"></a>10.4 <code>iterable object</code></h3><ul>
+<li>시퀸스형 자료형에서 데이터를 순서대로 추출하는 object</li>
+<li>object 내부적으로 __iter__와 __next__라는 함수(메서드)가 존재한다</li>
+<li>.iter() 와 .next() 함수로 iterable 객체를 iterator object로 사용이 가능하다</li>
+<li>아래의 generator와 같이 사용하면 정말 강력한 성능을 보이게 된다<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">cities = [<span class="string">&quot;Seoul&quot;</span>, <span class="string">&quot;Busan&quot;</span>, <span class="string">&quot;Jeju&quot;</span>] </span><br><span class="line">iter_obj = <span class="built_in">iter</span>(cities) </span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">next</span>(iter_obj))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">next</span>(iter_obj)) </span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">next</span>(iter_obj)) </span><br><span class="line"><span class="built_in">next</span>(iter_obj)</span><br><span class="line">==============</span><br><span class="line">output:</span><br><span class="line">Seoul</span><br><span class="line">Busan</span><br><span class="line">Jeju</span><br><span class="line">Error 발생 더이상 출력할 수 있는 원소가 없음</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="10-5-generator"><a href="#10-5-generator" class="headerlink" title="10.5 generator"></a>10.5 <code>generator</code></h3><ul>
+<li><p>iterable object를 특수한 형태로 사용해주는 함수</p>
+</li>
+<li><p>object 내부의 element가 호출되는 시점에 값을 메모리에 반환한다</p>
+<ul>
+<li>yield를 사용해서 한번에 하나의 element만 반환함<ul>
+<li>이 것이 궁금하다면 python 코루틴 관련해서 찾아보는것이 좋다</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>일반적인 iterator 보다 generator가 훨씬더 적은 메모리를 사용한다</p>
+</li>
+<li><p>먼 훗날에 나올 Dataset이 generator를 이용한 object이다</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_gen</span>():</span></span><br><span class="line">    n = <span class="number">1</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;This is printed first&#x27;</span>)</span><br><span class="line">    <span class="comment"># Generator function contains yield statements</span></span><br><span class="line">    <span class="keyword">yield</span> n</span><br><span class="line"></span><br><span class="line">    n += <span class="number">1</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;This is printed second&#x27;</span>)</span><br><span class="line">    <span class="keyword">yield</span> n</span><br><span class="line"></span><br><span class="line">    n += <span class="number">1</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;This is printed at last&#x27;</span>)</span><br><span class="line">    <span class="keyword">yield</span> n</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Using for loop</span></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> my_gen():</span><br><span class="line">    <span class="built_in">print</span>(item)</span><br><span class="line"></span><br><span class="line">=====================</span><br><span class="line">output:</span><br><span class="line">This <span class="keyword">is</span> printed first</span><br><span class="line"><span class="number">1</span></span><br><span class="line">This <span class="keyword">is</span> printed second</span><br><span class="line"><span class="number">2</span></span><br><span class="line">This <span class="keyword">is</span> printed at last</span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://www.programiz.com/python-programming/generator">예제출처</a></p>
+</li>
+<li><p>generator도 list comprehension과 유사한 형태로 표현이 가능하다</p>
+</li>
+<li><p>[] 대신 ()로 표현한다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">gen_ex = (n*n <span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">500</span>)) </span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">next</span>(gen_ex)) <span class="comment"># 0 1 4 ....</span></span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line"><span class="comment">### 10.6 function passing arguments</span></span><br><span class="line">* 함수에 입력되는 Argument는 아래와 같이 다양한 형태를 가진다</span><br><span class="line">  * Keyword arguments</span><br><span class="line">    * 함수에 입력되는 parameter의 변수명을 같이 입력하여 순서에 상관없이 parameter를 지정 해 줄 수 있다</span><br><span class="line">```python</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">function</span>(<span class="params">a, b</span>):</span></span><br><span class="line">    <span class="keyword">return</span> a*<span class="number">2</span> + b</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(function(<span class="number">3</span>, <span class="number">5</span>))</span><br><span class="line"><span class="built_in">print</span>(function(b=<span class="number">5</span>, a=<span class="number">3</span>))</span><br><span class="line">=========================</span><br><span class="line">output:</span><br><span class="line"><span class="number">11</span></span><br><span class="line"><span class="number">11</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>Default arguments</p>
+<ul>
+<li>parameter의 기본값을 사용한다</li>
+<li>따로 argument가 입력되지 않을 경우 기본값으로 출력한다<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">function</span>(<span class="params">a, b=<span class="number">0</span></span>):</span></span><br><span class="line">    <span class="keyword">return</span> a*<span class="number">2</span> + b</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(function(<span class="number">3</span>, <span class="number">1</span>))</span><br><span class="line"><span class="built_in">print</span>(function(<span class="number">3</span>))</span><br><span class="line"></span><br><span class="line">==================</span><br><span class="line">output:</span><br><span class="line"><span class="number">7</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">  * Variable-length arguments(가변인자)</span><br><span class="line">    * 개수가 특정되지 않은 변수를 함수의 parameter로 사용하는 방법</span><br><span class="line">    * Asterist * 기호를 사용하여 argument를 나타낸다</span><br><span class="line">    * 입력된 값은 <span class="type">Tuple</span>로 사용할 수 있다</span><br><span class="line">    * 함수에서 단 하나 존재하고, 뒤에 일반적인 argument가 존재할 수 없다</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">asterisk_test</span>(<span class="params">a, b, *args</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(args)</span><br><span class="line">    <span class="keyword">return</span> a+b+<span class="built_in">sum</span>(args)</span><br><span class="line"><span class="built_in">print</span>(asterisk_test(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>))</span><br><span class="line"></span><br><span class="line">===================================</span><br><span class="line">output:</span><br><span class="line">(<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>) 튜플의 형태로 존재한다</span><br><span class="line"><span class="number">15</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Keyword Variable-length arguments(키워드 가변인자)</p>
+<ul>
+<li>Parameter의 이름을 따로 지정하지않고 입력하는 방법</li>
+<li>Asterisk 두개 (**) 를 사용하여 함수의 parameter를 표시한다</li>
+<li>입력된 값은 dict type으로 사용할수 있다</li>
+<li>함수에서 단 하나 존재하고 뒤에 다른 argument가 존재할 수 없다</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">asterisk_test</span>(<span class="params">a, b, **kargs</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(kargs)</span><br><span class="line">    <span class="keyword">return</span> a+b+<span class="built_in">sum</span>(kargs.values())</span><br><span class="line"><span class="built_in">print</span>(asterisk_test(<span class="number">1</span>, <span class="number">2</span>, three=<span class="number">3</span>, four=<span class="number">4</span>, five=<span class="number">5</span>))</span><br><span class="line">===================================================</span><br><span class="line">output:</span><br><span class="line">&#123;<span class="string">&#x27;three&#x27;</span>: <span class="number">3</span>, <span class="string">&#x27;four&#x27;</span>: <span class="number">4</span>, <span class="string">&#x27;five&#x27;</span>: <span class="number">5</span>&#125;</span><br><span class="line"><span class="number">15</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-7-Asterisk"><a href="#10-7-Asterisk" class="headerlink" title="10.7 Asterisk"></a>10.7 Asterisk</h3><ul>
+<li>Asterisk는 위의 가변인자와 곱하기 연산자 이외의 기능이 존재한다</li>
+<li>list, tuple 등의 자료형 변수 앞에 *를 붙여서 unpacking 할 수 있다</li>
+<li>dict type의 경우 **를 붙여서 키워드 가변인자처럼 출력이 가능하다<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(*a)</span><br><span class="line">b = &#123;<span class="string">&#x27;one&#x27;</span>:<span class="number">1</span>, <span class="string">&#x27;two&#x27;</span>:<span class="number">2</span>, <span class="string">&#x27;three&#x27;</span>:<span class="number">3</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(*b)</span><br><span class="line"><span class="built_in">print</span>(asterisk_test(<span class="number">1</span>, <span class="number">2</span>, **b))</span><br><span class="line">===============================</span><br><span class="line">output:</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></span><br><span class="line">one two three</span><br><span class="line">&#123;<span class="string">&#x27;one&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;two&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;three&#x27;</span>: <span class="number">3</span>&#125;</span><br><span class="line"><span class="number">9</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-01-18T06:38:01.000Z" title="2022. 1. 18. 오후 3:38:01">2022-01-18</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-01-24T01:16:40.422Z" title="2022. 1. 24. 오전 10:16:40">2022-01-24</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">5분안에 읽기 (약 739 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/01/18/boostcamp/week/week1/python-5/">부스트 캠프 ai tech 1주 2일차 Python Basic for AI (5)</a></h1><div class="content"><hr>
+<h2 id="9-데이터-구조"><a href="#9-데이터-구조" class="headerlink" title="9. 데이터 구조"></a>9. 데이터 구조</h2><ul>
+<li>Stack &amp; Queue</li>
+<li>Tuple &amp; Set</li>
+<li>Dictionary</li>
+<li>Collection</li>
+</ul>
+<h3 id="9-1-Stack-amp-Queue"><a href="#9-1-Stack-amp-Queue" class="headerlink" title="9.1 Stack &amp; Queue"></a>9.1 Stack &amp; Queue</h3><ul>
+<li>Stack<ul>
+<li>나중에 넣은 데이터를 먼저 반환하도록 설계된 데이터 구조</li>
+<li><code>LIFO</code> (Last in First Out)</li>
+<li>입력을 Push, 출력을 Pop이라고 한다</li>
+<li>python의 list는 기본적으로 Stack의 구조를 가진다</li>
+</ul>
+</li>
+<li>Queue<ul>
+<li>먼저 넣은 데이터가 먼저 반환하도록 설계된 데이터 구조</li>
+<li><code>FIFO</code> (First in First Out)</li>
+<li>입력은 Push, 출력은 get 이라고 한다</li>
+<li>보통 python의 Dequeue를 사용한다.</li>
+</ul>
+</li>
+<li>정해진 크기를 넘어갈 경우 overflow, element가 없는데 반환을 시킬경우 underflow라고 한다.</li>
+</ul>
+<h3 id="9-2-Tuple-amp-Set"><a href="#9-2-Tuple-amp-Set" class="headerlink" title="9.2 Tuple &amp; Set"></a>9.2 Tuple &amp; Set</h3><ul>
+<li><strong><code>Tuple</code></strong><ul>
+<li><code>값의 변경이 불가능한 리스트</code></li>
+<li>index로 접근해서 값을 수정하는것을 막는다</li>
+<li>정의 할 때 ( )를 사용한다</li>
+<li>리스트와 동일하게 (+, *)연산, Indexing, Slicing을 사용한다</li>
+<li>사용자의 실수에 의한 에러를 사전에 방지하기 위해 변경할 필요가 없는 데이터를 저장할 때 사용한다  </li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">t = (<span class="number">1</span>, ) <span class="comment"># 값이 1개인 Tuple은 반드시 ,를 붙여야 함</span></span><br><span class="line">t + t <span class="comment"># (1, 1)</span></span><br><span class="line">t[<span class="number">0</span>] = <span class="number">2</span> <span class="comment"># Error 발생함</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong><code>Set</code></strong><ul>
+<li>값을 순서없이 저장, 중복을 허용하지 않는 자료형(확인필요)</li>
+<li>set( )을 통하여 객체를 생성한다</li>
+<li>set을 이용하여 다양한 집합연산이 가능하다<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">s1 = <span class="built_in">set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])</span><br><span class="line">s2 = <span class="built_in">set</span>([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>])</span><br><span class="line">s1.union(s2) <span class="comment"># (1, 2, 3, 4, 5, 7, 9) 합집합</span></span><br><span class="line">s1 | s2 <span class="comment"># (1, 2, 3, 4, 5, 7, 9) 합집합</span></span><br><span class="line">s1.intersection(s2) <span class="comment"># (1, 3, 5) 교집합</span></span><br><span class="line">s1 &amp; s2 <span class="comment"># (1, 3, 5) 교집합</span></span><br><span class="line">s1.difference(s2) <span class="comment"># (2, 4) 차집합</span></span><br><span class="line">s1 - s2 <span class="comment"># (2, 4) 차집합</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="9-3-Dictionary"><a href="#9-3-Dictionary" class="headerlink" title="9.3 Dictionary"></a>9.3 Dictionary</h3><ul>
+<li>데이터를 저장 할 때 구분지을수 있는 값(Key)를 함께 저장</li>
+<li>Hash 구조</li>
+<li>Key값을 활용하여 Value를 관리한다.</li>
+<li>dict( )나 { }로 객체를 생성한다</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">number_dic = &#123;<span class="string">&#x27;one&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;two&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;three&#x27;</span>: <span class="number">3</span>&#125;</span><br><span class="line">number_dic[<span class="string">&#x27;one&#x27;</span>] <span class="comment"># 1, Key 값으로 value 출력 가능</span></span><br><span class="line">country_code.items() <span class="comment"># 데이터 출력</span></span><br><span class="line"><span class="comment"># dict_items([(&#x27;one&#x27;, 1), (&#x27;two&#x27;, 2), (&#x27;three&#x27;, 3)])</span></span><br><span class="line">number_dic.keys() <span class="comment"># key만 출력</span></span><br><span class="line"><span class="comment"># dict_keys([&#x27;one&#x27;, &#x27;two&#x27;, &#x27;three&#x27;])</span></span><br><span class="line">number_dic.values() <span class="comment"># value만 출력</span></span><br><span class="line"><span class="comment"># dict_values([1, 2, 3])</span></span><br><span class="line">number_dic.get(<span class="number">1</span>) <span class="comment"># None, 아닐경우 None</span></span><br><span class="line">number_dic.get(<span class="string">&#x27;one&#x27;</span>) <span class="comment"># 1, key가 존재할 경우 values 값을 return</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="9-4-Collections"><a href="#9-4-Collections" class="headerlink" title="9.4 Collections"></a>9.4 Collections</h3><ul>
+<li><p>Python Built-in 확장 모듈</p>
+</li>
+<li><p>편의성, 실행 효율 등을 사용자에게 제공함</p>
+</li>
+<li><p>자주 사용되는 deque, difaultdict, Counter에 대해서만 다룰것이다</p>
+</li>
+<li><p><code>deque</code></p>
+<ul>
+<li>Stack과 Queue의 기능을 모두 지원하는 데이터 구조</li>
+<li>List에 비해 효율적인 저장방식을 지원한다<ul>
+<li>popleft()등 삽입 삭제에 매우 효율적임</li>
+</ul>
+</li>
+<li>Linked List의 특성(rotate, reverse)을 지원한다</li>
+<li>기존 list 형태의 함수를 모두 지원함<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line">q = deque()</span><br><span class="line">q.append(a) <span class="comment"># [a]</span></span><br><span class="line">q.appendleft(b) <span class="comment"># [b, a]</span></span><br><span class="line">q.popleft() <span class="comment"># [a]</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><code>defaultdict</code></p>
+<ul>
+<li>Dict type값에 기본값을 지정해서 key가 존재하지 않아도 기본값으로 찾아지는 기능을 가지고 있다</li>
+<li>defaultdict(datatype) 으로 기본값의 자료형을 정하면서 dict객체를 생성할 수 있다<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> defaultdict</span><br><span class="line">dic = defaultdict(<span class="built_in">int</span>)</span><br><span class="line">dic[<span class="string">&#x27;a&#x27;</span>] += <span class="number">1</span> <span class="comment"># &#123;&#x27;a&#x27;: 1&#125;</span></span><br><span class="line">dic[<span class="string">&#x27;b&#x27;</span>] -= <span class="number">1</span> <span class="comment"># &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: -1&#125;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><code>Counter</code></p>
+<ul>
+<li>시퀸스 type의 data element들의 갯수를 dict형태로 변환<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line">c = Counter([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">3</span>])</span><br><span class="line"><span class="comment"># Counter(&#123;1: 1, 3: 3, 5: 1, 2: 1, 4: 1&#125;)</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-01-18T05:32:17.000Z" title="2022. 1. 18. 오후 2:32:17">2022-01-18</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-01-24T01:16:38.925Z" title="2022. 1. 24. 오전 10:16:38">2022-01-24</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">3분안에 읽기 (약 377 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/01/18/boostcamp/week/week1/python-4/">부스트 캠프 ai tech 1주 2일차 Python Basic for AI (4)</a></h1><div class="content"><hr>
+<h2 id="8-문자열-string"><a href="#8-문자열-string" class="headerlink" title="8. 문자열(string)"></a>8. 문자열(string)</h2><ul>
+<li><strong>char들이 저장되어있는 <code>시퀸스</code> 자료형</strong></li>
+<li>기본적으로 list와 같은 형태로 데이터를 처리한다<ul>
+<li>Indexing, Slicing, +, * 연산은 리스트와 동일하게 수행한다  </li>
+</ul>
+</li>
+</ul>
+<h3 id="8-1-자주-사용하는-문자열-함수"><a href="#8-1-자주-사용하는-문자열-함수" class="headerlink" title="8.1 자주 사용하는 문자열 함수"></a>8.1 자주 사용하는 문자열 함수</h3><center>
+
+<table>
+<thead>
+<tr>
+<th align="center">함수명</th>
+<th align="center">기능</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">len(a)</td>
+<td align="center">문자열의 문자 개수를 반환</td>
+</tr>
+<tr>
+<td align="center">a.upper()</td>
+<td align="center">대문자로 변환</td>
+</tr>
+<tr>
+<td align="center">a.lower()</td>
+<td align="center">소문자로 변환</td>
+</tr>
+<tr>
+<td align="center">a.capitalize()</td>
+<td align="center">첫 문자를 대문자로 변환</td>
+</tr>
+<tr>
+<td align="center">a.strip(input) <br/> a.rstrip(input) <br/> a.lstrip(input)</td>
+<td align="center">좌우/우/좌 input을 없앰</td>
+</tr>
+<tr>
+<td align="center">a.split(input)</td>
+<td align="center">input 기준으로 문자열을 나눠서 리스트로 반환</td>
+</tr>
+<tr>
+<td align="center">a.isdigit() <br/> a.islower() <br/> a.isupper()</td>
+<td align="center">문자열이 숫자/소문자/대문자인지 여부 반환</td>
+</tr>
+<tr>
+<td align="center">a.startswith(input) <br/> a.endswith(input)</td>
+<td align="center">문자열이 input으로 시작/끝 나는 문자열 여부 반환</td>
+</tr>
+<tr>
+<td align="center">str.join(list)</td>
+<td align="center">list의 원소들을 str로 연결해서 하나의 문자열로 나타낸다 <br/> 단 list의 원소는 모두 문자열 type 이어야 한다</td>
+</tr>
+</tbody></table>
+</center>
+
+<h3 id="8-2-다양한표현"><a href="#8-2-다양한표현" class="headerlink" title="8.2 다양한표현"></a>8.2 다양한표현</h3><ul>
+<li>\ (백슬래쉬) : 특수하게 사용하는 문자열을 표현하기위해서 사용한다<ul>
+<li>백슬래쉬를 표현하기 위해서는 \\ 두번 사용하면 된다.</li>
+</ul>
+</li>
+<li>\n : 줄바꿈을 의미하는 특수문자</li>
+<li>\t : TAB</li>
+<li>“””문자열””” : 줄바꿈도 자유롭게 입력 가능한 문자열 표현 </li>
+<li>r”문자열” : 특수문자를 무시하고 그대로 출력함<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">r&#x27;이건 줄바꿈 기호입니다 \n&#x27;</span>)</span><br><span class="line"><span class="comment"># output : 이건 줄바꿈 기호입니다 \n</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-01-18T02:39:48.000Z" title="2022. 1. 18. 오전 11:39:48">2022-01-18</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-01-24T01:16:36.946Z" title="2022. 1. 24. 오전 10:16:36">2022-01-24</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">4분안에 읽기 (약 557 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/01/18/boostcamp/week/week1/python-3/">부스트 캠프 ai tech 1주 2일차 Python Basic for AI (3)</a></h1><div class="content"><hr>
+<h2 id="6-Condition-조건문"><a href="#6-Condition-조건문" class="headerlink" title="6. Condition (조건문)"></a>6. Condition (조건문)</h2><ul>
+<li>조건에 따라 특정한 동작을 하게 하는 명령어</li>
+<li>python 에서는 if, elif, else의 예약어를 사용한다</li>
+<li>조건을 나타내는 기준과 실행해야하는 명령으로 구성된다</li>
+<li>조건이 참일때만 실행한다<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> age &lt;= <span class="number">13</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;초등학생&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> age &lt;= <span class="number">16</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;중학생&#x27;</span>)</span><br><span class="line"><span class="keyword">elif</span> age &lt;= <span class="number">19</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;고등학생&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;성인&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<center>
+
+<table>
+<thead>
+<tr>
+<th align="center">비교연산자</th>
+<th align="center">설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">x &lt; y</td>
+<td align="center">x가 y보다 작은지 검사</td>
+</tr>
+<tr>
+<td align="center">x &gt; y</td>
+<td align="center">x가 y보다 큰지 검사</td>
+</tr>
+<tr>
+<td align="center">x == y</td>
+<td align="center">x와 y가 같은값인지 검사</td>
+</tr>
+<tr>
+<td align="center">x is y</td>
+<td align="center">x와 y의 메모리 주소가 같은지 검사</td>
+</tr>
+<tr>
+<td align="center">x != y</td>
+<td align="center">x와 y가 같은값인지 검사</td>
+</tr>
+<tr>
+<td align="center">x is not y</td>
+<td align="center">x와 y의 메모리 주소가 같은지 검사</td>
+</tr>
+<tr>
+<td align="center">x &gt;= y</td>
+<td align="center">x가 y이상인지 검사</td>
+</tr>
+<tr>
+<td align="center">x &lt;= y</td>
+<td align="center">x가 y이하인지 검사</td>
+</tr>
+</tbody></table>
+</center>
+
+<ul>
+<li>c언어에서는 0은 False, 1은 True를 나타내지만, python에서는 성립하지 않는다</li>
+<li>존재하면 참, 없으면 거짓으로 판단한다</li>
+<li>and, or, not 논리키워드와도 같이 사용한다<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="number">1</span> <span class="comment"># True</span></span><br><span class="line"><span class="keyword">if</span> <span class="number">0</span> <span class="comment"># True</span></span><br><span class="line"><span class="keyword">if</span> <span class="literal">None</span> <span class="comment"># False</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="6-1-삼항연산자-Ternary-operators"><a href="#6-1-삼항연산자-Ternary-operators" class="headerlink" title="6.1 삼항연산자(Ternary operators)"></a>6.1 삼항연산자(Ternary operators)</h3><ul>
+<li>참과 거짓만 존재하는 결과를 한줄에 표현 할 수 있다.<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;number&#x27;</span> <span class="keyword">if</span> <span class="built_in">isinstance</span>(a, <span class="built_in">int</span>) <span class="keyword">else</span> <span class="string">&#x27;not number&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h2 id="isinstance-var-datatype-gt-boolean"><a href="#isinstance-var-datatype-gt-boolean" class="headerlink" title="isinstance(var, datatype) -&gt; boolean"></a>isinstance(var, datatype) -&gt; boolean</h2><p>데이터의 타입을 판단하는 함수</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="7-반복문"><a href="#7-반복문" class="headerlink" title="7. 반복문"></a>7. 반복문</h2><ul>
+<li>정해진 동작을 반복적으로 수행하게 하는 명령문</li>
+<li>for, while 명령 키워드가 존재한다  </li>
+</ul>
+<h3 id="7-1-for-문"><a href="#7-1-for-문" class="headerlink" title="7.1 for 문"></a>7.1 for 문</h3><ul>
+<li>iterable 한 object의 원소의 갯수 만큼 반복시켜주는 반복문</li>
+<li><code>range</code>, <code>enumerate</code>등과 연계하여 사용이 가능하다<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>, <span class="number">2</span>):</span><br><span class="line">    <span class="built_in">print</span>(i) <span class="comment"># 1, 3 ... 7 ,9</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>, <span class="number">1</span>, -<span class="number">1</span>):</span><br><span class="line">    <span class="built_in">print</span>(i) <span class="comment"># 10, 9, ... , 2, 1</span></span><br><span class="line"><span class="keyword">for</span> i, x <span class="keyword">in</span> <span class="built_in">enumerate</span>(<span class="string">&#x27;apple&#x27;</span>):</span><br><span class="line">    <span class="built_in">print</span>(i, x) <span class="comment"># 0 a, 1 p, ... , 4 e</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="7-2-while-문"><a href="#7-2-while-문" class="headerlink" title="7.2 while 문"></a>7.2 while 문</h3><ul>
+<li>조건을 만족하는 동안 반복적으로 명령을 수행한다<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="number">5</span>:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line"><span class="comment"># output 0, 1, 2, 3, 4</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="7-3-반복문-제어"><a href="#7-3-반복문-제어" class="headerlink" title="7.3 반복문 제어"></a>7.3 반복문 제어</h3><ul>
+<li>break : 특정 조건에서 가장 가까운 반복문을 종료한다</li>
+<li>continue : 특정 조건에서 남은 명령을 skip 하고 다음 루프로 넘어간다</li>
+<li>else : 반복조건이 만족하지 않은경우 반복 종료시 1회 수행한다.<ul>
+<li>break로 반복문에서 탈출할 경우에는 수행하지 않음</li>
+</ul>
+</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-01-18T02:24:02.000Z" title="2022. 1. 18. 오전 11:24:02">2022-01-18</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-01-26T06:21:31.584Z" title="2022. 1. 26. 오후 3:21:31">2022-01-26</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/%EC%9D%BC%EC%83%81/">일상</a><span> / </span><a class="link-muted" href="/categories/%EC%9D%BC%EC%83%81/TIL/">TIL</a><span> / </span><a class="link-muted" href="/categories/boostcamp/Dairy/">Dairy</a></span><span class="level-item">2분안에 읽기 (약 270 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/01/18/boostcamp/Dairy/Day2/">Week1 - Day 1&amp;2 Review</a></h1><div class="content"><hr>
+<h2 id="오늘-하루-한-것"><a href="#오늘-하루-한-것" class="headerlink" title="오늘 하루 한 것"></a>오늘 하루 한 것</h2><ul>
+<li>Day1<ul>
+<li>팀원들과 아이스 브레이킹</li>
+<li>강의 듣기 (python 2-4까지)</li>
+<li>노션 회고록 Template 만들기</li>
+<li>과제<ul>
+<li>Basic Math</li>
+<li>Text Processing 1</li>
+<li>Text Processing 2</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Day2<ul>
+<li>강의듣기<ul>
+<li>python 강의 완료</li>
+<li>Ai Math 경사하강법까지 완료</li>
+</ul>
+</li>
+<li>과제<ul>
+<li>Gradient Descent 하는 중</li>
+<li>기본퀴즈 1~5강</li>
+</ul>
+</li>
+<li>python 3-2강 까지 정리</li>
+</ul>
+</li>
+</ul>
+<h2 id="피어세션에서-한것"><a href="#피어세션에서-한것" class="headerlink" title="피어세션에서 한것"></a>피어세션에서 한것</h2><ul>
+<li>Day1<ul>
+<li>피어세션 그라운드 룰 만들기</li>
+</ul>
+</li>
+<li>Day2<ul>
+<li>python 메모리 관리에 대한 질문</li>
+<li>구조체 메모리 점유에 대한 질문  </li>
+</ul>
+</li>
+</ul>
+<h2 id="내일-할것"><a href="#내일-할것" class="headerlink" title="내일 할것"></a>내일 할것</h2><ul>
+<li>심화과제 끝내기</li>
+<li>과제과정, 결과 + 정규식에 대해서 정리해보자  </li>
+</ul>
+<h2 id="느낀점"><a href="#느낀점" class="headerlink" title="느낀점"></a>느낀점</h2><ul>
+<li>어떻게 해야 남이보기 쉽게 설명할수 있을까? 정리하는데 시간이 오래걸린다.</li>
+<li>1일차 한 내용이 많아서 하루만에 정리하기 쉽지 않았다. 예전에도 한번 시도했지만 꾸준히 정리해야 할맛나는것 같다. 쌓이면 쌓일수록 답이없다…..</li>
+<li><strong>매일 적당한 양을 공부하고, 정리할것</strong></li>
+<li><strong><code>알아도 정리하자!</code></strong></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-01-18T00:39:17.000Z" title="2022. 1. 18. 오전 9:39:17">2022-01-18</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-01-24T01:16:35.187Z" title="2022. 1. 24. 오전 10:16:35">2022-01-24</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">6분안에 읽기 (약 830 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/01/18/boostcamp/week/week1/python-2/">부스트 캠프 ai tech 1주 2일차 Python Basic for AI (2)</a></h1><div class="content"><p><del>1일차 배운내용 2일차에 정리하는중…</del></p>
+<hr>
+<h2 id="4-Function-함수"><a href="#4-Function-함수" class="headerlink" title="4. Function(함수)"></a>4. Function(함수)</h2><ul>
+<li>어떤 일을 수행하는 논리적인 코드 단위</li>
+<li>parameter, indentation(들여쓰기), return 등으로 구성된다</li>
+<li>argument : 함수를 호출할 때 입력되는 파라미터들을 말한다  </li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">im_function</span>(<span class="params">im_parameter</span>):</span> <span class="comment">#함수의 정의와 파라미터</span></span><br><span class="line">    im_return = im_parameter <span class="comment"># 수행 내용</span></span><br><span class="line">    <span class="keyword">return</span> im_return <span class="comment"># 리턴값</span></span><br><span class="line"></span><br><span class="line">result = im_function(im_argument)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>함수에 return 값이 존재하지 않을경우 함수는 None을 리턴한다</li>
+</ul>
+<h3 id="4-1-지역변수-amp-전역변수"><a href="#4-1-지역변수-amp-전역변수" class="headerlink" title="4.1 지역변수 &amp; 전역변수"></a>4.1 지역변수 &amp; 전역변수</h3><ul>
+<li>지역변수(local variable) : 함수 내에서만 사용되는 변수</li>
+<li>전역변수(global variable) : 프로그램 전체에서 사용하는 변수<ul>
+<li>global을 사용하여 함수내에서 정의 할 수 있다.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">function</span>(<span class="params">x</span>):</span></span><br><span class="line">  <span class="keyword">global</span> y</span><br><span class="line">  <span class="keyword">return</span> x + y</span><br><span class="line"></span><br><span class="line">y = <span class="number">5</span></span><br><span class="line"><span class="built_in">print</span>(function(<span class="number">6</span>)) <span class="comment"># 11</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="4-2-재귀함수-recursive-Function"><a href="#4-2-재귀함수-recursive-Function" class="headerlink" title="4.2 재귀함수(recursive Function)"></a>4.2 재귀함수(recursive Function)</h3><ul>
+<li>자기자신을 호출하는 함수</li>
+<li>종료조건이 존재하여 종료조건을 만족시킬때 까지 스스로를 호출한다</li>
+<li>python에서는 recursivelimit가 걸려있어서 따로 sys 모듈을 통해 한도를 늘려놓아야 한다.</li>
+<li><del>개인적으로 별로 안이용하고 싶음</del>  </li>
+</ul>
+<h3 id="4-3-Function-type-hints-amp-Docstring"><a href="#4-3-Function-type-hints-amp-Docstring" class="headerlink" title="4.3 Function type hints &amp; Docstring"></a>4.3 Function type hints &amp; Docstring</h3><ul>
+<li><strong>Function type hints</strong><br>python에서는 dynamic typinig 형식으로 작성하기 때문에 별도로 자료형을 적어두지 않기 때문에 처음 함수를 사용하는 사용자가 interface를 알기 어렵다는 단점이 있다.<br>이를 해결하기 위해 type hints 기능을 제공한다.  <ul>
+<li>parameter와 return의 type을 알려주는 type hints  </li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">this_is_function</span>(<span class="params">var_name: var_type</span>) -&gt; return_type:</span></span><br><span class="line">  <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>Docstring</strong><br>함수에 대한 상세 스펙(필요한 parameter, return, 수행하는 일 등등)을 사전에 작성한다.<br>세개의 따옴표로 함수명 아래에 표시한다<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">function</span>(<span class="params">x</span>):</span></span><br><span class="line">  <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">  this is docstring</span></span><br><span class="line"><span class="string">  return parameter</span></span><br><span class="line"><span class="string">  x : int</span></span><br><span class="line"><span class="string">  =======</span></span><br><span class="line"><span class="string">  return int</span></span><br><span class="line"><span class="string">  &quot;&quot;&quot;</span></span><br><span class="line">  <span class="keyword">return</span> x</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="4-4-python-가이드-라인"><a href="#4-4-python-가이드-라인" class="headerlink" title="4.4 python 가이드 라인"></a>4.4 python 가이드 라인</h3><ul>
+<li>함수는 가능하면 짧게 작성한다</li>
+<li>함수이름에 역할, 의도를 명확하게 나타낼 수 있도록 한다</li>
+<li>하나의 함수에는 유사한 역할을 하는 코드만 포함한다</li>
+<li>parameter로 받은 값 자체를 바꾸지 않는다</li>
+<li>공통 코드나 복잡한 수식은 함수로 나타낸다</li>
+<li>PEP8 참고해보자</li>
+</ul>
+<h2 id="5-input-amp-print-amp-fommatting"><a href="#5-input-amp-print-amp-fommatting" class="headerlink" title="5. input &amp; print &amp; fommatting"></a>5. input &amp; print &amp; fommatting</h2><ul>
+<li>input 함수는 콘솔창에서 문자열을 입력받는 함수이다(string 형태로 받아옴)</li>
+<li>print 함수는 입력받은 값을 문자열으로 출력한다</li>
+<li><strong>,</strong> 를 사용할 경우 print문이 공백을 사이에 두고 연결된다<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;name :&quot;</span>)</span><br><span class="line">name = <span class="built_in">input</span>() <span class="comment"># input -&gt; 규범</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello&quot;</span>, name) <span class="comment"># Hello 규범</span></span><br></pre></td></tr></table></figure></li>
+<li>formatting을 통해서 출력양식의 형식을 지정할 수 있다.  <center></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">type</th>
+<th align="center">설명</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">%s</td>
+<td align="center">문자열(string)</td>
+</tr>
+<tr>
+<td align="center">%c</td>
+<td align="center">문자 1개(character)</td>
+</tr>
+<tr>
+<td align="center">%d</td>
+<td align="center">정수 (int 형)</td>
+</tr>
+<tr>
+<td align="center">%f</td>
+<td align="center">부동소수(float 형)</td>
+</tr>
+<tr>
+<td align="center">%o</td>
+<td align="center">8진수</td>
+</tr>
+<tr>
+<td align="center">%x</td>
+<td align="center">16진수</td>
+</tr>
+<tr>
+<td align="center">%%</td>
+<td align="center">% 문자 자체</td>
+</tr>
+</tbody></table>
+</center>
+
+<ul>
+<li><p>%n.m(datatype) </p>
+<ul>
+<li>string : n개의 문자로 맞춘다(공백으로 채운다). m 자리수까지만 나타낸다(혼용 불가)</li>
+<li>int : n개의 문자로 맞춘다(공백으로 채운다). m 은 사용불가</li>
+<li>float : n개의 문자로 맞춘다(공백으로 채운다). 소숫점 m자리까지 나타낸다</li>
+</ul>
+</li>
+<li><p>Python 3.6 이후의 PEP8에 근거한 formatting</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name = Jone</span><br><span class="line">age = <span class="number">20</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;Hello, <span class="subst">&#123;name&#125;</span>. I am <span class="subst">&#123;age&#125;</span>.&#x27;</span>) <span class="comment"># Hello, Jone. I am 20.</span></span><br></pre></td></tr></table></figure></li>
+<li><p>예전방식</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;%s %s&#x27;</span> % (<span class="string">&#x27;one&#x27;</span>, <span class="string">&#x27;two&#x27;</span>)) <span class="comment"># one two</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;%d %d&#x27;</span>.<span class="built_in">format</span>(<span class="number">1</span>, <span class="number">1</span>)) <span class="comment"># one two</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-01-17T09:46:31.000Z" title="2022. 1. 17. 오후 6:46:31">2022-01-17</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-01-24T01:16:33.413Z" title="2022. 1. 24. 오전 10:16:33">2022-01-24</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">6분안에 읽기 (약 834 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/01/17/boostcamp/week/week1/python_1/">부스트 캠프 ai tech 1주 1일차 Python Basic for AI (1)</a></h1><div class="content"><hr>
+<h2 id="1-Python의-특징"><a href="#1-Python의-특징" class="headerlink" title="1. Python의 특징"></a>1. Python의 특징</h2><ul>
+<li><strong>독립적인 플랫폼</strong><br>운영체제에 상관없이 작동하는 언어이다.</li>
+<li><strong>인터프리터 언어</strong><br>별도의 컴파일링 없이 컴퓨터가 바로 처리할 수 있는 언어이다. 속도는 컴파일러 언어에 비해서 느리지만 메모리가 적게 필요하다.</li>
+<li><strong>객체지향적</strong><br>실행 순서가 아닌 단위 모듈 중심으로 프로그램이 작성된다.</li>
+<li><strong>Dynamic Typing 언어</strong><br>프로그램이 실행하는 시점에 프로그램이 사용해야하는 데이터 타입이 결정된다.</li>
+</ul>
+<h2 id="2-변수"><a href="#2-변수" class="headerlink" title="2. 변수"></a>2. 변수</h2><ul>
+<li><strong>데이터를 저장하기 위한 메모리 공간</strong><br>  변수가 정의되면 변수는 메모리 주소를 할당 받고, 그 메모리 위치에 값을 저장한다. 그 외에 python에서 어떻게 변수를 할당받고 메모리를 관리하는지 알고싶으면 아래의 영상을 참고하는걸 추천한다.  <ul>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=arxWaw-E8QQ">https://www.youtube.com/watch?v=arxWaw-E8QQ</a></li>
+</ul>
+</li>
+<li><strong>기본 자료형들은 +, -, *, %의 사칙연산이 가능 하다</strong></li>
+<li><strong>Dynamic Typing을 지원하기 때문에 정의할 때에 자료형을 특정하지 않아도 된다.</strong><ul>
+<li>실행하는 시점에서 변수형을 확인하고 결정하기 때문에 타 언어보다 속도가 느리다.</li>
+<li>아래와 같이 자료형간 형 변환또한 가능하다.  </li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span> <span class="comment"># int형으로 정의</span></span><br><span class="line"><span class="built_in">int</span>(a) <span class="comment"># int() 로 형 변환 가능  </span></span><br><span class="line"><span class="built_in">str</span>(a) <span class="comment"># str로 재정의 이때의 값은 &#x27;5&#x27;</span></span><br><span class="line"><span class="built_in">float</span>(a) <span class="comment"># float형으로 재정의 이때의 값은 &#x27;5.0&#x27;</span></span><br><span class="line"><span class="built_in">bool</span>(a) <span class="comment"># boolean 형으로 재정이 이때의 값은 True</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-리스트"><a href="#3-리스트" class="headerlink" title="3. 리스트"></a>3. 리스트</h2><ul>
+<li><strong>여러 데이터들을 묶어서 표현할 수 있는 자료형</strong></li>
+<li><strong>python 에서는 리스트 내부에 여러가지 자료형이 동시에 존재할 수 있다.</strong>  </li>
+</ul>
+<h3 id="1-List-Indexing-amp-Slicing"><a href="#1-List-Indexing-amp-Slicing" class="headerlink" title="1. List Indexing &amp; Slicing"></a>1. List Indexing &amp; Slicing</h3><ul>
+<li>Indexing : 리스트에 있는 값들은 주소를 사용해 호출이 가능하다</li>
+<li>index를 넣는 곳에 음수값을 넣어서 뒤에서부터 호출 할 수 있다.</li>
+<li>len(object_name) : object의 길이를 반환한다<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">color = [<span class="string">&#x27;red&#x27;</span>, <span class="string">&#x27;blue&#x27;</span>, <span class="string">&#x27;green&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(colors[<span class="number">0</span>]) <span class="comment"># red</span></span><br><span class="line"><span class="built_in">print</span>(colors[-<span class="number">1</span>]) <span class="comment"># green</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(colors)) <span class="comment"># 3</span></span><br><span class="line">color[<span class="number">0</span>] = <span class="string">&#x27;Yellow&#x27;</span> <span class="comment"># [&#x27;Yellow&#x27;, &#x27;blue&#x27;, &#x27;green&#x27;]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>Slicing : list의 값들을 잘라서 부분적으로 표현할 수 있다.</li>
+<li>index과 같이 음수값 통해 역순으로도 가능하다.  </li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(numbers[<span class="number">0</span>:<span class="number">6</span>]) <span class="comment"># [1, 2, 3, 4, 5, 6] index 0번부터 6개</span></span><br><span class="line"><span class="built_in">print</span>(numbers[:]) <span class="comment"># [1, 2, 3, ... , 7, 8, 9] 처음부터 끝까지</span></span><br><span class="line"><span class="built_in">print</span>(numbers[::<span class="number">2</span>]) <span class="comment"># [1, 3, 5, 7, 9] 2칸단위로 슬라이싱</span></span><br><span class="line"><span class="built_in">print</span>(numbers[-<span class="number">5</span>::-<span class="number">1</span>]) <span class="comment"># [6, 5, 4, 3, 2, 1] 뒤에서 5번째부터 역순으로 슬라이싱</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-List-연산"><a href="#2-List-연산" class="headerlink" title="2. List 연산"></a>2. List 연산</h3><ul>
+<li>+ : 두 리스트를 합쳐준다  </li>
+<li>* : 리스트를 n회 반복해서 늘린다  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">num1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">num2 = [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">num1 + num2 <span class="comment"># [1, 2, 3, 3, 4, 5]</span></span><br><span class="line">num1 * <span class="number">2</span> <span class="comment"># [1, 2, 3, 1, 2, 3]</span></span><br></pre></td></tr></table></figure></li>
+<li>list.append(element) : list에 element를 추가한다</li>
+<li>list.extend(iterable) : list에 iterable의 원소들을 추가한다</li>
+<li>list.insert(index, element) : list의 특정 index 위치에 element를 삽입한다</li>
+<li>list.remove(element) : list의 특정 element를 삭제한다</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">num = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">num.append([<span class="number">4</span>, <span class="number">5</span>]) <span class="comment"># [1, 2, 3, [4, 5]]</span></span><br><span class="line">num.extend([<span class="number">1</span>, <span class="number">2</span>]) <span class="comment"># [1, 2, 3, [4, 5], 1, 2]</span></span><br><span class="line">num.insert(<span class="number">0</span>, <span class="string">&#x27;a&#x27;</span>) <span class="comment"># [&#x27;a&#x27;, 1, 2, 3, [4, 5], 1, 2]</span></span><br><span class="line">num.remove(<span class="number">1</span>) <span class="comment"># [&#x27;a&#x27;, 2, 3, [4, 5], 2]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-dim-list"><a href="#3-2-dim-list" class="headerlink" title="3. 2-dim list"></a>3. 2-dim list</h3><ul>
+<li><strong>행렬</strong></li>
+<li><strong>기존의 리스트와 비슷하지만, 복사할때 주의할점이 필요하다</strong><br>리스트를 복사할때 리스트 주소가 복사되기 때문에 내부의 리스트는 동일한 주소의 값을 가져 하나의 리스트를 변경하면 다른 리스트값도 변경됨  <ul>
+<li>python 모듈중 copy의 deepcopy를 이용하여 복사<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mat = [[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]]</span><br><span class="line">mat2 = mat</span><br><span class="line">mat[<span class="number">1</span>][<span class="number">0</span>] = <span class="number">2</span> <span class="comment"># [[2, 2, 3], [4, 5, 6]]</span></span><br><span class="line">mat2 <span class="comment"># [[2, 2, 3], [4, 5, 6]]</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-01-17T03:46:31.000Z" title="2022. 1. 17. 오후 12:46:31">2022-01-17</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-01-24T01:16:31.724Z" title="2022. 1. 24. 오전 10:16:31">2022-01-24</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">2분안에 읽기 (약 271 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/01/17/boostcamp/week/week1/basic/">부스트 캠프 ai tech 1주 1일차 Basic</a></h1><div class="content"><hr>
+<h3 id="1-OS-Operating-System-운영체제"><a href="#1-OS-Operating-System-운영체제" class="headerlink" title="1. OS(Operating System) 운영체제"></a>1. OS(Operating System) 운영체제</h3><ul>
+<li>Application이 동작 할 수 있는 환경을 말한다.</li>
+<li>컴퓨터의 하드웨어와 App이 소통하는 창구 역할을 한다.</li>
+<li>ex) 윈도우즈, MacOS, Ubuntu(Linux)</li>
+<li>자세한 내용은 CS에서 따로 정리를 하고있다.  </li>
+</ul>
+<h3 id="2-File-System"><a href="#2-File-System" class="headerlink" title="2. File System"></a>2. File System</h3><ul>
+<li>File system 이란?<ul>
+<li>파일을 저장하는 트리구조의 데이터 저장체제</li>
+</ul>
+</li>
+<li>Directory 이란?<ul>
+<li>아래에 정의하는 File이나 다른 Directory를 저장할수 있는 것</li>
+<li>폴더 또는 디렉토리라고 할 수 있다.  </li>
+</ul>
+</li>
+<li>File 이란?<ul>
+<li>의미있는 정보를 저장하는 논리적인 단위</li>
+<li>run, write, read 등을 할 수 있다.</li>
+<li>파일 명과 확장자로 종류나 쓰임새를 식별 가능하다.  </li>
+</ul>
+</li>
+<li>경로란?<ul>
+<li>절대경로 : root부터 현재 파일 위치까지의 경로</li>
+<li>상대경로 : 현재 활성화된 디렉토리부터 타겟 파일까지의 경로</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-Terminal"><a href="#3-Terminal" class="headerlink" title="3. Terminal"></a>3. Terminal</h3><ul>
+<li>키보드를 통하여 명령을 하고, 프로그램을 실행시키는 인터페이스</li>
+<li>windows의 CMD, PowerShell 과 Mac, Linux의 Terminal 등이 해당한다.</li>
+</ul>
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/categories/boostcamp/page/7/">이전</a></div><div class="pagination-next is-invisible is-hidden-mobile"><a href="/categories/boostcamp/page/9/">다음</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/categories/boostcamp/">1</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/categories/boostcamp/page/7/">7</a></li><li><a class="pagination-link is-current" href="/categories/boostcamp/page/8/">8</a></li></ul></nav></div><div class="column column-left is-3-tablet is-3-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="KyuBum Shin"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">KyuBum Shin</p><p class="is-size-6 is-block">Student</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Incheon</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">110</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">22</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">41</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/KyubumShin" target="_blank" rel="noopener">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/KyubumShin"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">링크</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://github.com/KyubumShin" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Github</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Computer-Science/"><span class="level-start"><span class="level-item">Computer Science</span></span><span class="level-end"><span class="level-item tag">8</span></span></a><ul><li><a class="level is-mobile" href="/categories/Computer-Science/Database/"><span class="level-start"><span class="level-item">Database</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Computer-Science/Network/"><span class="level-start"><span class="level-item">Network</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Computer-Science/OS/"><span class="level-start"><span class="level-item">OS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Computer-Science/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/"><span class="level-start"><span class="level-item">자료구조</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/DeepLearning/"><span class="level-start"><span class="level-item">DeepLearning</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/DeepLearning/Basic/"><span class="level-start"><span class="level-item">Basic</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/DeepLearning/Pytorch-Lightning/"><span class="level-start"><span class="level-item">Pytorch Lightning</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Programming/"><span class="level-start"><span class="level-item">Programming</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/Programming/Docker/"><span class="level-start"><span class="level-item">Docker</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Programming/Python/tip/"><span class="level-start"><span class="level-item">tip</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/boostcamp/"><span class="level-start"><span class="level-item">boostcamp</span></span><span class="level-end"><span class="level-item tag">80</span></span></a><ul><li><a class="level is-mobile" href="/categories/boostcamp/Dairy/"><span class="level-start"><span class="level-item">Dairy</span></span><span class="level-end"><span class="level-item tag">23</span></span></a></li><li><a class="level is-mobile" href="/categories/boostcamp/Peer-Session/"><span class="level-start"><span class="level-item">Peer Session</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/boostcamp/Problems/"><span class="level-start"><span class="level-item">Problems</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/boostcamp/week/"><span class="level-start"><span class="level-item">week</span></span><span class="level-end"><span class="level-item tag">53</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%EB%B0%B1%EC%97%94%EB%93%9C/"><span class="level-start"><span class="level-item">백엔드</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/%EB%B0%B1%EC%97%94%EB%93%9C/%EB%A9%94%EC%84%B8%EC%A7%80%ED%81%90/"><span class="level-start"><span class="level-item">메세지큐</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%EC%9D%BC%EC%83%81/"><span class="level-start"><span class="level-item">일상</span></span><span class="level-end"><span class="level-item tag">37</span></span></a><ul><li><a class="level is-mobile" href="/categories/%EC%9D%BC%EC%83%81/TIL/"><span class="level-start"><span class="level-item">TIL</span></span><span class="level-end"><span class="level-item tag">36</span></span></a></li><li><a class="level is-mobile" href="/categories/%EC%9D%BC%EC%83%81/%EA%B3%84%ED%9A%8D/"><span class="level-start"><span class="level-item">계획</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-16T01:11:47.000Z">2022-03-16</time></p><p class="title"><a href="/2022/03/16/boostcamp/week/week9/CNN-7/">부스트 캠프 ai tech 9주 3일차 Multi-modal Learning</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/boostcamp/week/">week</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-15T16:00:37.000Z">2022-03-16</time></p><p class="title"><a href="/2022/03/16/boostcamp/Dairy/week9-day2-review/">week9-day2-review</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/%EC%9D%BC%EC%83%81/">일상</a> / <a href="/categories/%EC%9D%BC%EC%83%81/TIL/">TIL</a> / <a href="/categories/boostcamp/Dairy/">Dairy</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-15T01:35:12.000Z">2022-03-15</time></p><p class="title"><a href="/2022/03/15/boostcamp/Dairy/Week9-Day1/">Week9 - Day 1 Review</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/%EC%9D%BC%EC%83%81/">일상</a> / <a href="/categories/%EC%9D%BC%EC%83%81/TIL/">TIL</a> / <a href="/categories/boostcamp/Dairy/">Dairy</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-14T01:15:18.000Z">2022-03-14</time></p><p class="title"><a href="/2022/03/14/boostcamp/week/week9/CNN-6/">부스트 캠프 ai tech 9주 2일차 Conditional Generative Model</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/boostcamp/week/">week</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-14T00:27:09.000Z">2022-03-14</time></p><p class="title"><a href="/2022/03/14/boostcamp/week/week9/CNN-5/">부스트 캠프 ai tech 9주 1일차 Instance &amp; Panoptic Segmantation</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/boostcamp/week/">week</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">3월 2022</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/02/"><span class="level-start"><span class="level-item">2월 2022</span></span><span class="level-end"><span class="level-item tag">34</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/01/"><span class="level-start"><span class="level-item">1월 2022</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">10월 2021</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">9월 2021</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">8월 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Ai-Math/"><span class="tag">Ai Math</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ai-serving/"><span class="tag">Ai serving</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CNN/"><span class="tag">CNN</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CNN-Viz/"><span class="tag">CNN Viz</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CV/"><span class="tag">CV</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Data-visualization/"><span class="tag">Data visualization</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DeepLearning/"><span class="tag">DeepLearning</span><span class="tag">21</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Docker/"><span class="tag">Docker</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Function/"><span class="tag">Function</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GAN/"><span class="tag">GAN</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Generative-Model/"><span class="tag">Generative Model</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Instance-Segmentation/"><span class="tag">Instance Segmentation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LandMark-Detection/"><span class="tag">LandMark Detection</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Multi-modal/"><span class="tag">Multi-modal</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Object-Detection/"><span class="tag">Object Detection</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Project-product/"><span class="tag">Project product</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pytorch-Lightning/"><span class="tag">Pytorch Lightning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Semantic-Segmentation/"><span class="tag">Semantic Segmentation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Sequencial-Model/"><span class="tag">Sequencial Model</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VAE/"><span class="tag">VAE</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/backend/"><span class="tag">backend</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cs/"><span class="tag">cs</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/database/"><span class="tag">database</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/message/"><span class="tag">message</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/network/"><span class="tag">network</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/os/"><span class="tag">os</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pytorch/"><span class="tag">pytorch</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week1/"><span class="tag">week1</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week2/"><span class="tag">week2</span><span class="tag">15</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week3/"><span class="tag">week3</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week4/"><span class="tag">week4</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week5/"><span class="tag">week5</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week6/"><span class="tag">week6</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week8/"><span class="tag">week8</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week9/"><span class="tag">week9</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EC%9D%BC%EC%83%81/"><span class="tag">일상</span><span class="tag">36</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/"><span class="tag">자료구조</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%ED%95%A0%EC%9D%BC/"><span class="tag">할일</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">업데이트 소식 받기</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="KyuBum&#039;s Dev Blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 KyuBum Shin</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="맨 위로" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "이 웹 사이트는 귀하의 경험을 향상시키기 위해 Cookie를 사용합니다.",
+          dismiss: "무시",
+          allow: "허용",
+          deny: "거부",
+          link: "더 알아보기",
+          policy: "Cookie 정책",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="입력 하세요..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"입력 하세요...","untitled":"(제목 없음)","posts":"포스트","pages":"페이지","categories":"카테고리","tags":"태그"});
+        });</script></body></html>

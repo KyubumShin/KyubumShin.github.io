@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>카테고리: boostcamp - KyuBum&#039;s Dev Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="KyuBum Shin"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="KyuBum Shin"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="KyuBum&#039;s Dev Blog"><meta property="og:url" content="https://kyubumshin.github.io/"><meta property="og:site_name" content="KyuBum&#039;s Dev Blog"><meta property="og:locale" content="ko_KR"><meta property="og:image" content="https://kyubumshin.github.io/img/og_image.png"><meta property="article:author" content="KyuBum Shin"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://kyubumshin.github.io"},"headline":"KyuBum's Dev Blog","image":["https://kyubumshin.github.io/img/og_image.png"],"author":{"@type":"Person","name":"KyuBum Shin"},"publisher":{"@type":"Organization","name":"KyuBum's Dev Blog","logo":{"@type":"ImageObject","url":"https://kyubumshin.github.io/img/logo.svg"}},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="KyuBum&#039;s Dev Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-9-tablet is-9-desktop is-9-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">카테고리</a></li><li class="is-active"><a href="#" aria-current="page">boostcamp</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-08T00:55:23.000Z" title="2022. 2. 8. 오전 9:55:23">2022-02-08</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-11T14:27:14.769Z" title="2022. 2. 11. 오후 11:27:14">2022-02-11</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">3분안에 읽기 (약 391 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/08/boostcamp/week/week4/DL-basic-3/">부스트 캠프 ai tech 4주 2일차 DL Basic (3)</a></h1><div class="content"><hr>
+<h2 id="Convolution-Neural-Network-CNN"><a href="#Convolution-Neural-Network-CNN" class="headerlink" title="Convolution Neural Network (CNN)"></a>Convolution Neural Network (CNN)</h2><ul>
+<li>시각적 데이터르 분석하는데 사용되는 인공신경망</li>
+<li>CNN은 크게 Convolution Layer, Pooling Layer, (Fully Cunnect Layer)로 구성된다</li>
+</ul>
+<center>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Typical_cnn.png" alt="" width="500px"/>
+
+</center>
+
+
+<h3 id="Convolution-layer"><a href="#Convolution-layer" class="headerlink" title="Convolution layer"></a>Convolution layer</h3><ul>
+<li>합성곱 연산이 진행되는 레이어</li>
+<li>parameter의 수는 $kernel_size \times Channel_in \times Channel_out$으로 계산된다</li>
+<li>이미지 처리를 할 시에 Fully Connected Layer보다 parameter 수가 월등하게 적다</li>
+<li>실제 연산 이미지  </li>
+</ul>
+<center>
+
+<img src="/img/Convolution_schematic.gif" alt="" width="500px"/>
+
+</center>
+
+<ul>
+<li>input과 output의 크기는 아래와 같이 계산된다</li>
+<li>input : $(N, C_{in}, H_{in}, W_{in})$ </li>
+<li>output : $(N, C_{out}, H_{out}, W_{out})$</li>
+<li>stride : 연산이 이루어지는 간격</li>
+<li>padding : 차원을 확장시켜 convolution 연산후에도 크기가 일정하게 유지되도록 한다</li>
+<li>kernel : convolution 연산을 하는 주체, filter이기도 하다</li>
+<li>N : batch size</li>
+<li>C : Channel 수</li>
+<li>W : 연산될 Matrix의 가로 길이</li>
+<li>H : 연산될 Matrix의 세로 길이</li>
+</ul>
+<h3 id="Pooling-Layer"><a href="#Pooling-Layer" class="headerlink" title="Pooling Layer"></a>Pooling Layer</h3><ul>
+<li>일정 범위안의 값들을 대표하는 하나의 값으로 압축하는 down sampling 기법</li>
+<li>W와 H을 줄여서 차원을 축소하고, 연산에 필요한 parameter 수를 줄인다.</li>
+</ul>
+<center>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Max_pooling.png" alt="Max Pooling" width="500px"/>
+
+</center>
+
+<h3 id="1x1-Convolution"><a href="#1x1-Convolution" class="headerlink" title="1x1 Convolution"></a>1x1 Convolution</h3><ul>
+<li>kernel size가 1,1인 convolution 연산을 하는것</li>
+<li>input, output의 W, H는 일정하지만 channel수가 감소한다.</li>
+<li>WHY?  <ul>
+<li>channel 수를 줄여서 차원축소를 시키고, 추후에 연산에 필요한 parameter 수를 줄인다</li>
+</ul>
+</li>
+</ul>
+<p>$$<br>H_{out} = \left[ \frac{H_{in} + 2 \times \operatorname{padding[0]} - \operatorname{kernel_size[0]}}{\operatorname{stride}[0]} +1 \right]<br>$$</p>
+<p>$$<br>W_{out} = \left[ \frac{W_{in} + 2 \times \operatorname{padding[1]} - \operatorname{kernel_size[1]}}{\operatorname{stride}[1]} +1 \right]<br>$$</p>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+<li>[By Aphex34 - Own work, CC BY-SA 4.0, <a target="_blank" rel="noopener" href="https://commons.wikimedia.org/w/index.php?curid=45679374%5D">https://commons.wikimedia.org/w/index.php?curid=45679374]</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-07T02:58:04.000Z" title="2022. 2. 7. 오전 11:58:04">2022-02-07</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-11T12:24:08.204Z" title="2022. 2. 11. 오후 9:24:08">2022-02-11</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/%EC%9D%BC%EC%83%81/">일상</a><span> / </span><a class="link-muted" href="/categories/%EC%9D%BC%EC%83%81/TIL/">TIL</a><span> / </span><a class="link-muted" href="/categories/boostcamp/Dairy/">Dairy</a></span><span class="level-item">1분안에 읽기 (약 130 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/07/boostcamp/Dairy/Week4-Day1-Review/">Week4 - Day1 Review</a></h1><div class="content"><hr>
+<h2 id="1-오늘-하루-한-것"><a href="#1-오늘-하루-한-것" class="headerlink" title="1. 오늘 하루 한 것"></a>1. 오늘 하루 한 것</h2><ul>
+<li>강의<ul>
+<li>MLP, Optimization</li>
+</ul>
+</li>
+<li>정리<ul>
+<li>MLP, Optimization</li>
+</ul>
+</li>
+<li>과제<ul>
+<li>MLP, Optimization</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-피어세션에서-한-것"><a href="#2-피어세션에서-한-것" class="headerlink" title="2. 피어세션에서 한 것"></a>2. 피어세션에서 한 것</h2><ul>
+<li>FQ<ul>
+<li>Regression Task, Classification Task, Probabilistic Task의 Loss 함수(or 클래스)는 Pytorch에서 어떻게 구현이 되어있을까요?<br>* </li>
+<li>올바르게(?) cross-validation을 하기 위해서는 어떻 방법들이 존재할까요?<ul>
+<li>sklearn.model_selection.StratifiedKFold</li>
+</ul>
+</li>
+<li>Time series의 경우 일반적인 k-fold cv를 사용해도 될까요?<ul>
+<li>nested CV</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-내일-할-것"><a href="#3-내일-할-것" class="headerlink" title="3. 내일 할 것"></a>3. 내일 할 것</h2><ul>
+<li>CNN, RNN 강의</li>
+</ul>
+<h2 id="4-하루-느낀점"><a href="#4-하루-느낀점" class="headerlink" title="4. 하루 느낀점"></a>4. 하루 느낀점</h2><ul>
+<li>오늘은 열심히 한것같다</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-07T02:56:12.000Z" title="2022. 2. 7. 오전 11:56:12">2022-02-07</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-08T00:56:28.320Z" title="2022. 2. 8. 오전 9:56:28">2022-02-08</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">8분안에 읽기 (약 1230 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/07/boostcamp/week/week4/DL-basic-2/">부스트 캠프 ai tech 4주 1일차 DL Basic (2)</a></h1><div class="content"><hr>
+<h2 id="들어가기-전에"><a href="#들어가기-전에" class="headerlink" title="들어가기 전에"></a>들어가기 전에</h2><h3 id="Generalization"><a href="#Generalization" class="headerlink" title="Generalization"></a>Generalization</h3><ul>
+<li>이 모델이 얼마나 일반적인지를 나타내는 지표</li>
+<li>보통 train loss와 test loss간의 차이를 말한다</li>
+<li>Generalization Gap이 작을수록 일반적인 모델이라고 한다 </li>
+</ul>
+<hr>
+<h3 id="Overfitting-amp-Underfitting"><a href="#Overfitting-amp-Underfitting" class="headerlink" title="Overfitting &amp; Underfitting"></a>Overfitting &amp; Underfitting</h3><ul>
+<li>Overfitting<ul>
+<li>과적합. 학습데이터에 대해서는 잘 예측하지만, test데이터에 대해서는 잘 예측하지 못하는 형태. </li>
+</ul>
+</li>
+<li>Underfitting<ul>
+<li>학습데이터와 test데이터 둘 다 제대로 예측하지 못하는 형태.</li>
+</ul>
+</li>
+</ul>
+<center>
+
+<img src="/img/Overfitted_Data.png" alt="" width="500px"/>
+
+</center>
+
+<hr>
+<h3 id="Cross-Vaildation"><a href="#Cross-Vaildation" class="headerlink" title="Cross Vaildation"></a>Cross Vaildation</h3><ul>
+<li>Cross vaildation<ul>
+<li>train Data를 균등하게 나눠서 학습을 시켜 최적의 hyperparameter를 찾는 방법</li>
+</ul>
+</li>
+</ul>
+<h3 id="Bias-amp-Variance"><a href="#Bias-amp-Variance" class="headerlink" title="Bias &amp; Variance"></a>Bias &amp; Variance</h3><ul>
+<li>Bias<ul>
+<li>편향</li>
+</ul>
+</li>
+<li>Variance<ul>
+<li>분산</li>
+</ul>
+</li>
+</ul>
+<h3 id="Boostrapping-기법"><a href="#Boostrapping-기법" class="headerlink" title="Boostrapping 기법"></a>Boostrapping 기법</h3><ul>
+<li>Bootstrapping<ul>
+<li>통계학적으로 resampling을 통해 표본들의 추정치를 예측하는 기법</li>
+<li>train dataset을 다시 sampling을 해서 만든 여러가지 data로 모델들을 학습시키는것을 Bootstrapping이라고 한다</li>
+</ul>
+</li>
+<li>Bagging<ul>
+<li>Bootstrapping aggregating</li>
+<li>여러 모델들을 bootstrapping을 통하여 학습시키고, 그 나온 결과값의 평균을 내는 방법</li>
+<li>일반적으로 Ensemble 이라고 부른다</li>
+</ul>
+</li>
+<li>Boosting<ul>
+<li>여러개의 모델들을 학습시켜서 Sequential하게 이어 예측하는 방법</li>
+</ul>
+</li>
+</ul>
+<center>
+
+<img src="https://miro.medium.com/max/783/0*otyOVi3MATrv1VIY.png" alt="Bootstrapping" width="600px"/>
+
+</center>
+
+<hr>
+<h3 id="Gradient-Descent-Methods"><a href="#Gradient-Descent-Methods" class="headerlink" title="Gradient Descent Methods"></a>Gradient Descent Methods</h3><ul>
+<li>(Stochastic) gradient descent<ul>
+<li>하나의 데이터 샘플로 Gradient를 업데이트 하는 방식</li>
+</ul>
+</li>
+<li>Minibatch Gradient Descent<ul>
+<li>일부의 데이터 샘플로 Gradient를 업데이트 하는 방식</li>
+</ul>
+</li>
+<li>Batch Gradient Descent<ul>
+<li>전체의 데이터로 Gradient를 업데이트 하는 방식</li>
+</ul>
+</li>
+<li>데이터의 전체 크기가 커진 현재로써 Batch Gradient는 하드웨어 한계와 연산속도가  Minibatch에 비해 느려서 현재는 대부분 Minibatch 형식으로 학습을 진행한다  </li>
+</ul>
+<h3 id="Batch-Size"><a href="#Batch-Size" class="headerlink" title="Batch Size"></a>Batch Size</h3><ul>
+<li>large batch -&gt; sharp Minimum</li>
+<li>small batch -&gt; Flat minimun</li>
+</ul>
+<center>
+
+<img src="/img/minimum.PNG" alt="Batch Size" width="600px"/>
+
+</center>
+
+<hr>
+<h2 id="Optimization"><a href="#Optimization" class="headerlink" title="Optimization"></a>Optimization</h2><ol>
+<li>(Stochastic) Gradient descent<ul>
+<li>일반적인(확률적) 경사하강법</li>
+<li>$\gamma$ : learning rate</li>
+<li>$W$ : weight</li>
+<li>$g$ : gradient<br>$$<br>W_{t+1} \leftarrow W_{t} - \gamma g_{t}<br>$$</li>
+</ul>
+</li>
+<li>Momentum<ul>
+<li>경사하강법에 관성을 부여한 방법  </li>
+<li>전에 이동한 정보를 조금 더해서 Gradient를 업데이트 하는 방법<br>$$<br>\begin{aligned}<br>a_{t+1} &amp;\leftarrow \beta a_{t} + g_{t}\\<br>W_{t+1} &amp;\leftarrow W_{t} - \gamma a_{t+1}<br>\end{aligned}<br>$$</li>
+</ul>
+</li>
+<li>Nesterov Accelerate Gradient<ul>
+<li>Momentum과 비슷하지만 순서가 다르다</li>
+<li>$a$ 방향으로 이동 한 뒤 위치에서 gradient를 계산 후 업데이트한다</li>
+<li>Momentum 보다 minimum에 수렴하는 속도가 빠르다<br>$$<br>\begin{aligned}<br>a_{t+1} &amp;\leftarrow \beta a_{t} + \nabla\mathcal{L} (W_{t} - \gamma g_{t})\\<br>W_{t+1} &amp;\leftarrow W_{t} - \gamma a_{t+1}<br>\end{aligned}<br>$$</li>
+</ul>
+</li>
+<li>Adagrad<ul>
+<li>parameter의 변한 값에 대해서 영향을 받는다</li>
+<li>$G_{t}$ : gradient 제곱합</li>
+<li>적게 변한 parameter는 크게, 크게변한 parameter는 작게 변환한다</li>
+<li>$G_{t}$ 가 계속 커지기 때문에 학습이 길어지면 잘 학습되지 않는다</li>
+<li>$G_{t}$ 또한 계속 저장해야하기 때문에 학습이 길어지면 resource 소모가 크다<br>$$<br>W_{t+1} \leftarrow W_{t} - \frac{\gamma}{\sqrt{G_{t}+\epsilon}} g_{t}<br>$$</li>
+</ul>
+</li>
+<li>Adadelta<ul>
+<li>Adagrad에서 $G_{t}$ 가 무한하게 커지는것을 방지한 학습법</li>
+<li>Weight에 관여하는 Learning rate가 존재하지 않는다<ul>
+<li>hyperparameter가 적어서 잘 사용되지 않았다</li>
+</ul>
+</li>
+<li>$G_{t}$ : EMA of gradient squares</li>
+<li>$H_{t}$ : EMA of difference squares</li>
+<li>EMA : Exponential Moving Average 지수이동평균</li>
+<li>$\alpha$ : ema 가중치  </li>
+</ul>
+</li>
+</ol>
+<p>$$<br>\begin{aligned}<br>G_{t+1} &amp;\leftarrow \alpha G_{t}  + (1-\alpha) g^{2}_{t}\\<br>W_{t+1} &amp;\leftarrow W_{t} - \frac{\sqrt{H_{t-1}+\epsilon}}{\sqrt{G_{t}+\epsilon}} g_{t}\\<br>H_{t+1} &amp;\leftarrow \alpha H_{t} + (1-\alpha)(\Delta W_{t})^2<br>\end{aligned}<br>$$</p>
+<ol start="6">
+<li>RMSprop<ul>
+<li>EMA of gradient squares + Learning rate</li>
+<li>해봤는데 잘되었다  </li>
+</ul>
+</li>
+</ol>
+<p>$$<br>\begin{aligned}<br>G_{t+1} &amp;\leftarrow \alpha G_{t}  + (1-\alpha) g^{2}_{t}\\<br>W_{t+1} &amp;\leftarrow W_{t} - \frac{\gamma}{\sqrt{G_{t}+\epsilon}} g_{t}<br>\end{aligned}<br>$$</p>
+<ol start="7">
+<li>Adam<ul>
+<li>RMSprop + Momentum</li>
+<li>현재 가장 많이 쓰이고있는 계열의 optimizer</li>
+<li>AdamW, RAdam, AdamL등 여러가지 variation이 존재한다  </li>
+</ul>
+</li>
+</ol>
+<p>$$<br>\begin{aligned}<br>m_{t+1} &amp;\leftarrow \beta_{1} m_{t}  + (1-\beta_{1}) g_{t}\\<br>v_{t+1} &amp;\leftarrow \beta_{2} m_{t}  + (1-\beta_{2}) v_{t}\\<br>W_{t+1} &amp;\leftarrow W_{t} - \frac{\gamma}{\sqrt{v_{t}+\epsilon}}\frac{\sqrt{1-\beta^{t}_{2}}}{1-\beta_{1}^{t}} g_{t}<br>\end{aligned}<br>$$</p>
+<hr>
+<h2 id="Regularzation"><a href="#Regularzation" class="headerlink" title="Regularzation"></a>Regularzation</h2><ul>
+<li>일반화가 잘 되도록 데이터나 parameter에 규제를 하는 방법</li>
+</ul>
+<ol>
+<li>Earlystopping<ul>
+<li>overfitting을 방지하기 위해서 중간에 학습을 멈추는것</li>
+<li>모델을 평가하기 위한 vaildation Dataset이 필요하다</li>
+</ul>
+</li>
+<li>Parameter norm penalty<ul>
+<li>파라미터가 일정이상 커지는것을 방지하는 기법</li>
+</ul>
+</li>
+<li>Data augmentation<ul>
+<li>데이터 수를 늘리기 위해 하는 기법</li>
+<li>데이터에 종류에 따라 augmentation을 잘 선택해서 반영해야한다</li>
+</ul>
+</li>
+<li>Noise robustness<ul>
+<li>입력 데이터나, weight에 noise를 추가하는 기법</li>
+</ul>
+</li>
+<li>Label smoothing<ul>
+<li>데이터의 경계를 흐리게 하여 강건성을 높이는 방법</li>
+<li>Mix-up<ul>
+<li>두 사진을 섞어서 섞은 비율만큼 다시 라벨링 하는 방법</li>
+</ul>
+</li>
+<li>Cutout<ul>
+<li>일부분을 잘라서 제거하는 방법</li>
+</ul>
+</li>
+<li>CutMix<ul>
+<li>일부분을 자른뒤 다른 label을 추가하는 방법</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Dropout<ul>
+<li>랜덤하게 일부 Neural을 비활성화 하는 방법</li>
+</ul>
+</li>
+<li>Batch normalization<ul>
+<li>따로 포스팅 예정</li>
+</ul>
+</li>
+</ol>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+<li><a target="_blank" rel="noopener" href="https://python.plainenglish.io/adaboost-classifier-in-python-8d34a9f20459">Bootstrapping Image</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Overfitting">Overfitting &amp; Underfitting Image</a></li>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1609.04836.pdf">On Large-Batch Training for Deep Learning: Generalization Gap and Sharp Minima</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-07T00:10:03.000Z" title="2022. 2. 7. 오전 9:10:03">2022-02-07</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-07T02:55:29.278Z" title="2022. 2. 7. 오전 11:55:29">2022-02-07</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">2분안에 읽기 (약 301 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/07/boostcamp/week/week4/DL-basic-1/">부스트 캠프 ai tech 4주 1일차 DL Basic (1)</a></h1><div class="content"><hr>
+<h2 id="Linear-Neural-Networks"><a href="#Linear-Neural-Networks" class="headerlink" title="Linear Neural Networks"></a>Linear Neural Networks</h2><ul>
+<li>Data $(x_{i}, y_{i})^{N}_{i=1}$ 가 존재 할 때 $x$에 대해서 $\hat{y}$ 연산하는 선형연산함수</li>
+<li>$\hat{y}=Wx + b$</li>
+<li>$x$ : 데이터, $y$ : 라벨</li>
+<li>경사하강법으로 y에 가까운 값을 계산하는 $W$와 $b$를 찾는다</li>
+</ul>
+<hr>
+<h2 id="Multi-Layer-Perceptron-MLP"><a href="#Multi-Layer-Perceptron-MLP" class="headerlink" title="Multi Layer Perceptron(MLP)"></a>Multi Layer Perceptron(MLP)</h2><ul>
+<li>위의 Neural Network가 여러층에 걸쳐서 쌓여있는 형태</li>
+<li>Layer 사이에 Non Linear transform을 한다<ul>
+<li>선형연산을 2번연속으로 하는것은 연산을 한번 하는 것과 똑같다</li>
+<li>$W_{1}W_{2}x = W_{1,2}x$</li>
+</ul>
+</li>
+<li>NonLinear transform의 역활을 해주는것이 Activation Functions이다</li>
+<li>최근에는 대부분 ReLU 계열의 Activation Function이 쓰인다</li>
+<li><a href="/2022/01/22/DL/Basic/activate-function/" title="자주 쓰이는 Activation functions">자주 쓰이는 Activation functions</a></li>
+<li>Target $y$와 출력물 $\hat{y}$의 차이를 계산하는 loss function을 문제에 따라 잘 선택하여 사용하는 테크닉 또한 필요하다</li>
+</ul>
+<hr>
+<h2 id="그-외-내용"><a href="#그-외-내용" class="headerlink" title="그 외 내용"></a>그 외 내용</h2><ul>
+<li>이론적으로 1개의 hidden layer로 대부분의 원하는 target값의 근사할 수 있다<ul>
+<li>라고 하지만 이것은 매우 어렵다</li>
+<li>그만큼 Neural Network의 표현력이 좋다라는 뜻으로 받아드리는게 더 좋다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-05T13:34:24.000Z" title="2022. 2. 5. 오후 10:34:24">2022-02-05</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-06T12:59:41.497Z" title="2022. 2. 6. 오후 9:59:41">2022-02-06</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">2분안에 읽기 (약 369 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/05/boostcamp/week/week3/data-viz-9/">부스트 캠프 ai tech 3주 2일차 Data 시각화 (9)</a></h1><div class="content"><hr>
+<h2 id="Grid"><a href="#Grid" class="headerlink" title="Grid"></a>Grid</h2><ul>
+<li>축과 평행한 선을 사용하여 거리 및 값 등을 보조적으로 알려준다</li>
+<li>색은 최대한 방해하지 않도록 무채색을 사용한다</li>
+<li>Layer상 항상 맨 아래 오도록 zorder를 0으로 조정</li>
+<li>axis를 이용해서 x, y축 또는 동시에 격자를 보이게 할 수 있다</li>
+<li>which 를 이용하여 큰격자, 세부격자 등을 보이게 할 수 있다</li>
+</ul>
+<hr>
+<h2 id="추가적인-보조-처리"><a href="#추가적인-보조-처리" class="headerlink" title="추가적인 보조 처리"></a>추가적인 보조 처리</h2><ul>
+<li>보조선 긋기<ul>
+<li>axvline(), axhline()으로 수평선을 그을 수 있다</li>
+<li>axvline(start, color, linestyle, zorder, alpha)</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>start : 선을 그어질 point</li>
+<li>color : 색</li>
+<li>linestyle : 선 스타일</li>
+<li>zorder : z축 순서</li>
+<li>alpha : 투명도 조절</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">drow_graph</span>(<span class="params">x, y, d, function_name, y_lim, x_lim, minmax</span>):</span></span><br><span class="line">    fig, ax = plt.subplots(<span class="number">1</span>, <span class="number">2</span>, figsize=(<span class="number">16</span>, <span class="number">4</span>))</span><br><span class="line"></span><br><span class="line">    ax[<span class="number">0</span>].plot(x, y)</span><br><span class="line">    ax[<span class="number">0</span>].set_title(<span class="string">f&quot;<span class="subst">&#123;function_name&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    ax[<span class="number">1</span>].plot(x, d)</span><br><span class="line">    ax[<span class="number">1</span>].set_title(<span class="string">f&quot;<span class="subst">&#123;function_name&#125;</span> (Derivative)&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> minmax:</span><br><span class="line">        ax[<span class="number">0</span>].axhline(<span class="built_in">max</span>(y), color=<span class="string">&quot;red&quot;</span>, linestyle=<span class="string">&quot;--&quot;</span>, zorder=<span class="number">1</span>)</span><br><span class="line">        ax[<span class="number">0</span>].axhline(<span class="built_in">min</span>(y), color=<span class="string">&quot;blue&quot;</span>, linestyle=<span class="string">&quot;--&quot;</span>, zorder=<span class="number">1</span>)</span><br><span class="line">        ax[<span class="number">1</span>].axhline(<span class="built_in">max</span>(d), color=<span class="string">&quot;red&quot;</span>, linestyle=<span class="string">&quot;--&quot;</span>, zorder=<span class="number">1</span>, xmax=<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line">        ax[i].axvline(<span class="number">0</span>, color=<span class="string">&quot;gray&quot;</span>, linestyle=<span class="string">&quot;-&quot;</span>, zorder=<span class="number">0</span>)</span><br><span class="line">        ax[i].axhline(<span class="number">0</span>, color=<span class="string">&quot;gray&quot;</span>, linestyle=<span class="string">&quot;-&quot;</span>, zorder=<span class="number">0</span>)</span><br><span class="line">        ax[i].set_xlim(x_lim)</span><br><span class="line">        ax[i].set_ylim(y_lim)</span><br><span class="line">        ax[i].spines[<span class="string">&#x27;top&#x27;</span>].set_visible(<span class="literal">False</span>)</span><br><span class="line">        ax[i].spines[<span class="string">&#x27;right&#x27;</span>].set_visible(<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+<center>
+
+<img src="/img/more1.PNG" alt="" width="700px"/>
+
+</center>
+
+
+<ul>
+<li>보조 면 추가하기<ul>
+<li>axvspan(), axhspan()으로 영역에 색을 칠할 수 있다</li>
+<li>axvspan(start, color, linestyle, zorder, alpha)</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>start : 시작 point</li>
+<li>end : 끝 지점</li>
+<li>color : 색</li>
+<li>linestyle : 경계 스타일</li>
+<li>zorder : z축 순서</li>
+<li>alpha : 투명도 조절  </li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fig, ax = plt.subplots()</span><br><span class="line"></span><br><span class="line">ax.set_aspect(<span class="number">1</span>)</span><br><span class="line">ax.axvspan(<span class="number">0</span>,<span class="number">0.5</span>, color=<span class="string">&#x27;red&#x27;</span>)</span><br><span class="line">ax.axhspan(<span class="number">0</span>,<span class="number">0.5</span>, color=<span class="string">&#x27;green&#x27;</span>)</span><br><span class="line"></span><br><span class="line">ax.set_xlim(-<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">ax.set_ylim(-<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<center>
+
+<img src="/img/more2.PNG" alt="" width="300px"/>
+
+</center>
+
+
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-04T06:00:16.000Z" title="2022. 2. 4. 오후 3:00:16">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-06T12:14:47.346Z" title="2022. 2. 6. 오후 9:14:47">2022-02-06</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">4분안에 읽기 (약 631 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/boostcamp/week/week3/data-viz-8/">부스트 캠프 ai tech 3주 2일차 Data 시각화 (8)</a></h1><div class="content"><hr>
+<h2 id="Facet"><a href="#Facet" class="headerlink" title="Facet"></a>Facet</h2><ul>
+<li>분할을 의미한다</li>
+<li>화면상에 view를 분할하여 큰틀에서는 볼 수 없는 부분집합을 세세하게 보여줄 수 있다.</li>
+</ul>
+<h3 id="1-Figure-amp-Axes"><a href="#1-Figure-amp-Axes" class="headerlink" title="1. Figure &amp; Axes"></a>1. Figure &amp; Axes</h3><ul>
+<li>Figure는 그래프가 들어가는 큰 틀, Axes는 각 plot이 들어가는 공간을 말한다.</li>
+<li>Figure는 항상 1개, Axes는 여러개가 존재할 수 있다.</li>
+<li>아래의 함수들로 N by M 의 Axes(subplot)들을 만들 수 있다.<ul>
+<li>plt.subplot()</li>
+<li>plt.figure() + fig.add_subplot()</li>
+<li>plt.subplots()</li>
+</ul>
+</li>
+<li>sharex, sharey를 통해 subplot끼리의 x축, y축의 범위를 통일 할 수 있다</li>
+<li>squeeze를 False로 지정해서 subplot의 index를 n by m Matrix로 바꿀 수 있다.<ul>
+<li>기본으로 True이기 때문에 1차원 배열로 나오게 된다</li>
+</ul>
+</li>
+<li>aspect을 통해서 눈금간의 간격의 길이를 설정 할 수 있다  </li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fig = plt.figure(figsize=(<span class="number">12</span>, <span class="number">5</span>))</span><br><span class="line">ax1 = fig.add_subplot(<span class="number">121</span>, aspect=<span class="number">1</span>)</span><br><span class="line">ax2 = fig.add_subplot(<span class="number">122</span>, aspect=<span class="number">0.5</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<center>
+
+<img src="/img/facet1.PNG" alt="" width="500px"/>
+
+</center>
+
+
+<h3 id="2-Grid-spec"><a href="#2-Grid-spec" class="headerlink" title="2. Grid spec"></a>2. Grid spec</h3><ul>
+<li>css의 그리드 처럼 동일 크기 분할이 아닌 다양한 크기의 그래프를 그리고 싶을때 사용하는 방식이다</li>
+<li>add_subplot<ul>
+<li>numpy의 slicing과 비슷하게 사용이 가능하다  </li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">fig = plt.figure(figsize=(<span class="number">8</span>, <span class="number">5</span>))</span><br><span class="line">gs = fig.add_gridspec(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">ax = [<span class="literal">None</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>)]</span><br><span class="line"></span><br><span class="line">ax[<span class="number">0</span>] = fig.add_subplot(gs[<span class="number">0</span>, :<span class="number">2</span>]) </span><br><span class="line">ax[<span class="number">0</span>].set_title(<span class="string">&#x27;gs[0, :]&#x27;</span>)</span><br><span class="line"></span><br><span class="line">ax[<span class="number">1</span>] = fig.add_subplot(gs[<span class="number">0</span>:, -<span class="number">1</span>])</span><br><span class="line">ax[<span class="number">1</span>].set_title(<span class="string">&#x27;gs[0, -1]&#x27;</span>)</span><br><span class="line"></span><br><span class="line">ax[<span class="number">2</span>] = fig.add_subplot(gs[<span class="number">1</span>:<span class="number">3</span>, <span class="number">0</span>:<span class="number">2</span>])</span><br><span class="line">ax[<span class="number">2</span>].set_title(<span class="string">&#x27;gs[-1, 0]&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ix <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">    ax[ix].set_xticks([])</span><br><span class="line">    ax[ix].set_yticks([])</span><br><span class="line"></span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<center>
+
+<img src="/img/facet2.PNG" alt="" width="500px"/>
+
+</center>
+
+<ul>
+<li>subplot2grid((shape), (y, x), colspan = dx, rowspan = dy)<ul>
+<li>shape를 통해 그리고자하는 grid를 설정</li>
+<li>y, x : 시작하고자하는 좌표값</li>
+<li>colspan, rawspan : 할당하고자 하는 가로 세로 길이  </li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">fig = plt.figure(figsize=(<span class="number">8</span>, <span class="number">5</span>))</span><br><span class="line">ax = [<span class="literal">None</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">6</span>)]</span><br><span class="line"></span><br><span class="line">ax[<span class="number">0</span>] = plt.subplot2grid((<span class="number">3</span>,<span class="number">4</span>), (<span class="number">0</span>,<span class="number">0</span>), colspan=<span class="number">4</span>)</span><br><span class="line">ax[<span class="number">1</span>] = plt.subplot2grid((<span class="number">3</span>,<span class="number">4</span>), (<span class="number">1</span>,<span class="number">0</span>), colspan=<span class="number">2</span>)</span><br><span class="line">ax[<span class="number">2</span>] = plt.subplot2grid((<span class="number">3</span>,<span class="number">4</span>), (<span class="number">1</span>,<span class="number">2</span>), colspan=<span class="number">1</span>)</span><br><span class="line">ax[<span class="number">3</span>] = plt.subplot2grid((<span class="number">3</span>,<span class="number">4</span>), (<span class="number">1</span>,<span class="number">3</span>), colspan=<span class="number">1</span>,rowspan=<span class="number">2</span>)</span><br><span class="line">ax[<span class="number">4</span>] = plt.subplot2grid((<span class="number">3</span>,<span class="number">4</span>), (<span class="number">2</span>,<span class="number">0</span>), colspan=<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ix <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>): </span><br><span class="line">    ax[ix].set_title(<span class="string">&#x27;ax[&#123;&#125;]&#x27;</span>.<span class="built_in">format</span>(ix)) <span class="comment"># make ax title for distinguish:)</span></span><br><span class="line">    ax[ix].set_xticks([]) <span class="comment"># to remove x ticks</span></span><br><span class="line">    ax[ix].set_yticks([]) <span class="comment"># to remove y ticks</span></span><br><span class="line">    </span><br><span class="line">fig.tight_layout()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<center>
+
+<img src="/img/facet3.PNG" alt="" width="500px"/>
+
+</center>
+
+<h3 id="3-insert"><a href="#3-insert" class="headerlink" title="3. insert"></a>3. insert</h3><ul>
+<li>subplot 내부에 subplot을 생성하는 방법이다.</li>
+<li>ax.inset_axes()<ul>
+<li>Ax 내부에 subplot을 추가하는 방법</li>
+<li>메인 시각화를 해치지 않는 선에서 사용하자</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">fig, ax = plt.subplots()</span><br><span class="line"></span><br><span class="line">color=[<span class="string">&#x27;royalblue&#x27;</span>, <span class="string">&#x27;tomato&#x27;</span>]</span><br><span class="line">ax.bar([<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>], [<span class="number">1</span>, <span class="number">2</span>],</span><br><span class="line">       color=color</span><br><span class="line">      )</span><br><span class="line"></span><br><span class="line">ax.margins(<span class="number">0.2</span>)</span><br><span class="line">axin = ax.inset_axes([<span class="number">0.8</span>, <span class="number">0.8</span>, <span class="number">0.2</span>, <span class="number">0.2</span>])</span><br><span class="line">axin.pie([<span class="number">1</span>, <span class="number">2</span>], colors=color, </span><br><span class="line">         autopct=<span class="string">&#x27;%1.0f%%&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<center>
+
+<img src="/img/facet4.PNG" alt="" width="300px"/>
+
+</center>
+
+<ul>
+<li>make_axes_locatable(ax)<ul>
+<li>Ax 사이드에 부가적인 정보를 주는 방법</li>
+<li>보통 colorbar로 많이 사용한다  </li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fig, ax = plt.subplots(<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 이미지를 보여주는 시각화</span></span><br><span class="line"><span class="comment"># 2D 배열을 색으로 보여줌</span></span><br><span class="line">im = ax.imshow(np.arange(<span class="number">100</span>).reshape((<span class="number">10</span>, <span class="number">10</span>)))</span><br><span class="line"></span><br><span class="line">divider = make_axes_locatable(ax)</span><br><span class="line">cax = divider.append_axes(<span class="string">&quot;right&quot;</span>, size=<span class="string">&quot;5%&quot;</span>, pad=<span class="number">0.05</span>)</span><br><span class="line"></span><br><span class="line">fig.colorbar(im, cax=cax)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<center>
+
+<img src="/img/facet5.PNG" alt="" width="300px"/>
+
+</center>
+
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-04T04:54:53.000Z" title="2022. 2. 4. 오후 1:54:53">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-06T12:14:52.335Z" title="2022. 2. 6. 오후 9:14:52">2022-02-06</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">3분안에 읽기 (약 382 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/boostcamp/week/week3/data-viz-7/">부스트 캠프 ai tech 3주 2일차 Data 시각화 (7)</a></h1><div class="content"><hr>
+<h2 id="color"><a href="#color" class="headerlink" title="color"></a>color</h2><ul>
+<li>시각화에서 색을 통해서 효과적으로 채널을 구분할 수 있다</li>
+<li>심미적인 요소 또한 시각화의 일부 요소이다</li>
+<li>전달하고 싶은 내용을 깔끔하게 색을 통해서 전달하는것이 주 목표이다<ul>
+<li>꼭 화려한것이 답은 아니다</li>
+</ul>
+</li>
+</ul>
+<h2 id="Color-Palette"><a href="#Color-Palette" class="headerlink" title="Color Palette"></a>Color Palette</h2><h3 id="1-categorical-color"><a href="#1-categorical-color" class="headerlink" title="1. categorical color"></a>1. categorical color</h3><ul>
+<li>Discrete, Qualitative등의 다양한 이름으로 불린다</li>
+<li>독립된 색상으로 구성되어 범주형 변수에 주로 사용된다</li>
+<li>이산적인 개별값을 나타낼때 적합하다</li>
+</ul>
+<center>
+
+<img src="https://betterfigures.files.wordpress.com/2015/06/categorical.png?w=500&h=250" alt="categorical" width="300px"/>
+
+</center>
+
+<h3 id="2-Sequential-color"><a href="#2-Sequential-color" class="headerlink" title="2. Sequential color"></a>2. Sequential color</h3><ul>
+<li>정렬된 값을 가지는 연속형 변수에 적합나다</li>
+<li>연속적인 색상을 사용하여 표현한다<ul>
+<li>어두운곳에서는 밝은색, 밝은 곳에서는 어두운색을 이용한다.</li>
+</ul>
+</li>
+<li>색상은 단일 색조로 표현하는것이 좋다.</li>
+<li>대표적으로 github commit log의 색이 있다.</li>
+</ul>
+<center>
+
+<img src="https://betterfigures.files.wordpress.com/2015/06/sequential.png" alt="subplot" width="300px"/>
+
+</center>
+
+<h3 id="3-Divergence-color"><a href="#3-Divergence-color" class="headerlink" title="3. Divergence color"></a>3. Divergence color</h3><ul>
+<li>연속형과 유사하지만 중앙을 기준으로 서로 다른색으로 나타난다</li>
+<li>상반된 값을 표현하는데 좋다(기온, 지지율 등)</li>
+</ul>
+<center>
+
+<img src="https://betterfigures.files.wordpress.com/2015/06/diverging.png?w=500&h=250" alt="subplot" width="300px"/>
+
+</center>
+
+<h2 id="그-외에-고려할-점"><a href="#그-외에-고려할-점" class="headerlink" title="그 외에 고려할 점"></a>그 외에 고려할 점</h2><ul>
+<li>다름을 보이기 위한 <code>Highlighting</code>을 색으로 표현 할 수 있다.</li>
+<li>보통 먼 색일수록 차이가 더 크게보이는 색상 대비를 사용한다.</li>
+<li>색약이나 색맹을 가지는 읽는 사람을 위해 색 선택을 고려할 필요가 있다.</li>
+</ul>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+<li><a target="_blank" rel="noopener" href="https://betterfigures.org/2015/06/23/picking-a-colour-scale-for-scientific-graphics/">Sequential color</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-04T01:59:55.000Z" title="2022. 2. 4. 오전 10:59:55">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-06T12:14:56.455Z" title="2022. 2. 6. 오후 9:14:56">2022-02-06</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">2분안에 읽기 (약 311 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/boostcamp/week/week3/data-viz-6/">부스트 캠프 ai tech 3주 2일차 Data 시각화 (6)</a></h1><div class="content"><hr>
+<h2 id="Text"><a href="#Text" class="headerlink" title="Text"></a>Text</h2><ul>
+<li>시각화에 적절한 Text는 시각적인것으로만 전달하기 힘든 설명을 추가하거나 잘못된 전달에서 생기는 오해를 방지 할 수 있다</li>
+<li>하지만 과한 Text는 오히려 방해가 될 수 있으니 주의할 필요가 있다</li>
+</ul>
+<h3 id="1-Anatomy-of-a-Figure"><a href="#1-Anatomy-of-a-Figure" class="headerlink" title="1. Anatomy of a Figure"></a>1. Anatomy of a Figure</h3><ul>
+<li>Title : 그래프의 주제</li>
+<li>Label : 축에 해당되는 데이터 정보</li>
+<li>Tick Lable : 축의 grid의 스케일 정보</li>
+<li>Legend : 한 그래프에서 여러개의 데이터 분류를 위한 보조 정보</li>
+<li>Annotation : 그 외의 시각화를 위한 보조정보</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">코드 추가 필요</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Text-Properties"><a href="#2-Text-Properties" class="headerlink" title="2. Text Properties"></a>2. Text Properties</h3><ol>
+<li><p>font Components</p>
+<ul>
+<li>family : 글씨체</li>
+<li>size or fontsize : 사이즈</li>
+<li>style or fontstyle : 스타일(기울임체 등등)</li>
+<li>weight or fontweight : 두께</li>
+<li><a target="_blank" rel="noopener" href="https://matplotlib.org/stable/gallery/text_labels_and_annotations/fonts_demo.html">matplot Docs Fonts Demo</a></li>
+</ul>
+</li>
+<li><p>Detail</p>
+<ul>
+<li>color : 글씨의 색</li>
+<li>linespacing : 줄간격</li>
+<li>backgroundcolor : 배경색</li>
+<li>alpha : 투명도</li>
+<li>zorder : z축 순서</li>
+<li>visible : 랜더 유무</li>
+</ul>
+</li>
+<li><p>정렬</p>
+<ul>
+<li>ha : horizontal alignment</li>
+<li>va : vertical alignment</li>
+<li>rotation : 가로로 적을지 세로로 적을지 설정</li>
+<li>multialignment : 추가적인 정렬</li>
+</ul>
+</li>
+<li><p>그 외 추가적인 항목</p>
+<ul>
+<li>bbox설정을 통해 text에 box를 만들수 있다.<ul>
+<li><a target="_blank" rel="noopener" href="https://matplotlib.org/stable/gallery/shapes_and_collections/fancybox_demo.html">Drawing fancy boxes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-03T23:07:54.000Z" title="2022. 2. 4. 오전 8:07:54">2022-02-04</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-04T04:55:34.292Z" title="2022. 2. 4. 오후 1:55:34">2022-02-04</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">5분안에 읽기 (약 722 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/04/boostcamp/week/week3/data-viz-4/">부스트 캠프 ai tech 3주 1일차 Data 시각화 (4)</a></h1><div class="content"><hr>
+<h2 id="Lineplot"><a href="#Lineplot" class="headerlink" title="Lineplot"></a>Lineplot</h2><ul>
+<li>연속적으로 변화하는 값을 점으로 나타내고 선으로 연결한 그래프</li>
+</ul>
+<h3 id="1-기본적인-Lineplot"><a href="#1-기본적인-Lineplot" class="headerlink" title="1. 기본적인 Lineplot"></a>1. 기본적인 Lineplot</h3><ul>
+<li>.plot()으로 그래프를 그릴 수 있다</li>
+<li>5개 이하의 선을 사용하는것이 가독성이 좋다<ul>
+<li>색상, 마커, 선의 종류 등으로 선을 구분해서 가독성을 더 끌어 올릴 수 있다.</li>
+<li>color : 색상 지정</li>
+<li>marker : 점의 모양 지정</li>
+<li>linestyle : 선의 종류 지정(solid, dashed, dashdot, dotted, None)</li>
+</ul>
+</li>
+<li>흐름의 파악을 원할하게 하기 위해 smoothing을 사용해서 Noise를 줄인다  </li>
+</ul>
+<h2 id="2-Lineplot의-특징"><a href="#2-Lineplot의-특징" class="headerlink" title="2. Lineplot의 특징"></a>2. Lineplot의 특징</h2><h3 id="1-흐름에-집중하는-그래프"><a href="#1-흐름에-집중하는-그래프" class="headerlink" title="1. 흐름에 집중하는 그래프"></a>1. 흐름에 집중하는 그래프</h3><ul>
+<li>데이터의 흐름을 보기위한 그래프이다<ul>
+<li>그렇기에 bar와 다르게 축을 0에 맞출 필요는 없다</li>
+</ul>
+</li>
+<li>너무 구체적인 정보는 오히려 흐름을 보는데 방해 될 수 있다<ul>
+<li>Grid, Annotate등을 최소한으로 사용한다</li>
+<li>디테일한 정보는 따로 표로 제공하는것도 좋다</li>
+</ul>
+</li>
+<li>생략되지 않는 선에서 범위를 조절해서 표현한다<ul>
+<li>.set_ylim()을 이용하자</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-간격"><a href="#2-간격" class="headerlink" title="2. 간격"></a>2. 간격</h3><ul>
+<li>축의 간격이 다를경우 기울기 정보에서 오해를 일으킬 수 있다. 또한 점과 점 사이를 선으로 연결한 것이기 때문에 실제로 데이터가 없는부분에서 있다고 오해가 가능하다<ul>
+<li>수치형 데이터일 경우 matplot에서 알아서 맞추어준다</li>
+<li>데이터의 위치에 mark를 해서 오해를 줄일 수 있다</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-보간"><a href="#3-보간" class="headerlink" title="3. 보간"></a>3. 보간</h3><ul>
+<li>점과 점사이를 실제 데이터가 없지만 이어서 선으로 만드는 방법</li>
+<li>데이터의 error나 Noise가 포함되어 있을경우 보간을 사용해서 어느정도 보정해 이해를 도울 수 있다.<ul>
+<li>scipy모듈을 이용하여 사용</li>
+</ul>
+</li>
+<li>데이터를 분석할 경우 미세한 차이를 놓치거나, 없는데이터를 있다고 생각하게 할수 있기때문에 EDA에서는 지양하는것이 좋다.</li>
+</ul>
+<h3 id="4-이중-축-사용"><a href="#4-이중-축-사용" class="headerlink" title="4. 이중 축 사용"></a>4. 이중 축 사용</h3><ul>
+<li>한 plot에 대해서 2개의 축을 사용하는 방법</li>
+<li>같은 시간축에서 서로다른 데이터를 표현하기 위해서 쓴다.<ul>
+<li>.twinx()를 사용해서 구현한다</li>
+</ul>
+</li>
+<li>보통 한 데이터에 대한 다른단위 표현을 위해 사용한다<ul>
+<li>.secondary_xaxis(), .secondary_yaxis()를 사용한다</li>
+</ul>
+</li>
+<li>두 데이터에 대해서 이중 축을 사용하는것은 강제로 상관관계를 부여할 수 있으니 지양하고 2개의 plot을 사용하는쪽이 좀 더 가독성 면에서도 좋다</li>
+</ul>
+<h3 id="5-그-외-팁"><a href="#5-그-외-팁" class="headerlink" title="5.그 외 팁"></a>5.그 외 팁</h3><ul>
+<li>라인 끝에 label을 추가하면 식별에 도움이 된다</li>
+<li>주요 포인트에는 annotation을 추가하면 도움이 될 수도 있다</li>
+<li>연한색으로 uncerainty 표현이 가능하다</li>
+</ul>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-03T09:16:54.000Z" title="2022. 2. 3. 오후 6:16:54">2022-02-03</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-03T09:19:32.630Z" title="2022. 2. 3. 오후 6:19:32">2022-02-03</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/%EC%9D%BC%EC%83%81/">일상</a><span> / </span><a class="link-muted" href="/categories/%EC%9D%BC%EC%83%81/TIL/">TIL</a><span> / </span><a class="link-muted" href="/categories/boostcamp/Dairy/">Dairy</a></span><span class="level-item">몇 초안에 읽기 (약 77 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/03/boostcamp/Dairy/Week3-Day1-Review/">Week3 - Day 1 Review</a></h1><div class="content"><hr>
+<h2 id="1-오늘-하루-한-것"><a href="#1-오늘-하루-한-것" class="headerlink" title="1. 오늘 하루 한 것"></a>1. 오늘 하루 한 것</h2><ul>
+<li>강의<ul>
+<li>1, 2강 완료</li>
+</ul>
+</li>
+<li>정리<ul>
+<li>1강 완료, 2강 Barplot</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-피어세션에서-한-것"><a href="#2-피어세션에서-한-것" class="headerlink" title="2. 피어세션에서 한 것"></a>2. 피어세션에서 한 것</h2><ul>
+<li>피어슨 상관계수</li>
+</ul>
+<h2 id="3-내일-할-것"><a href="#3-내일-할-것" class="headerlink" title="3. 내일 할 것"></a>3. 내일 할 것</h2><ul>
+<li>정리 마무리</li>
+<li>3, 4 강의</li>
+</ul>
+<h2 id="4-하루-느낀점"><a href="#4-하루-느낀점" class="headerlink" title="4. 하루 느낀점"></a>4. 하루 느낀점</h2><ul>
+<li>설연휴 좀 쉬었더니 빠르게 정리가 잘 되지 않는다</li>
+<li>쉰다고 많이 못했어….</li>
+</ul>
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/categories/boostcamp/page/3/">이전</a></div><div class="pagination-next"><a href="/categories/boostcamp/page/5/">다음</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/categories/boostcamp/">1</a></li><li><a class="pagination-link" href="/categories/boostcamp/page/2/">2</a></li><li><a class="pagination-link" href="/categories/boostcamp/page/3/">3</a></li><li><a class="pagination-link is-current" href="/categories/boostcamp/page/4/">4</a></li><li><a class="pagination-link" href="/categories/boostcamp/page/5/">5</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/categories/boostcamp/page/8/">8</a></li></ul></nav></div><div class="column column-left is-3-tablet is-3-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="KyuBum Shin"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">KyuBum Shin</p><p class="is-size-6 is-block">Student</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Incheon</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">110</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">22</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">41</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/KyubumShin" target="_blank" rel="noopener">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/KyubumShin"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">링크</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://github.com/KyubumShin" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Github</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Computer-Science/"><span class="level-start"><span class="level-item">Computer Science</span></span><span class="level-end"><span class="level-item tag">8</span></span></a><ul><li><a class="level is-mobile" href="/categories/Computer-Science/Database/"><span class="level-start"><span class="level-item">Database</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Computer-Science/Network/"><span class="level-start"><span class="level-item">Network</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Computer-Science/OS/"><span class="level-start"><span class="level-item">OS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Computer-Science/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/"><span class="level-start"><span class="level-item">자료구조</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/DeepLearning/"><span class="level-start"><span class="level-item">DeepLearning</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/DeepLearning/Basic/"><span class="level-start"><span class="level-item">Basic</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/DeepLearning/Pytorch-Lightning/"><span class="level-start"><span class="level-item">Pytorch Lightning</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Programming/"><span class="level-start"><span class="level-item">Programming</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/Programming/Docker/"><span class="level-start"><span class="level-item">Docker</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Programming/Python/tip/"><span class="level-start"><span class="level-item">tip</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/boostcamp/"><span class="level-start"><span class="level-item">boostcamp</span></span><span class="level-end"><span class="level-item tag">80</span></span></a><ul><li><a class="level is-mobile" href="/categories/boostcamp/Dairy/"><span class="level-start"><span class="level-item">Dairy</span></span><span class="level-end"><span class="level-item tag">23</span></span></a></li><li><a class="level is-mobile" href="/categories/boostcamp/Peer-Session/"><span class="level-start"><span class="level-item">Peer Session</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/boostcamp/Problems/"><span class="level-start"><span class="level-item">Problems</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/boostcamp/week/"><span class="level-start"><span class="level-item">week</span></span><span class="level-end"><span class="level-item tag">53</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%EB%B0%B1%EC%97%94%EB%93%9C/"><span class="level-start"><span class="level-item">백엔드</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/%EB%B0%B1%EC%97%94%EB%93%9C/%EB%A9%94%EC%84%B8%EC%A7%80%ED%81%90/"><span class="level-start"><span class="level-item">메세지큐</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%EC%9D%BC%EC%83%81/"><span class="level-start"><span class="level-item">일상</span></span><span class="level-end"><span class="level-item tag">37</span></span></a><ul><li><a class="level is-mobile" href="/categories/%EC%9D%BC%EC%83%81/TIL/"><span class="level-start"><span class="level-item">TIL</span></span><span class="level-end"><span class="level-item tag">36</span></span></a></li><li><a class="level is-mobile" href="/categories/%EC%9D%BC%EC%83%81/%EA%B3%84%ED%9A%8D/"><span class="level-start"><span class="level-item">계획</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-16T01:11:47.000Z">2022-03-16</time></p><p class="title"><a href="/2022/03/16/boostcamp/week/week9/CNN-7/">부스트 캠프 ai tech 9주 3일차 Multi-modal Learning</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/boostcamp/week/">week</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-15T16:00:37.000Z">2022-03-16</time></p><p class="title"><a href="/2022/03/16/boostcamp/Dairy/week9-day2-review/">week9-day2-review</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/%EC%9D%BC%EC%83%81/">일상</a> / <a href="/categories/%EC%9D%BC%EC%83%81/TIL/">TIL</a> / <a href="/categories/boostcamp/Dairy/">Dairy</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-15T01:35:12.000Z">2022-03-15</time></p><p class="title"><a href="/2022/03/15/boostcamp/Dairy/Week9-Day1/">Week9 - Day 1 Review</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/%EC%9D%BC%EC%83%81/">일상</a> / <a href="/categories/%EC%9D%BC%EC%83%81/TIL/">TIL</a> / <a href="/categories/boostcamp/Dairy/">Dairy</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-14T01:15:18.000Z">2022-03-14</time></p><p class="title"><a href="/2022/03/14/boostcamp/week/week9/CNN-6/">부스트 캠프 ai tech 9주 2일차 Conditional Generative Model</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/boostcamp/week/">week</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-14T00:27:09.000Z">2022-03-14</time></p><p class="title"><a href="/2022/03/14/boostcamp/week/week9/CNN-5/">부스트 캠프 ai tech 9주 1일차 Instance &amp; Panoptic Segmantation</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/boostcamp/week/">week</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">3월 2022</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/02/"><span class="level-start"><span class="level-item">2월 2022</span></span><span class="level-end"><span class="level-item tag">34</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/01/"><span class="level-start"><span class="level-item">1월 2022</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">10월 2021</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">9월 2021</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">8월 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Ai-Math/"><span class="tag">Ai Math</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ai-serving/"><span class="tag">Ai serving</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CNN/"><span class="tag">CNN</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CNN-Viz/"><span class="tag">CNN Viz</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CV/"><span class="tag">CV</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Data-visualization/"><span class="tag">Data visualization</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DeepLearning/"><span class="tag">DeepLearning</span><span class="tag">21</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Docker/"><span class="tag">Docker</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Function/"><span class="tag">Function</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GAN/"><span class="tag">GAN</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Generative-Model/"><span class="tag">Generative Model</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Instance-Segmentation/"><span class="tag">Instance Segmentation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LandMark-Detection/"><span class="tag">LandMark Detection</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Multi-modal/"><span class="tag">Multi-modal</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Object-Detection/"><span class="tag">Object Detection</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Project-product/"><span class="tag">Project product</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pytorch-Lightning/"><span class="tag">Pytorch Lightning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Semantic-Segmentation/"><span class="tag">Semantic Segmentation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Sequencial-Model/"><span class="tag">Sequencial Model</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VAE/"><span class="tag">VAE</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/backend/"><span class="tag">backend</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cs/"><span class="tag">cs</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/database/"><span class="tag">database</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/message/"><span class="tag">message</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/network/"><span class="tag">network</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/os/"><span class="tag">os</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pytorch/"><span class="tag">pytorch</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week1/"><span class="tag">week1</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week2/"><span class="tag">week2</span><span class="tag">15</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week3/"><span class="tag">week3</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week4/"><span class="tag">week4</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week5/"><span class="tag">week5</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week6/"><span class="tag">week6</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week8/"><span class="tag">week8</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week9/"><span class="tag">week9</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EC%9D%BC%EC%83%81/"><span class="tag">일상</span><span class="tag">36</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/"><span class="tag">자료구조</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%ED%95%A0%EC%9D%BC/"><span class="tag">할일</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">업데이트 소식 받기</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="KyuBum&#039;s Dev Blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 KyuBum Shin</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="맨 위로" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "이 웹 사이트는 귀하의 경험을 향상시키기 위해 Cookie를 사용합니다.",
+          dismiss: "무시",
+          allow: "허용",
+          deny: "거부",
+          link: "더 알아보기",
+          policy: "Cookie 정책",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="입력 하세요..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"입력 하세요...","untitled":"(제목 없음)","posts":"포스트","pages":"페이지","categories":"카테고리","tags":"태그"});
+        });</script></body></html>

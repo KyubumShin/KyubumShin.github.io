@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>KyuBum&#039;s Dev Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="KyuBum Shin"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="KyuBum Shin"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="KyuBum&#039;s Dev Blog"><meta property="og:url" content="https://kyubumshin.github.io/"><meta property="og:site_name" content="KyuBum&#039;s Dev Blog"><meta property="og:locale" content="ko_KR"><meta property="og:image" content="https://kyubumshin.github.io/img/og_image.png"><meta property="article:author" content="KyuBum Shin"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://kyubumshin.github.io"},"headline":"KyuBum's Dev Blog","image":["https://kyubumshin.github.io/img/og_image.png"],"author":{"@type":"Person","name":"KyuBum Shin"},"publisher":{"@type":"Organization","name":"KyuBum's Dev Blog","logo":{"@type":"ImageObject","url":"https://kyubumshin.github.io/img/logo.svg"}},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="KyuBum&#039;s Dev Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-9-tablet is-9-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-09-27T13:19:49.000Z" title="2021. 9. 27. 오후 10:19:49">2021-09-27</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-10-02T14:02:11.921Z" title="2021. 10. 2. 오후 11:02:11">2021-10-02</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/%EC%9D%BC%EC%83%81/">일상</a><span> / </span><a class="link-muted" href="/categories/%EC%9D%BC%EC%83%81/TIL/">TIL</a></span><span class="level-item">1분안에 읽기 (약 190 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/27/Diary/9-27-TD/">9-27-TD</a></h1><div class="content"><h2 id="9-27일"><a href="#9-27일" class="headerlink" title="9/27일"></a>9/27일</h2><p>오늘은 최종프로젝트를 자동빌딩 시키기 위해  CI/CD 의 하나인 Bitbucket runners에 대해서 조사했다. 하지만 Bitbucker Image에 Docker가 안깔려있어서 빌드되는것을 확인하는데에는 실패 하였다. KDT과정이 끝나고 아마존이 아닌 싼 VPS에서 모델을 돌리려 하다보니 이런저런 제약사항이 뒤따르고있다. 모델이 많이 무거워서 모델 경량화에 대해서 한번 공부할 필요성을 느꼈다.<br>그리고 Git 명령어에 대해서 공부했다.(저번에 저지른 사건을 잘 처리하기 위해서)  </p>
+<p>오늘 한것</p>
+<ol>
+<li>Hash Table 정리  <a href="/2021/09/27/cs/datastructure/hash/" title="해쉬 테이블">해쉬 테이블</a></li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-09-26T15:39:13.000Z" title="2021. 9. 27. 오전 12:39:13">2021-09-27</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-09-27T12:45:15.478Z" title="2021. 9. 27. 오후 9:45:15">2021-09-27</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/%EC%9D%BC%EC%83%81/">일상</a><span> / </span><a class="link-muted" href="/categories/%EC%9D%BC%EC%83%81/TIL/">TIL</a></span><span class="level-item">2분안에 읽기 (약 272 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/27/Diary/9-26-TD/">9/26-일기</a></h1><div class="content"><h2 id="9-26일"><a href="#9-26일" class="headerlink" title="9/26일"></a>9/26일</h2><p>다 지나가서 27일 오전 1시에 쓰는 일기</p>
+<p>카카오 준비한다고 몇 일 동안 하지 못했던 KDT 프로젝트 유지보수를 다시 시작하였다.<br>카카오 준비 직전에 바쁘다고 정신이 없었는데 그 때 ssh키를 모르고 커밋을 해버려서 팀내에서 새로 규칙을 정해서 브랜치를 정리했다. (미안….)<br>(private key 파일을 다행(?)히도 push 까지는 하지 않았고, 사용하는 repository가 private라 큰일은 없어서 다행이었다.)<br>가볍게 git을 공부했었는데 제대로 공부할 필요성을 느낀다.<br><strong>무엇보다 git add . 이거 쓰면 안될거같다.</strong></p>
+<h2 id="오늘-공부한것"><a href="#오늘-공부한것" class="headerlink" title="오늘 공부한것"></a>오늘 공부한것</h2><h3 id="1-Hash-Table-추후에-자세히-정리예정"><a href="#1-Hash-Table-추후에-자세히-정리예정" class="headerlink" title="1. Hash Table (추후에 자세히 정리예정)"></a>1. Hash Table (추후에 자세히 정리예정)</h3><ul>
+<li>python dictionay structure<ul>
+<li>파이썬 내부에서 dictionary는 어떻게 돌아가나?</li>
+</ul>
+</li>
+<li>dictionary와 hashtable 차이<ul>
+<li>Boxing/UnBoxing을 하나 안하나</li>
+</ul>
+</li>
+<li>충돌 처리기법<ul>
+<li>Open Hashging<ul>
+<li>Chaining : linked list 이용</li>
+</ul>
+</li>
+<li>Close hashing(Open Addressing)<ul>
+<li>Linear probing</li>
+<li>Quadratic probing</li>
+<li>Double hashing</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-깃-브런치-복습"><a href="#1-깃-브런치-복습" class="headerlink" title="1. 깃 브런치 복습"></a>1. 깃 브런치 복습</h3><p><a target="_blank" rel="noopener" href="https://learngitbranching.js.org/?locale=ko">(https://learngitbranching.js.org/?locale=ko)</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-09-25T14:07:50.000Z" title="2021. 9. 25. 오후 11:07:50">2021-09-25</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-09-27T12:45:15.427Z" title="2021. 9. 27. 오후 9:45:15">2021-09-27</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/%EC%9D%BC%EC%83%81/">일상</a><span> / </span><a class="link-muted" href="/categories/%EC%9D%BC%EC%83%81/TIL/">TIL</a></span><span class="level-item">3분안에 읽기 (약 459 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/25/Diary/9-25-TD/">9/25-일기</a></h1><div class="content"><h2 id="9-25일"><a href="#9-25일" class="headerlink" title="9/25일"></a>9/25일</h2><p>카카오 2차 시험을 보았다.<br>문제는 밝힐수 없지만 흥미로운 주제였다.  </p>
+<p>하루종일 시험을 보면서 더 공부해야할게 많다라는 점과 정말 잘하는사람은 엄청 잘하더라 알고리즘 어케 짰을지 궁금하다 라는 생각이 들었다.<br>그리고 리더보드는 정말 압박감이 심하더라…  </p>
+<p>필기시험과 api코딩테스트를 같이 봤는데<br>생각보다 내 cs 지식이 빈약한것을 느낄 수 있었다.<br>그래서 오늘 이런것들을 찾아서 정리해 보았다.<br>조금더 있는데 시험본다고 너무 피곤해서 내일 남길 예정이다.</p>
+<ol>
+<li>데이터베이스 Key  <a href="#">Post not found: database-key 데이터베이스 Key</a></li>
+</ol>
+<h2 id="부분-키-Partial-Key-또는-식별자-Discriminator"><a href="#부분-키-Partial-Key-또는-식별자-Discriminator" class="headerlink" title="부분 키(Partial Key) 또는 식별자(Discriminator)"></a>부분 키(Partial Key) 또는 식별자(Discriminator)</h2><ul>
+<li>상위 개체 타입이 결정되지 않으면 개별 개체를 식별할 수 없는 종속적인 개체 타입</li>
+<li>독립적인 키로는 존재할수 없지만, 상위 개체의 타입의 키와 결합하여 약한개체 타입의 개별개체를 고유하게 식별하는 속성</li>
+</ul>
+<h2 id="약한-개체-타입"><a href="#약한-개체-타입" class="headerlink" title="약한 개체 타입"></a>약한 개체 타입</h2><ul>
+<li>상위개체타입이 결정되지 않으면 개별 개체를 식별할 수 없는 종속적인 개체타입</li>
+<li>ex) 프로리그 축구단의 소속된 선수의 등번호<ul>
+<li>등번호만 놓고 보면 다른축구단에도 같은 번호가 존재 할 수 있지만, 특정 축구단의 소속된 선수의 등번호는 단 하나만 존재한다. -&gt; 개별개체를 식별가능</li>
+</ul>
+</li>
+</ul>
+<h2 id="Http-status-code"><a href="#Http-status-code" class="headerlink" title="Http status code"></a>Http status code</h2><ul>
+<li>100 : 조건부 응답</li>
+<li>200 : 성공</li>
+<li>300 : 리다이렉션 완료</li>
+<li>400 : 클라이언트 에러</li>
+<li>500 : 서버 에러<br>추후에 Fastapi 정리하면서 한번더 정리할 예정</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-09-25T13:19:11.000Z" title="2021. 9. 25. 오후 10:19:11">2021-09-25</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-10-27T00:29:21.099Z" title="2021. 10. 27. 오전 9:29:21">2021-10-27</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Computer-Science/">Computer Science</a><span> / </span><a class="link-muted" href="/categories/Computer-Science/Database/">Database</a></span><span class="level-item">3분안에 읽기 (약 449 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/25/cs/Database/database-key/">database-key</a></h1><div class="content"><h1 id="KEY"><a href="#KEY" class="headerlink" title="KEY"></a>KEY</h1><p>Key는 데이터베이스에서 조건에 만족하는 튜플을 찾거나 순서대로 정렬할 때 다른 튜플들과 구별할 수 있는 유일한 기준이 되는 Attribute(속성)</p>
+<h2 id="1-슈퍼키-Super-Key"><a href="#1-슈퍼키-Super-Key" class="headerlink" title="1. 슈퍼키(Super Key)"></a>1. 슈퍼키(Super Key)</h2><ul>
+<li>데이터 베이스에서 테이블의 행을 고유하게 식별할 수 있는 속성 또는 속성의 집합</li>
+<li>고유하게 식별하는 <span style="color:red"><strong>모든 조합</strong></span>을 나타냄</li>
+</ul>
+<h2 id="2-후보-키-candidate-key"><a href="#2-후보-키-candidate-key" class="headerlink" title="2. 후보 키(candidate key)"></a>2. 후보 키(candidate key)</h2><ul>
+<li>슈퍼 키 중에 더이상 줄일 수 없는 형태를 가진 것</li>
+<li>슈퍼 키를 구성하는 속성 중 하나라도 빠지면 유일성을 잃어버리는 조합</li>
+<li>기본 키로 선정될 수 있는 후보이기 때문에 후보키라고 이름이 붙여짐</li>
+<li><del>Null 값을 허용할지 안할지는 여러가지 설이 존재함(된다 하는 사람도 있고 안된다 하는 사람도 있음)</del></li>
+</ul>
+<h2 id="3-기본-키-Primary-Key-주-키"><a href="#3-기본-키-Primary-Key-주-키" class="headerlink" title="3. 기본 키(Primary Key, 주 키)"></a>3. 기본 키(Primary Key, 주 키)</h2><ul>
+<li>식별자로 이용하기에 가장 적합한 것을 설계자가 선택 정의한 후보키</li>
+<li>후보키중 하나를 설계자가 선택해서 기본키로 삼을수 있음</li>
+<li>항상 고유한 값을 가짐</li>
+<li>Null 값이 존재하지 않아야함</li>
+</ul>
+<h2 id="4-대리-키-alternate-key"><a href="#4-대리-키-alternate-key" class="headerlink" title="4. 대리 키(alternate key)"></a>4. 대리 키(alternate key)</h2><ul>
+<li>후보 키들중 기본키로 선택받지 못한 나머지 키들</li>
+<li>기본키의 조건도 만족하기때문에 언제든지 기본키로 대체될 수 있다.</li>
+<li>대체 키(surrogate key)라고도 함</li>
+</ul>
+<h2 id="5-외래-키-외부-키-Foreign-Key"><a href="#5-외래-키-외부-키-Foreign-Key" class="headerlink" title="5. 외래 키(외부 키, Foreign Key)"></a>5. 외래 키(외부 키, Foreign Key)</h2><ul>
+<li>테이블과 테이블을 연결시켜주는 키</li>
+<li>여러 테이블을 동시에 분석할때 유용하다</li>
+<li>하나의 테이블로 저장할때 발생하는 중복된 데이터 발생을 방지하면서 데이터를 이어줄 수 있다.</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-09-24T10:35:13.000Z" title="2021. 9. 24. 오후 7:35:13">2021-09-24</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-10-02T11:46:44.453Z" title="2021. 10. 2. 오후 8:46:44">2021-10-02</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Computer-Science/">Computer Science</a><span> / </span><a class="link-muted" href="/categories/Computer-Science/Network/">Network</a></span><span class="level-item">4분안에 읽기 (약 587 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/24/cs/network/TCP-UDP/">TCP/UDP</a></h1><div class="content"><h1 id="2-TCP-UDP"><a href="#2-TCP-UDP" class="headerlink" title="2. TCP/UDP"></a>2. TCP/UDP</h1><h2 id="2-1-TCP-전송-제어-프로토콜"><a href="#2-1-TCP-전송-제어-프로토콜" class="headerlink" title="2.1 TCP 전송 제어 프로토콜"></a>2.1 TCP 전송 제어 프로토콜</h2><h3 id="2-1-1-TCP개요"><a href="#2-1-1-TCP개요" class="headerlink" title="2.1.1 TCP개요"></a><strong>2.1.1 TCP개요</strong></h3><ul>
+<li>인터넷 상에서 데이터를 메세지의 형태(TCP 세그먼트)로 보내기 위해 IP와 함께 사용하는 프로토콜</li>
+<li>IP와 함께 TCP/IP라는 명칭으로 불린다. IP가 주소를 통해 데이터의 배달을 한다면 TCP는 패킷을 추적 및 관리하는 역할을 한다.</li>
+</ul>
+<h3 id="2-1-2-TCP특징"><a href="#2-1-2-TCP특징" class="headerlink" title="2.1.2 TCP특징"></a><strong>2.1.2 TCP특징</strong></h3><ul>
+<li>연결형 서비스로 연결이 성공해야지만 통신 가능(3 &amp; 4 way Handshaking : 연결설정,  연결해제)</li>
+<li>데이터의 경계를 구분하지 않음</li>
+<li>신뢰성이 있다<ul>
+<li>패킷손실, 중복 순서바뀜을 보장 -&gt; 정확한 데이터 전달 가능</li>
+</ul>
+</li>
+<li>흐름제어 및 혼잡제어를 제공<ul>
+<li>흐름제어 : 송신처와 수신처의 데이터 처리속도를 조절하여 수신자의 버퍼 오버플로우를 방지<ul>
+<li>수신측의 처리속도보다 송신속도가 빠를경우 도착한 데이터가 손상될 가능성이 존재</li>
+<li>수신자가 송신자에게 자신의 상태를 feedback 해서 속도를 조절한다.</li>
+</ul>
+</li>
+<li>혼잡제어 : 네트워크 내의 패킷수가 넘치지 않도록 방지<ul>
+<li>낮은속도로 전송하기 시작해서 속도를 올림</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Full-Duplex(전송이 양방향으로 동시에 일어날 수 있음), Point to Point(연결이 정확히 2개의 종단점을 가지고 있음)</li>
+<li>ex) 파일전송</li>
+</ul>
+<h2 id="2-2-UDP-사용자-데이터그램-프로토콜"><a href="#2-2-UDP-사용자-데이터그램-프로토콜" class="headerlink" title="2.2 UDP 사용자 데이터그램 프로토콜"></a>2.2 UDP 사용자 데이터그램 프로토콜</h2><h3 id="2-2-1-UDP개요"><a href="#2-2-1-UDP개요" class="headerlink" title="2.2.1 UDP개요"></a><strong>2.2.1 UDP개요</strong></h3><ul>
+<li>데이터를 데이터그램 단위로 처리하는 프로토콜 -&gt; 전송계층</li>
+<li>비연결형, 신뢰성 없는 전송 프로토콜이다.</li>
+</ul>
+<h3 id="2-2-2-UDP특징"><a href="#2-2-2-UDP특징" class="headerlink" title="2.2.2 UDP특징"></a><strong>2.2.2 UDP특징</strong></h3><ul>
+<li>전송방식이 매우 단순해서 빠르다 -&gt; 최소한의 오류만 검출한다.</li>
+<li>신뢰성이 낮다 -&gt; 전송하는 데이터의 순번이 바뀌거나 누락될 가능성이 존재한다.</li>
+<li>비연결형 서비스이다<ul>
+<li>논리적인 경로가 없기 때문에 각각의 패킷은 다른 경로로 전송되고 독립적인 관계를 가진다.</li>
+</ul>
+</li>
+<li>ex) 실시간 서비스 : 영상통화 등등</li>
+</ul>
+<h2 id="2-3-TCP-UDP-차이"><a href="#2-3-TCP-UDP-차이" class="headerlink" title="2.3 TCP UDP 차이"></a><strong>2.3 TCP UDP 차이</strong></h2><p><img src="https://media.vlpt.us/images/soosungp33/post/39ae941b-183f-4305-8cd6-02de6036f2c4/4.png"><br><a target="_blank" rel="noopener" href="https://velog.io/@soosungp33/CS-Network#-tcp%EC%99%80-udp-%EB%B9%84%EA%B5%90">출처 : soosungp33.log [CS] 📕 Network</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-09-24T08:06:03.000Z" title="2021. 9. 24. 오후 5:06:03">2021-09-24</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-10-02T09:16:38.233Z" title="2021. 10. 2. 오후 6:16:38">2021-10-02</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Computer-Science/">Computer Science</a><span> / </span><a class="link-muted" href="/categories/Computer-Science/Network/">Network</a></span><span class="level-item">6분안에 읽기 (약 831 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/24/cs/network/Network/">OSI 모델</a></h1><div class="content"><h1 id="1-OSI-모델이란"><a href="#1-OSI-모델이란" class="headerlink" title="1. OSI 모델이란?"></a><strong>1. OSI 모델이란?</strong></h1><p>컴퓨터 네트워크 프로토콜 디자인과 통신을 계층으로 나누어 설명한 것이다. 각 계층은 하위 계층의 기능만을 이용하고, 상위 계층에게 기능을 제공한다. 일반적으로 하위 계층들은 하드웨어로, 상위 계층들은 소프트웨어로 구현된다.</p>
+<h2 id="1-1-7계층으로-나눈-이유"><a href="#1-1-7계층으로-나눈-이유" class="headerlink" title="1.1 7계층으로 나눈 이유"></a><strong>1.1 7계층으로 나눈 이유</strong></h2><p>통신이 일어나는 과정을 단계별로 파악할수 있고, 특정한 곳에 이상이 생기면 이상을 탐지하기 쉽고, 이상이 생긴 단계만 고칠수 있기 때문이다</p>
+<h2 id="1-2-계층단계"><a href="#1-2-계층단계" class="headerlink" title="1.2. 계층단계"></a><strong>1.2. 계층단계</strong></h2><ol>
+<li>물리 계층<ul>
+<li>네트워크의 기본 하드웨어 전송기술로 구성</li>
+<li>높은 수준의 기능의 논리데이터 구조를 기초로 한다</li>
+<li>하드웨어 기술이 접목되어있어 OSI 아키텍쳐중 가장 복잡한 계층이며 필수적이다</li>
+<li>전송단위는 Bit이다</li>
+<li>리피터, 케이블, 허브</li>
+</ul>
+</li>
+<li>데이터 링크 계층<ul>
+<li> Point to Point 간 신뢰성 있는 전송을 보장하기 위한 계층</li>
+<li> 네트워크 위의 개체들 간 데이터를 전달한다.</li>
+<li> 물리계층에서 발생할 수 있는 오류를 찾아내고 수정하는데 필요한 기능적, 절차적 수단을 제공한다.</li>
+<li> 주소값은 물리적으로 할당받는다.(MAC address)</li>
+<li> 네트워크 브릿지나 스위치 등이 이계층에서 동작한다. (Ethernet)</li>
+<li> 전송단위는 Frame</li>
+</ul>
+</li>
+<li>네트 워크 계층<ul>
+<li>여러개의 노드를 거칠때마다 경로를 찾아주는 역할을 하는 계층으로 다양한 길이의 데이터를 네트워크들을 통해 전달하고, 그 과정에서 전송 계층이 요구하는 서비스 품질(QoS)을 제공하기 위한 기능적, 절차적 수단을 제공</li>
+<li>라우팅, 흐름 제어, 세그멘테이션(segmentation/desegmentation), 오류 제어, 인터네트워킹(Internetworking) 등을 수행한다</li>
+<li>IP부여, 경로설정(Route)</li>
+<li>전송단위는 Datagram(Packet)</li>
+</ul>
+</li>
+<li>전송 계층<ul>
+<li>양 끝단(End to end)의 사용자들이 신뢰성있는 데이터를 주고 받을 수 있도록 해 주어, 상위 계층들이 데이터 전달의 유효성이나 효율성을 생각하지 않도록 해준다.</li>
+<li>TCP/UDP프로토콜을 사용한다.</li>
+<li>전송 단위는 Segment이다.</li>
+<li>여기까지가 물리 계층이라고 한다.</li>
+</ul>
+</li>
+<li>세션 계층<ul>
+<li>양 끝단의 응용 프로세스가 통신을 관리하기 위한 방법을 제공한다.</li>
+<li>TCP/IP 세션을 만들고 없애는 책임을 진다.</li>
+<li>통신을 하기 위한 세션을 확립/유지/중단</li>
+</ul>
+</li>
+<li>표현 계층<ul>
+<li>코드 간의 번역을 담당하여 사용자 시스템에서 데이터의 형식상 차이를 다루는 부담을 응용 계층으로부터 덜어 준다.</li>
+<li>인코딩이나 암호화등의 동작이 이루어진다.</li>
+<li>송신층과 수신측 사이에서 데이터의 형식(png, jpg, webp 등등) 을 정해준다.</li>
+</ul>
+</li>
+<li>응용 계층<ul>
+<li>응용 계층(Application layer)은 응용 프로세스와 직접 관계하여 일반적인 응용 서비스를 수행한다. </li>
+<li>DHCP, DNS, FTP, HTTP</li>
+</ul>
+</li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-09-22T13:59:18.000Z" title="2021. 9. 22. 오후 10:59:18">2021-09-22</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-10-04T11:58:16.849Z" title="2021. 10. 4. 오후 8:58:16">2021-10-04</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Computer-Science/">Computer Science</a><span> / </span><a class="link-muted" href="/categories/Computer-Science/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/">자료구조</a></span><span class="level-item">3분안에 읽기 (약 508 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/22/cs/datastructure/list-Array/">Array &amp; ArrayList &amp; LinkedList</a></h1><div class="content"><h1 id="Array-amp-ArrayList-amp-LinkedList-의-특징"><a href="#Array-amp-ArrayList-amp-LinkedList-의-특징" class="headerlink" title="Array &amp; ArrayList &amp; LinkedList 의 특징"></a>Array &amp; ArrayList &amp; LinkedList 의 특징</h1><h2 id="Array-배열"><a href="#Array-배열" class="headerlink" title="Array(배열)"></a>Array(배열)</h2><ul>
+<li>Array는 선언함과 동시에 크기를 함께 적어줘야하는 자료구조이다.  </li>
+<li>Array를 선언하면서 특정 자료형과 배열의 크기를 함께 적어주면 특정 자료형이 들어갈 메모리공간을 미리 할당한다.</li>
+<li>데이터를 삭제해도 공간이 남아있다.</li>
+<li>장점<ul>
+<li>미리 주소값(Index)을 할당하다보니 데이터검색이 빠르다.</li>
+</ul>
+</li>
+<li>단점<ul>
+<li>선언한 크기 이상의 데이터를 가지는것은 불가능하기 때문에 데이터가 늘어나거나 하는 최대사이즈를 알수없는 상황에서 사용하기 부적합하다.</li>
+</ul>
+</li>
+<li>ex) c, c++의 배열</li>
+</ul>
+<h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><ul>
+<li>ArrayList는 크기가 정해져 있지 않다.</li>
+<li>데이터에 순서가 Index형식으로 존재한다.</li>
+<li>데이터를 중간에 추가하면 기존에 데이터는 Index의 변화가 일어난다. (뒤로 하나씩 밀리거나 당겨지거나)</li>
+<li>장점<ul>
+<li>배열과 같이 Index가 존재하기 때문에 데이터검색이 빠르다. </li>
+<li>데이터 검색에 $O(1)$의 시간복잡도</li>
+</ul>
+</li>
+<li>단점<ul>
+<li>중간에 추가하면 기존 데이터의 Index에 변화가 일어나기 때문에 추가적인 연산이 필요하다. </li>
+<li>데이터 추가와 삭제에 $O(n)$의 시간복잡도</li>
+</ul>
+</li>
+</ul>
+<h2 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h2><ul>
+<li>각 노드가 데이터와 포인터를 가지고 연결되어 있는 방식으로 데이터를 저장</li>
+<li>한방향으로만 연결되거나, 양방향으로 연결, 순환구조로 연결 등의 여러가지 방식이 존재한다.</li>
+<li>장점<ul>
+<li>노드의 연결만 끊어주면 되기때문에 데이터의 추가 삭제가 간단함</li>
+<li>시간복잡도 $O(1)$</li>
+</ul>
+</li>
+<li>단점<ul>
+<li>특정위치의 데이터를 알기 위해서 처음부터 탐색을 해야하기 때문에 시간이 소요됨</li>
+<li>시간복잡도 $O(n)$</li>
+</ul>
+</li>
+<li><a href="/2021/08/28/cs/datastructure/linked-list/" title="추가 정보">추가 정보</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-09-22T09:00:59.000Z" title="2021. 9. 22. 오후 6:00:59">2021-09-22</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-09-22T13:23:01.638Z" title="2021. 9. 22. 오후 10:23:01">2021-09-22</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/%EB%B0%B1%EC%97%94%EB%93%9C/">백엔드</a><span> / </span><a class="link-muted" href="/categories/%EB%B0%B1%EC%97%94%EB%93%9C/%EB%A9%94%EC%84%B8%EC%A7%80%ED%81%90/">메세지큐</a></span><span class="level-item">4분안에 읽기 (약 654 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/22/rabbitmq/">rabbitmq</a></h1><div class="content"><p>KDT과정에서 만든 프로젝트의 실사용자가 여럿인 경우를 가정하고(그럴일은 거의 없겠지만) 백엔드를 구성하려고 팀원들과 계획을 해서 Rabbitmq를 사용하기로 결정하여 공부했었던 내용을 정리해 보았다.</p>
+<p>RabbitMQ는 오픈소스 메세지 브로커로써 메세지를 많은사람들에게 전달하거나, request에 대한 처리시간이 길 때 등 비동기적인 처리를 할 때 사용된다.</p>
+<h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><p>RabbitMQ는 아래와 같이 AMQP(Advanced Message Queuing Protocol)에 따른 구조로 되어있다.</p>
+<p><img src="https://www.rabbitmq.com/img/tutorials/python-three-overall.png" alt="image"></p>
+<h2 id="Producer-P"><a href="#Producer-P" class="headerlink" title="Producer(P)"></a><strong>Producer(P)</strong></h2><ul>
+<li>메세지를 생성하고 Queue에 보내 저장하는 주체이다.<h2 id="Consumer-C"><a href="#Consumer-C" class="headerlink" title="Consumer(C)"></a><strong>Consumer(C)</strong></h2></li>
+<li>메세지를 수신하는 주체이다.<h2 id="Exchange-X"><a href="#Exchange-X" class="headerlink" title="Exchange(X)"></a><strong>Exchange(X)</strong></h2></li>
+<li>Producer로 부터 수신한 메세지를 각각의 키에 따른 규칙(Binding)으로 Queue나 다른 Exchange로 보내주는 라우터의 기능을 가지고 있다. </li>
+<li>모든 Queue는 반드시 Exchange를 통해 메세지를 Producer로 부터 전달받는다.<h2 id="Queue-Red-Box"><a href="#Queue-Red-Box" class="headerlink" title="Queue(Red Box)"></a><strong>Queue(Red Box)</strong></h2></li>
+<li>자료구조에서 흔히 들어왔던 큐이다. 메모리에 메세지를 저장하고 Consumer로부터 큐에 요청이 들어오면 저장되었던 메세지를 Consumer에게 전달한다.</li>
+</ul>
+<h1 id="Exchange-Type"><a href="#Exchange-Type" class="headerlink" title="Exchange Type"></a>Exchange Type</h1><p>producer로부터 생성된 모든 메세지들은 반드시 Exchange에서 Exchange Type과 Binding 규칙에 따라 규칙에 알맞은 Queue로 전달된다. Exchange Type은 다음과 같은 속성을 가진다.</p>
+<ul>
+<li>Direct Exchange<ul>
+<li>메세지에 포함된 routing Key를 기반으로 <strong>동일한</strong> binding key를 가진 Queue에 연결된다.</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://www.rabbitmq.com/img/tutorials/direct-exchange.png" alt="image"></p>
+<ul>
+<li>Fanout Exchange<ul>
+<li>Exchange에 연결된 모든 Queue에 동일한 메세지를 전달한다.</li>
+</ul>
+</li>
+<li>Topic Exchange<ul>
+<li>routing Key와 binding Key가 <strong>부분적</strong>으로 일치하는 모든 Queue 로 메세지를 전달한다.</li>
+<li>닷( . )으로 구분된 binding key를 사용하며 <code>*</code>와 <code>#</code>을 이용하여 binding Key를 구성할 수 있다. <code>*</code>은 한개의 단어를 나타내고 <code>#</code>은 0개 또는 1개의 단어를 나타낸다.</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://www.rabbitmq.com/img/tutorials/python-five.png" alt="image"></p>
+<ul>
+<li>Header Exchange<ul>
+<li>key-value 로 정의된 헤더에 의해서 전달할 Queue를 결정한다. </li>
+<li>Queue를 바인딩 할 때 x-match라는 argument로 헤더를 하나만 충족켜도 되는지(any : OR의 기능), 모든 헤더를 충족시켜야 하는지(all : AND의 기능) 규칙을 정할 수 있다.</li>
+</ul>
+</li>
+</ul>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><ul>
+<li><a target="_blank" rel="noopener" href="http://egloos.zum.com/killins/v/3025514">AMQP Introduction</a>  </li>
+<li><a target="_blank" rel="noopener" href="https://www.rabbitmq.com/getstarted.html">RabbitMQ Tutorials</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.dudaji.com/general/2020/05/25/rabbitmq.html">RabbitMQ란? by Eric</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-08-31T12:02:06.000Z" title="2021. 8. 31. 오후 9:02:06">2021-08-31</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-09-25T14:08:45.164Z" title="2021. 9. 25. 오후 11:08:45">2021-09-25</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/%EC%9D%BC%EC%83%81/">일상</a><span> / </span><a class="link-muted" href="/categories/%EC%9D%BC%EC%83%81/%EA%B3%84%ED%9A%8D/">계획</a></span><span class="level-item">4분안에 읽기 (약 604 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/08/31/todolist/">todolist</a></h1><div class="content"><h2 id="9월-해야하는것"><a href="#9월-해야하는것" class="headerlink" title="9월 해야하는것"></a>9월 해야하는것</h2><ul>
+<li>딥러닝관련 공부(하고싶은것 우선적으로)<ul>
+<li>강화학습관련 공부(policy 기반 학습관련해서 공부, MARL관련 논문보기)<ul>
+<li><a target="_blank" rel="noopener" href="http://rail.eecs.berkeley.edu/deeprlcourse-fa19/resources/">http://rail.eecs.berkeley.edu/deeprlcourse-fa19/resources/</a></li>
+</ul>
+</li>
+<li>GNN 관련 개요 알아보기 -&gt; 유사도 기반 추천시스템에서 사용하려고함<ul>
+<li><a target="_blank" rel="noopener" href="http://web.stanford.edu/class/cs224w/index.html#schedule">http://web.stanford.edu/class/cs224w/index.html#schedule</a></li>
+</ul>
+</li>
+<li>python 메모리 관리(malloc, free 등), asyncio 공부</li>
+</ul>
+</li>
+</ul>
+<h2 id="현재-하고있는것"><a href="#현재-하고있는것" class="headerlink" title="현재 하고있는것"></a>현재 하고있는것</h2><ul>
+<li>DP관련 문제 풀기<ul>
+<li>백준 DP 문제집 푸는중</li>
+</ul>
+</li>
+<li>배운것 정리하기(너무 미루는거같아서 하루에 1포스트씩이라도 정리하자)</li>
+<li>Stargan-V2 논문 정독</li>
+<li>카카오 블라인드 2022 자체 피드백:<ul>
+<li>cs 공부</li>
+</ul>
+</li>
+<li>cs 공부(되세김질 기술면접대비)</li>
+<li>코딩테스트 대비 알고리즘 공부 및 정리(점점 늘어날 예정)<ul>
+<li>힙, 큐, 스택</li>
+<li>트리</li>
+<li>DFS, BFS</li>
+<li>플루이드 와샬 알고리즘</li>
+<li>다익스트라 알고리즘</li>
+<li>이진탐색</li>
+<li>LIS</li>
+<li>A* 알고리즘</li>
+</ul>
+</li>
+<li>인터넷 찾다가 공부하고 싶은것<ul>
+<li>B+ Tree</li>
+</ul>
+</li>
+<li>백엔드 관련 공부(KDT 프로그램 최종 프로젝트 관련)<ul>
+<li>rabbitmq, fastapi, celery</li>
+</ul>
+</li>
+<li>도커, 도커 컴포즈 공부</li>
+</ul>
+<h2 id="한것"><a href="#한것" class="headerlink" title="한것"></a>한것</h2><ul>
+<li>코세라 딥러닝 강의 수료 : 복습하는 느낌이라 2일만에 끝내긴 했는데 좋았다</li>
+<li>KDT 마지막 프로젝트 GAN 임시 테스트 데이터셋으로 학습시키기 : 결과가 나오는것을 보았는데 정말 행복했다. 일주일동안 라벨링만했는데 보상 받는 기분</li>
+<li>KDT 과정 마지막 프로젝트 진행 : 어느정도 결과가 나오게 무사히 끝난거같다. 팀원들과 유지보수, 보완에 대해 토의해서 주기적으로 보안하는 코드를 작성할 예정</li>
+<li>코딩테스트 대비 알고리즘 공부 및 정리(점점 늘어날 예정)<ul>
+<li>링크드 리스트</li>
+</ul>
+</li>
+<li>카카오 블라인드 2022 준비 :<ul>
+<li>1차 준비 : 4.5솔로 솔직히 잘본건 아니었는데 붙어서 다행이었다.</li>
+<li>2차 준비 : 참신한 문제여서 재미는 있었는데 리더보드로 인한 압박감이 너무 컸다. 면접 볼수 있으면 좋겠다. 아직 내 cs상식이 좀 부족한거같았다. 열심히 면접대비cs지식을 보면서 공부했는데 모르는것만 나오더라…</li>
+</ul>
+</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-08-28T13:31:05.000Z" title="2021. 8. 28. 오후 10:31:05">2021-08-28</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2021-10-02T14:00:53.147Z" title="2021. 10. 2. 오후 11:00:53">2021-10-02</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Computer-Science/">Computer Science</a><span> / </span><a class="link-muted" href="/categories/Computer-Science/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/">자료구조</a></span><span class="level-item">3분안에 읽기 (약 438 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/08/28/cs/datastructure/linked-list/">링크드 리스트</a></h1><div class="content"><h2 id="링크드리스트"><a href="#링크드리스트" class="headerlink" title="링크드리스트"></a>링크드리스트</h2><p>링크드 리스트는 각 노드가 데이터와 포인터를 가지고 연결되어 있는 방식으로 데이터를 저장하는 자료구조이다</p>
+<h3 id="장점"><a href="#장점" class="headerlink" title="장점"></a>장점</h3><ul>
+<li>원소 추가와 제거가 쉬움 : 시간복잡도 $O(1)$</li>
+<li>list의 크기를 가변적으로 사용가능</li>
+</ul>
+<h3 id="단점"><a href="#단점" class="headerlink" title="단점"></a>단점</h3><ul>
+<li>탐색에는 효율이 좋지 않음 : 특정위치 탐색에 걸리는 시간복잡도 $O(n)$</li>
+</ul>
+<h3 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h3><ul>
+<li>가변적으로 자주 변하는 데이터에 사용하면 좋다</li>
+</ul>
+<h2 id="종류"><a href="#종류" class="headerlink" title="종류"></a>종류</h2><ul>
+<li>단일 연결 리스트 : 단방향으로 포인터가 연결된 리스트</li>
+<li>이중 연결 리스트 : 양방향으로 포인터가 연결된 리스트</li>
+<li>순환 연결 리스트 : Head와 Tail의 노드가 연결되어 순환구조를 가지는 리스트</li>
+</ul>
+<h2 id="구현"><a href="#구현" class="headerlink" title="구현"></a>구현</h2><p>양방향 리스트로 구현해 보았다.</p>
+<ol>
+<li>노드<ul>
+<li>데이터를 담을 노드를 구현<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, Data</span>):</span></span><br><span class="line">        self.Data = Data</span><br><span class="line">        self.prev = <span class="literal">None</span></span><br><span class="line">        self.<span class="built_in">next</span> = <span class="literal">None</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>리스트<ul>
+<li>head와 tail은 더미데이터를 넣어주어서 고려할 사항을 줄여줌<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">linked_list</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        dummy = Node(<span class="literal">None</span>)</span><br><span class="line">        self.head = dummy</span><br><span class="line">        self.tail = dummy</span><br><span class="line">        self.current = dummy</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">self, data</span>):</span> <span class="comment"># 새로운 노드를 추가</span></span><br><span class="line">        newNode = Node(data)</span><br><span class="line">        self.tail.<span class="built_in">next</span> = newNode</span><br><span class="line">        newNode.prev = self.tail</span><br><span class="line">        self.tail = newNode</span><br><span class="line">        self.current = newNode</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">delete</span>(<span class="params">self</span>):</span> <span class="comment"># 현재 활성화 노드를 삭제하고 리턴</span></span><br><span class="line">        next_node, prev_node = self.current.<span class="built_in">next</span>, self.current.prev</span><br><span class="line">        <span class="keyword">if</span> next_node != <span class="literal">None</span>:</span><br><span class="line">            next_node.prev = prev_node</span><br><span class="line">        prev_node.<span class="built_in">next</span> = next_node</span><br><span class="line">        <span class="keyword">return</span> self.current</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">delete_n</span>(<span class="params">self, n</span>):</span> <span class="comment"># n번째 노드를 삭제하고 리턴</span></span><br><span class="line">        current = self.head.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">1</span>):</span><br><span class="line">            current = current.<span class="built_in">next</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">prev</span>(<span class="params">self</span>):</span> <span class="comment"># 활성화 노드를 prev로 이동</span></span><br><span class="line">        self.current = self.current.prev</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">next</span>(<span class="params">self</span>):</span> <span class="comment"># 활성화 노드를 next로 이동</span></span><br><span class="line">        self.current = self.current.<span class="built_in">next</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/10/">이전</a></div><div class="pagination-next is-invisible is-hidden-mobile"><a href="/page/12/">다음</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/10/">10</a></li><li><a class="pagination-link is-current" href="/page/11/">11</a></li></ul></nav></div><div class="column column-left is-3-tablet is-3-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="KyuBum Shin"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">KyuBum Shin</p><p class="is-size-6 is-block">Student</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Incheon</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">110</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">22</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">41</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/KyubumShin" target="_blank" rel="noopener">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/KyubumShin"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">링크</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://github.com/KyubumShin" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Github</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Computer-Science/"><span class="level-start"><span class="level-item">Computer Science</span></span><span class="level-end"><span class="level-item tag">8</span></span></a><ul><li><a class="level is-mobile" href="/categories/Computer-Science/Database/"><span class="level-start"><span class="level-item">Database</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Computer-Science/Network/"><span class="level-start"><span class="level-item">Network</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Computer-Science/OS/"><span class="level-start"><span class="level-item">OS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Computer-Science/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/"><span class="level-start"><span class="level-item">자료구조</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/DeepLearning/"><span class="level-start"><span class="level-item">DeepLearning</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/DeepLearning/Basic/"><span class="level-start"><span class="level-item">Basic</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/DeepLearning/Pytorch-Lightning/"><span class="level-start"><span class="level-item">Pytorch Lightning</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Programming/"><span class="level-start"><span class="level-item">Programming</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/Programming/Docker/"><span class="level-start"><span class="level-item">Docker</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Programming/Python/tip/"><span class="level-start"><span class="level-item">tip</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/boostcamp/"><span class="level-start"><span class="level-item">boostcamp</span></span><span class="level-end"><span class="level-item tag">80</span></span></a><ul><li><a class="level is-mobile" href="/categories/boostcamp/Dairy/"><span class="level-start"><span class="level-item">Dairy</span></span><span class="level-end"><span class="level-item tag">23</span></span></a></li><li><a class="level is-mobile" href="/categories/boostcamp/Peer-Session/"><span class="level-start"><span class="level-item">Peer Session</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/boostcamp/Problems/"><span class="level-start"><span class="level-item">Problems</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/boostcamp/week/"><span class="level-start"><span class="level-item">week</span></span><span class="level-end"><span class="level-item tag">53</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%EB%B0%B1%EC%97%94%EB%93%9C/"><span class="level-start"><span class="level-item">백엔드</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/%EB%B0%B1%EC%97%94%EB%93%9C/%EB%A9%94%EC%84%B8%EC%A7%80%ED%81%90/"><span class="level-start"><span class="level-item">메세지큐</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%EC%9D%BC%EC%83%81/"><span class="level-start"><span class="level-item">일상</span></span><span class="level-end"><span class="level-item tag">37</span></span></a><ul><li><a class="level is-mobile" href="/categories/%EC%9D%BC%EC%83%81/TIL/"><span class="level-start"><span class="level-item">TIL</span></span><span class="level-end"><span class="level-item tag">36</span></span></a></li><li><a class="level is-mobile" href="/categories/%EC%9D%BC%EC%83%81/%EA%B3%84%ED%9A%8D/"><span class="level-start"><span class="level-item">계획</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-16T01:11:47.000Z">2022-03-16</time></p><p class="title"><a href="/2022/03/16/boostcamp/week/week9/CNN-7/">부스트 캠프 ai tech 9주 3일차 Multi-modal Learning</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/boostcamp/week/">week</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-15T16:00:37.000Z">2022-03-16</time></p><p class="title"><a href="/2022/03/16/boostcamp/Dairy/week9-day2-review/">week9-day2-review</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/%EC%9D%BC%EC%83%81/">일상</a> / <a href="/categories/%EC%9D%BC%EC%83%81/TIL/">TIL</a> / <a href="/categories/boostcamp/Dairy/">Dairy</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-15T01:35:12.000Z">2022-03-15</time></p><p class="title"><a href="/2022/03/15/boostcamp/Dairy/Week9-Day1/">Week9 - Day 1 Review</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/%EC%9D%BC%EC%83%81/">일상</a> / <a href="/categories/%EC%9D%BC%EC%83%81/TIL/">TIL</a> / <a href="/categories/boostcamp/Dairy/">Dairy</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-14T01:15:18.000Z">2022-03-14</time></p><p class="title"><a href="/2022/03/14/boostcamp/week/week9/CNN-6/">부스트 캠프 ai tech 9주 2일차 Conditional Generative Model</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/boostcamp/week/">week</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-14T00:27:09.000Z">2022-03-14</time></p><p class="title"><a href="/2022/03/14/boostcamp/week/week9/CNN-5/">부스트 캠프 ai tech 9주 1일차 Instance &amp; Panoptic Segmantation</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/boostcamp/week/">week</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">3월 2022</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/02/"><span class="level-start"><span class="level-item">2월 2022</span></span><span class="level-end"><span class="level-item tag">34</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/01/"><span class="level-start"><span class="level-item">1월 2022</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">10월 2021</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">9월 2021</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">8월 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Ai-Math/"><span class="tag">Ai Math</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ai-serving/"><span class="tag">Ai serving</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CNN/"><span class="tag">CNN</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CNN-Viz/"><span class="tag">CNN Viz</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CV/"><span class="tag">CV</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Data-visualization/"><span class="tag">Data visualization</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DeepLearning/"><span class="tag">DeepLearning</span><span class="tag">21</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Docker/"><span class="tag">Docker</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Function/"><span class="tag">Function</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GAN/"><span class="tag">GAN</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Generative-Model/"><span class="tag">Generative Model</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Instance-Segmentation/"><span class="tag">Instance Segmentation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LandMark-Detection/"><span class="tag">LandMark Detection</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Multi-modal/"><span class="tag">Multi-modal</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Object-Detection/"><span class="tag">Object Detection</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Project-product/"><span class="tag">Project product</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pytorch-Lightning/"><span class="tag">Pytorch Lightning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Semantic-Segmentation/"><span class="tag">Semantic Segmentation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Sequencial-Model/"><span class="tag">Sequencial Model</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VAE/"><span class="tag">VAE</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/backend/"><span class="tag">backend</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cs/"><span class="tag">cs</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/database/"><span class="tag">database</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/message/"><span class="tag">message</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/network/"><span class="tag">network</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/os/"><span class="tag">os</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pytorch/"><span class="tag">pytorch</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week1/"><span class="tag">week1</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week2/"><span class="tag">week2</span><span class="tag">15</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week3/"><span class="tag">week3</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week4/"><span class="tag">week4</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week5/"><span class="tag">week5</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week6/"><span class="tag">week6</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week8/"><span class="tag">week8</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week9/"><span class="tag">week9</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EC%9D%BC%EC%83%81/"><span class="tag">일상</span><span class="tag">36</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/"><span class="tag">자료구조</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%ED%95%A0%EC%9D%BC/"><span class="tag">할일</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">업데이트 소식 받기</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="KyuBum&#039;s Dev Blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 KyuBum Shin</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="맨 위로" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "이 웹 사이트는 귀하의 경험을 향상시키기 위해 Cookie를 사용합니다.",
+          dismiss: "무시",
+          allow: "허용",
+          deny: "거부",
+          link: "더 알아보기",
+          policy: "Cookie 정책",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="입력 하세요..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"입력 하세요...","untitled":"(제목 없음)","posts":"포스트","pages":"페이지","categories":"카테고리","tags":"태그"});
+        });</script></body></html>

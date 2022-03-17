@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>부스트 캠프 ai tech 4주 3일차 DL Basic (5) - KyuBum&#039;s Dev Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="KyuBum Shin"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="KyuBum Shin"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Fully Convolutional Network CNN에서 마지막을 담당하던 Dense Layer를 Dense Layer Feature와 동일한 Channel수를 가진 Convolution Layer로 대체한 Network Dense Layer는 reshape을 통해서 input을 집어넣기 때문에 정해진 input size가 필요 했지만, convolu"><meta property="og:type" content="blog"><meta property="og:title" content="부스트 캠프 ai tech 4주 3일차 DL Basic (5)"><meta property="og:url" content="https://kyubumshin.github.io/2022/02/08/boostcamp/week/week4/DL-basic-5/"><meta property="og:site_name" content="KyuBum&#039;s Dev Blog"><meta property="og:description" content="Fully Convolutional Network CNN에서 마지막을 담당하던 Dense Layer를 Dense Layer Feature와 동일한 Channel수를 가진 Convolution Layer로 대체한 Network Dense Layer는 reshape을 통해서 input을 집어넣기 때문에 정해진 input size가 필요 했지만, convolu"><meta property="og:locale" content="ko_KR"><meta property="og:image" content="https://kyubumshin.github.io/img/og_image.png"><meta property="article:published_time" content="2022-02-08T03:17:13.000Z"><meta property="article:modified_time" content="2022-03-07T06:37:04.441Z"><meta property="article:author" content="KyuBum Shin"><meta property="article:tag" content="DeepLearning"><meta property="article:tag" content="week4"><meta property="article:tag" content="CNN"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://kyubumshin.github.io/2022/02/08/boostcamp/week/week4/DL-basic-5/"},"headline":"부스트 캠프 ai tech 4주 3일차 DL Basic (5)","image":["https://kyubumshin.github.io/img/og_image.png"],"datePublished":"2022-02-08T03:17:13.000Z","dateModified":"2022-03-07T06:37:04.441Z","author":{"@type":"Person","name":"KyuBum Shin"},"publisher":{"@type":"Organization","name":"KyuBum's Dev Blog","logo":{"@type":"ImageObject","url":"https://kyubumshin.github.io/img/logo.svg"}},"description":"Fully Convolutional Network CNN에서 마지막을 담당하던 Dense Layer를 Dense Layer Feature와 동일한 Channel수를 가진 Convolution Layer로 대체한 Network Dense Layer는 reshape을 통해서 input을 집어넣기 때문에 정해진 input size가 필요 했지만, convolu"}</script><link rel="canonical" href="https://kyubumshin.github.io/2022/02/08/boostcamp/week/week4/DL-basic-5/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="KyuBum&#039;s Dev Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-08T03:17:13.000Z" title="2022. 2. 8. 오후 12:17:13">2022-02-08</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-03-07T06:37:04.441Z" title="2022. 3. 7. 오후 3:37:04">2022-03-07</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">2분안에 읽기 (약 362 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile">부스트 캠프 ai tech 4주 3일차 DL Basic (5)</h1><div class="content"><hr>
+<h3 id="Fully-Convolutional-Network"><a href="#Fully-Convolutional-Network" class="headerlink" title="Fully Convolutional Network"></a>Fully Convolutional Network</h3><ul>
+<li>CNN에서 마지막을 담당하던 Dense Layer를 Dense Layer Feature와 동일한 Channel수를 가진 Convolution Layer로 대체한 Network</li>
+<li>Dense Layer는 reshape을 통해서 input을 집어넣기 때문에 정해진 input size가 필요 했지만, convolution Layer의 경우 channel 이외에는 가변적이기 때문에 이미지의 크기와 상관없이 연산이 가능해졌다</li>
+<li>연산을 할 때 마다 차원이 축소되는 문제가 있다 -&gt; upsampling기법을 사용<ul>
+<li>conv transpose -&gt; checker board</li>
+<li>unpooling</li>
+</ul>
+</li>
+</ul>
+<h2 id="Object-Detection"><a href="#Object-Detection" class="headerlink" title="Object Detection"></a>Object Detection</h2><h3 id="R-CNN-계열"><a href="#R-CNN-계열" class="headerlink" title="R-CNN 계열"></a>R-CNN 계열</h3><ul>
+<li>R-CNN<ul>
+<li>Selective Search 로 BBox 2000개정도를 추출 한 뒤 각각 CNN을 돌린다</li>
+<li>CNN 연산이 2000번 반복되기 때문에 매우 느린 속도이다</li>
+</ul>
+</li>
+<li>fast R-CNN<ul>
+<li>SPP Net을 이용하여 기존 2000번 반복된 연산을 1번으로 줄임</li>
+</ul>
+</li>
+<li>Faster R-CNN<ul>
+<li>Selective Search를 Region Proposal Network로 바꾼 R-CNN</li>
+<li>Region Proposal Network : BBox도 네트워크 학습으로 뽑아내자</li>
+<li>기존에 존재하는 anchor Box(샘플한 여러 크기의 Bbox)와 이미지를 비교하여 물체가 있을법한 장소를 탐색하고, 대략적인 Bbox위치를 특정한다</li>
+</ul>
+</li>
+</ul>
+<h3 id="Yolo"><a href="#Yolo" class="headerlink" title="Yolo"></a>Yolo</h3><ul>
+<li>BBox와 Classfication이 동시에 이루어지는 1 stage 모델</li>
+<li>R-CNN 계열에 비해서 속도가 매우 빠르지만, 정확도는 조금 떨어진다</li>
+<li>실시간 물체검출이나 추적에 용이한 모델이다</li>
+</ul>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>부스트 캠프 ai tech 4주 3일차 DL Basic (5)</p><p><a href="https://kyubumshin.github.io/2022/02/08/boostcamp/week/week4/DL-basic-5/">https://kyubumshin.github.io/2022/02/08/boostcamp/week/week4/DL-basic-5/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>KyuBum Shin</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2022-02-08</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-03-07</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/DeepLearning/">DeepLearning</a><a class="link-muted mr-2" rel="tag" href="/tags/week4/">week4</a><a class="link-muted mr-2" rel="tag" href="/tags/CNN/">CNN</a></div><div class="sharethis-inline-share-buttons"></div><script src="&lt;script type=&quot;text/javascript&quot; src=&quot;https://platform-api.sharethis.com/js/sharethis.js#property=612ce5f747069100121128ed&amp;product=inline-share-buttons&quot; async=&quot;async&quot;&gt;&lt;/script&gt;" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2022/02/08/boostcamp/Dairy/Week4-Day2-Review/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Week4 - Day2 Review</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/02/08/boostcamp/week/week4/DL-basic-4/"><span class="level-item">부스트 캠프 ai tech 4주 1일차 DL Basic (4)</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">댓글</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://kyubumshin.github.io/2022/02/08/boostcamp/week/week4/DL-basic-5/';
+            this.page.identifier = '2022/02/08/boostcamp/week/week4/DL-basic-5/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'kyubumshin-github-io' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="KyuBum&#039;s Dev Blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 KyuBum Shin</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="맨 위로" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "이 웹 사이트는 귀하의 경험을 향상시키기 위해 Cookie를 사용합니다.",
+          dismiss: "무시",
+          allow: "허용",
+          deny: "거부",
+          link: "더 알아보기",
+          policy: "Cookie 정책",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="입력 하세요..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"입력 하세요...","untitled":"(제목 없음)","posts":"포스트","pages":"페이지","categories":"카테고리","tags":"태그"});
+        });</script></body></html>

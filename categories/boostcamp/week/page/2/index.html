@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>카테고리: week - KyuBum&#039;s Dev Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="KyuBum Shin"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="KyuBum Shin"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="KyuBum&#039;s Dev Blog"><meta property="og:url" content="https://kyubumshin.github.io/"><meta property="og:site_name" content="KyuBum&#039;s Dev Blog"><meta property="og:locale" content="ko_KR"><meta property="og:image" content="https://kyubumshin.github.io/img/og_image.png"><meta property="article:author" content="KyuBum Shin"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://kyubumshin.github.io"},"headline":"KyuBum's Dev Blog","image":["https://kyubumshin.github.io/img/og_image.png"],"author":{"@type":"Person","name":"KyuBum Shin"},"publisher":{"@type":"Organization","name":"KyuBum's Dev Blog","logo":{"@type":"ImageObject","url":"https://kyubumshin.github.io/img/logo.svg"}},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="KyuBum&#039;s Dev Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-9-tablet is-9-desktop is-9-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">카테고리</a></li><li><a href="/categories/boostcamp/">boostcamp</a></li><li class="is-active"><a href="#" aria-current="page">week</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-14T00:57:34.000Z" title="2022. 2. 14. 오전 9:57:34">2022-02-14</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-15T08:15:40.017Z" title="2022. 2. 15. 오후 5:15:40">2022-02-15</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">5분안에 읽기 (약 706 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/14/boostcamp/week/week5/ai-serving/">AI 프로젝트 설계</a></h1><div class="content"><hr>
+<h2 id="문제를-해결하기-위한-흐름"><a href="#문제를-해결하기-위한-흐름" class="headerlink" title="문제를 해결하기 위한 흐름"></a>문제를 해결하기 위한 흐름</h2><ul>
+<li>현상파악</li>
+<li>목적 및 문제 정의</li>
+<li>프로젝트 설계</li>
+<li>Action</li>
+<li>추가적인 원인 분석</li>
+</ul>
+<h2 id="1-현상-파악-및-문제-정의"><a href="#1-현상-파악-및-문제-정의" class="headerlink" title="1. 현상 파악 및 문제 정의"></a>1. 현상 파악 및 문제 정의</h2><ul>
+<li>문제의 정의<ul>
+<li>특정 현상을 파악하고, 그 현상의 있는 문제를 정의하는 과정이 필요하다</li>
+<li>풀고자 하는 문제를 명확하게 하는것이 중요하다</li>
+</ul>
+</li>
+<li>어느정도 현상파악이 끝나면 내렸던 문제의 정의를 좀더 구체적으로 만들어본다<ul>
+<li>문제 해결을 위한 대상을 정하기</li>
+<li>목표에 대한 구체적인 정의 등</li>
+<li>왜 그러한 일이 발생하는지 가설세우기</li>
+<li>이 문제대해 어떠한 데이터가 존재하는가?</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-프로젝트-설계"><a href="#2-프로젝트-설계" class="headerlink" title="2. 프로젝트 설계"></a>2. 프로젝트 설계</h2><ul>
+<li><p><code>처음부터 최대한 자세하게 설계하자</code></p>
+</li>
+<li><p>머신러닝 문제 타당성 확인</p>
+<blockquote>
+<h3 id="항상-ML이-만능은-아니다"><a href="#항상-ML이-만능은-아니다" class="headerlink" title="항상 ML이 만능은 아니다"></a><code>항상 ML이 만능은 아니다</code></h3><ul>
+<li>ML을 사용하면 좋은경우</li>
+<li>학습가능한 패턴이 존재하는 문제<ul>
+<li>사람이 반복적으로 실행하는 task인 경우 -&gt; ML로 대체될 가능성이 높다</li>
+</ul>
+</li>
+<li>그리고 그 패턴이 복잡할 경우<ul>
+<li>간단한 문제면 Huristic한 알고리즘이 이것보다 몇배는 더 빠르다</li>
+<li>간단하면 계산 코스트가 너무 커질 가능성이 높다</li>
+</ul>
+</li>
+<li>목적함수를 만들 수 없으면 ML의 의미가 없다</li>
+<li><code>데이터 수집이 가능할 경우</code> : 데이터가 없으면 답이 없다<ul>
+<li>없으면 데이터 수집부터 진행해야한다…. Labeling</li>
+</ul>
+</li>
+<li>인종, 성향 등등의 윤리적인 제한에 자유로울 경우  </li>
+</ul>
+</blockquote>
+</li>
+<li><p>프로젝트의 목표 및 지표 설정</p>
+<ul>
+<li>목표 : 일반적인 목적, 큰 목적, 메인 Task</li>
+<li>지표 : 목적을 달성하기 위한 세부 단계의 목표</li>
+</ul>
+</li>
+<li><p>제약조건</p>
+<ul>
+<li>이 문제를 해결하기 위해 무한한 자금과 시간이 있는것이 아니다.</li>
+<li>시간적인 문제</li>
+<li>금전적인 문제</li>
+<li>데이터가 민감한 정보들을 포함하고 있을 가능성도 존재한다</li>
+<li>데이터 윤리적인 문제</li>
+</ul>
+</li>
+<li><p>Baseline, Prototype 제작</p>
+</li>
+<li><p>Metric Evaluation  </p>
+</li>
+</ul>
+<h2 id="3-Action"><a href="#3-Action" class="headerlink" title="3. Action"></a>3. Action</h2><ul>
+<li>모델 개발 후 배포, 모니터링 과정</li>
+<li>앞서 설계한 지표의 변화 파악하는 과정을 진행한다  </li>
+</ul>
+<h2 id="4-추가-원인분석"><a href="#4-추가-원인분석" class="headerlink" title="4. 추가 원인분석"></a>4. 추가 원인분석</h2><ul>
+<li>새롭게 발견한 상황들의 원인 분석 및 해결방안 설계  </li>
+</ul>
+<h2 id="비즈니스-모델-BM"><a href="#비즈니스-모델-BM" class="headerlink" title="비즈니스 모델 BM"></a>비즈니스 모델 BM</h2><ul>
+<li>회사가 어떤 서비스 가치를 제공하고있는가?<ul>
+<li>비즈니스 모델 : 회사가 서비스를 제공하여 가치를 창출하는 방식</li>
+</ul>
+</li>
+<li>서비스의 핵심을 파악하자</li>
+<li>어떠한 데이터를 가지고있는가</li>
+<li>데이터로 무엇을 할수 있을까  </li>
+</ul>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-13T14:14:53.000Z" title="2022. 2. 13. 오후 11:14:53">2022-02-13</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-14T00:57:54.892Z" title="2022. 2. 14. 오전 9:57:54">2022-02-14</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">1분안에 읽기 (약 196 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/13/boostcamp/week/week4/data-viz-13/">부스트 캠프 ai tech 4주차 Data 시각화 (13)</a></h1><div class="content"><hr>
+<h3 id="Missingno"><a href="#Missingno" class="headerlink" title="Missingno"></a>Missingno</h3><ul>
+<li>결측치를 시각화 해주는 라이브러리</li>
+<li>빠르게 결측치의 분포를 확인할 때 사용가능하다</li>
+<li>missingno library를 사용한다</li>
+</ul>
+<h3 id="plotly"><a href="#plotly" class="headerlink" title="plotly"></a>plotly</h3><ul>
+<li>interactive한 시각화를 할때 사용하는 시각화 라이브러리</li>
+<li>추가적으로 다룰 예정이다</li>
+<li>Treemap같은 계층을 interactive 하게 보여줄때 사용한다</li>
+</ul>
+<h3 id="Waffle-Chart"><a href="#Waffle-Chart" class="headerlink" title="Waffle Chart"></a>Waffle Chart</h3><ul>
+<li>pywaffle</li>
+<li>와플형태로 discrete하게 값을 나타내는 차트<ul>
+<li>github commit형태</li>
+</ul>
+</li>
+<li>icon을 이용해서 표현을 할 수 있다</li>
+<li>info graphic 에 유용하게 사용가능하다</li>
+</ul>
+<h3 id="Venn"><a href="#Venn" class="headerlink" title="Venn"></a>Venn</h3><ul>
+<li>집합으로 표현하는 시각화</li>
+<li>pyvenn을 사용</li>
+<li>EDA보다는 출판용으로 사용하는것이 좋다<ul>
+<li>가독성이 좋지 않다</li>
+</ul>
+</li>
+</ul>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-09T02:38:46.000Z" title="2022. 2. 9. 오전 11:38:46">2022-02-09</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-15T08:14:40.183Z" title="2022. 2. 15. 오후 5:14:40">2022-02-15</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">2분안에 읽기 (약 314 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/09/boostcamp/week/week4/DL-basic-9/">부스트 캠프 ai tech 4주 5일차 DL Basic (9)</a></h1><div class="content"><hr>
+<h2 id="GAN"><a href="#GAN" class="headerlink" title="GAN"></a>GAN</h2><ul>
+<li>적대적 생성모델</li>
+<li>노이즈로부터 데이터를 생성하는 Generator와 데이터가 진짜 데이터인지 생성된 데이터인지를 판단하는 Discriminator 2개의 구조로 이루어져 있다</li>
+<li>Generator와 Discriminator는 서로의 Loss값을 최대로 하는 방향으로 학습을 하려 한다<ul>
+<li>Generator는 Discriminator의 판단한 결과로 실제 데이터와 유사하게 학습하는 방향으로 학습한다</li>
+<li>Discriminator는 이진분류기로 실제데이터와 생성데이터를 분류한다</li>
+</ul>
+</li>
+</ul>
+<center>
+
+<img src="https://t1.daumcdn.net/cfile/tistory/9928E6375B75872D17" alt="" width="400px"/>
+
+</center>
+  
+<ul>
+<li>GAN을 아래와 같이 표현이 가능하다.<br>$$<br>min_G, max_D, V(D,G) = \mathbf{E}<em>{x\sim p</em>{data}(x)}[\operatorname{log}D(x)] + \mathbf{E}<em>{z \sim p</em>{z}(z)}[\operatorname{log}(1 - D(G(z)))]<br>$$</li>
+</ul>
+<h2 id="GAN-amp-VAE"><a href="#GAN-amp-VAE" class="headerlink" title="GAN &amp; VAE"></a>GAN &amp; VAE</h2><ul>
+<li>VAE<ul>
+<li>학습이 안정적이다</li>
+<li>결과물이 흐릿하게 나올 확률이 높다</li>
+<li>학습 데이터에 있는 데이터와 비슷하게 나온다<ul>
+<li>새로운것을 만들어내지는 못함</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>GAN  <ul>
+<li>학습이 불안전하다</li>
+<li>출력물이 뚜렷한 편이다<ul>
+<li>새로운 분포를 만들 수 있다</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>최근에는 VAE또한 많이 발전해서 output이 GAN 이상의 것들을 보여준다<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3></li>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-09T02:38:34.000Z" title="2022. 2. 9. 오전 11:38:34">2022-02-09</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-11T14:27:16.310Z" title="2022. 2. 11. 오후 11:27:16">2022-02-11</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">4분안에 읽기 (약 570 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/09/boostcamp/week/week4/DL-basic-8/">부스트 캠프 ai tech 4주 4일차 DL Basic (8)</a></h1><div class="content"><hr>
+<h2 id="Generative-Model"><a href="#Generative-Model" class="headerlink" title="Generative Model"></a>Generative Model</h2><ul>
+<li>생성모델은 아래와 같은 특징을 가진다</li>
+<li>Generatation<ul>
+<li>기존의 데이터 확률분포 $p(x)$ 에 속하는 $x_new$를 만들어 낸다</li>
+</ul>
+</li>
+<li>Density estimation<ul>
+<li>data $x$가 기존의 데이터와 비슷하면 확률분포 $p(x)$상에 존재할 가능성이 높다.</li>
+<li>anomaly detection 이상치 탐지</li>
+<li>설명 가능한 모델 등이 있다</li>
+</ul>
+</li>
+</ul>
+<h2 id="Variaty-Autoencoder"><a href="#Variaty-Autoencoder" class="headerlink" title="Variaty Autoencoder"></a>Variaty Autoencoder</h2><ul>
+<li>Latent Space로 부터 데이터를 생성해내는 모델을 말한다</li>
+<li>Encoder와 Decoder 2부분으로 이루어져 있다<ul>
+<li>Encoder에서는 기존의 Dataset으로 부터 Latent Space를 생성한다<ul>
+<li>$x \rightarrow p(x)$</li>
+</ul>
+</li>
+<li>Decoder는 Latent Space로부터 역으로 Data를 생성한다<ul>
+<li>$p(x) \rightarrow x$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>그래서 Encoder에서는 Dataset으로 Latent Space의 확률분포를 근사하고<ul>
+<li>$q_\phi$(z|x)</li>
+</ul>
+</li>
+<li>Decoder에서는 Latent Space에서 기존 Dataset의 확률분포로 이동을 시켜준다<ul>
+<li>$p_\theta(x)$</li>
+<li>하지만 위의 확률분포는 우리가 알 방법이 없다</li>
+</ul>
+</li>
+<li>그래서 이것을 근사하기 위해 VAE에서 사용된 2가지 기법에 대해서 간략하게 설명한다</li>
+</ul>
+<h3 id="Variaty-Inference"><a href="#Variaty-Inference" class="headerlink" title="Variaty Inference"></a>Variaty Inference</h3><ul>
+<li><p>$q_\phi(z|x)$와 $p_\theta(z|x)$의 차이($D_{KL}$)를 줄이는것이 궁극적인 목표이다</p>
+<ul>
+<li>하지만 $p_\theta(z|x)$은 우리가 알 수가 없다</li>
+</ul>
+</li>
+<li><p>그래서 Maximum Likehood를 변형시켜서 학습에 이용한다</p>
+</li>
+<li><p>$\mathcal{L}(\theta, \phi ; x)$ : Evidence Lower Bound (ELBO)<br>$$<br>\begin{aligned}<br>log(p_\theta (x)) &amp;= \int_z q_\phi(z|x)log(p_\theta(x))\\<br>&amp;= \mathcal{L}(\theta, \phi ; x) + D_{KL}(q_\phi(z|x)||p_\theta(z|x))<br>\end{aligned}<br>$$</p>
+</li>
+<li><p>$D_{KL}$는 항상 1보다 크기때문에 위의 식은 다음과 같이 나타낼 수 있다.</p>
+</li>
+</ul>
+<p>$$<br>log(p_\theta (x)) \geq \mathcal{L}(\theta, \phi ; x)<br>$$</p>
+<ul>
+<li>여기서 ELBO를 크게 하는 쪽으로 학습을 하게되면 $D_{KL}$은 줄어들게 된다.</li>
+</ul>
+<h3 id="Reparametrization-Trick"><a href="#Reparametrization-Trick" class="headerlink" title="Reparametrization Trick"></a>Reparametrization Trick</h3><ul>
+<li>학습과정 중간에 Sampling이 들어가서 미분이 되지 않는것을 해결하기 위한 Trick</li>
+<li>sampling 한 값 $z$가 $\mu_q + \sigma_q \cdot \epsilon$ 과 같다고 생각하고 기존에 없던 $z$에 대해서 미분이 가능하게 바꾸었다.</li>
+</ul>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=KYA-GEhObIs&list=PLlMkM4tgfjnJhhd4wn5aj8fVTYJwIpWkS">PR-[010] : Auto-Encoding variational Bayes ICLR 2014</a></li>
+<li><a target="_blank" rel="noopener" href="https://hugrypiggykim.com/2018/09/07/variational-autoencoder%EC%99%80-elboevidence-lower-bound/">VARIATIONAL-AUTOENCODER와 ELBO(EVIDENCE LOWER BOUND)</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-08T04:11:46.000Z" title="2022. 2. 8. 오후 1:11:46">2022-02-08</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-11T14:27:15.795Z" title="2022. 2. 11. 오후 11:27:15">2022-02-11</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">5분안에 읽기 (약 693 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/08/boostcamp/week/week4/DL-basic-6/">부스트 캠프 ai tech 4주 3일차 DL Basic (6)</a></h1><div class="content"><hr>
+<h2 id="Sequential-Model"><a href="#Sequential-Model" class="headerlink" title="Sequential Model"></a>Sequential Model</h2><h3 id="Naive-sequeance-model"><a href="#Naive-sequeance-model" class="headerlink" title="Naive sequeance model"></a>Naive sequeance model</h3><ul>
+<li>과거 모든시점의 데이터를 고려해야한다</li>
+<li>시퀸스가 진행될 수록 고려해야할 데이터 양이 늘어남  </li>
+</ul>
+<h3 id="Autoregressive-model"><a href="#Autoregressive-model" class="headerlink" title="Autoregressive model"></a>Autoregressive model</h3><ul>
+<li>특정 과거 시점 이후의 데이터만 고려한다<h3 id="Markov-model"><a href="#Markov-model" class="headerlink" title="Markov model"></a>Markov model</h3></li>
+<li>Markov Chain role에 의하여 바로 전 state가 이전시점의 모든 데이터를 가지고 있다고 가정한다</li>
+<li>위의 이유로 바로 전 시점의 데이터만 고려함</li>
+<li>강화학습에서 많이 사용하는데 현실에 직접 적용하기에는 버려지는 정보량이 너무 많다</li>
+</ul>
+<h3 id="Latent-autoregressive-model"><a href="#Latent-autoregressive-model" class="headerlink" title="Latent autoregressive model"></a>Latent autoregressive model</h3><ul>
+<li>과거의 모든 정보들을 요약한 hidden state를 사용한다<ul>
+<li>hidden state가 어떻게 정의되느냐에 따라서 모델간 많은 차이가 존재한다</li>
+</ul>
+</li>
+<li>RNN도 Latent autoregressive model라고 볼 수 있다</li>
+</ul>
+<hr>
+<h2 id="Recurrent-Neural-Network-RNN"><a href="#Recurrent-Neural-Network-RNN" class="headerlink" title="Recurrent Neural Network (RNN)"></a>Recurrent Neural Network (RNN)</h2><ul>
+<li>자기참조로 학습하는 네트워크</li>
+</ul>
+<center>
+
+<img src="https://colah.github.io/posts/2015-08-Understanding-LSTMs/img/RNN-unrolled.png" alt="" width="500px"/>
+
+</center>
+
+<ul>
+<li>short-term dependencies<ul>
+<li>먼 과거의 정보(Long-term)는 고려하기 힘들다</li>
+<li>자기참조로 인한 연산이 계속되면서 gradient vanishing(sigmoid, tanh)이나 exploring(ReLU 계열)이 발생한다</li>
+</ul>
+</li>
+</ul>
+<h2 id="Long-Short-Term-Memory"><a href="#Long-Short-Term-Memory" class="headerlink" title="Long Short Term Memory"></a>Long Short Term Memory</h2><ul>
+<li><p>먼 과거의 정보를 고려하기위해 고안된 RNN</p>
+</li>
+<li><p>기존에 존재하는 Hidden state에 내부에서만 연산되는 Cell State를 추가하여 먼 과거의 정보 또한 잘 기억할 수 있다</p>
+</li>
+<li><p>$x$ : data</p>
+</li>
+<li><p>$C$ : Cell state</p>
+</li>
+<li><p>$h$ : hidden state</p>
+</li>
+<li><p>$\sigma$ : sigmoid function</p>
+</li>
+<li><p>$tanh$ : hyperbolic tan function</p>
+</li>
+</ul>
+<center>
+
+<img src="https://colah.github.io/posts/2015-08-Understanding-LSTMs/img/LSTM3-chain.png" alt="" width="500px"/>
+
+</center>
+
+<h3 id="Cell-state"><a href="#Cell-state" class="headerlink" title="Cell state"></a>Cell state</h3><ul>
+<li>먼 과거의 정보까지 요약해서 가지고 있다가 Hidden state에 넘겨주는 역할</li>
+<li>과거의 정보가 희석되는것을 막는 Resnet의 Skip Connection과 비슷한 역할을 한다</li>
+<li>Cell state는 다음과 같은 과정으로 업데이트 된다</li>
+</ul>
+<ol>
+<li>$t-1$시점의 Hidden state가 Forget Gate를 통과<ul>
+<li>Forget Gate : 중요하지 않은 정보들을 없애는 Gate<br>$$<br>f_{t} = \sigma(W_{f}\cdot[h_{t-1}, x_{t}] + b_f)<br>$$</li>
+</ul>
+</li>
+<li>$t-1$시점의 Hidden state가 Input Gate를 통과<ul>
+<li>Input Gate : Cell state에 저장해야하는 정보들을 결정하는 Gate<br>$$<br>\begin{aligned}<br>i_{t} &amp;= \sigma(W_{i}\centerdot [h_{t-1}, x_{t}] + b_{f})\\<br>\tilde{C_{t}} &amp;= tanh(W_{C}\cdot [h_{t-1}, x_{t} ]+b_{C})<br>\end{aligned}<br>$$ </li>
+</ul>
+</li>
+<li>$t-1$시점의 Cell state와 Gate를 통해서 나온 값들의 연산으로 Cell state를 업데이트 한다<br>$$<br>C_{t} = f_{t} * C_{t-1} + i_{t}*\tilde{C_{t}}<br>$$</li>
+</ol>
+<h3 id="Hidden-state"><a href="#Hidden-state" class="headerlink" title="Hidden state"></a>Hidden state</h3><ul>
+<li>기존의 RNN에 Hidden state와 동일한 역할</li>
+<li>아래의 Output Gate에 Cell state와 Hidden state의 연산으로 업데이트 된다</li>
+</ul>
+<ol>
+<li>Output Gate<br>$$<br>o_t = \sigma(W_o [h_{t-1}, x_t] + b_i)\\<br>h_t = o_t * tanh(C_t)<br>$$</li>
+</ol>
+<h2 id="Gated-Recurrent-Unit-GRU"><a href="#Gated-Recurrent-Unit-GRU" class="headerlink" title="Gated Recurrent Unit (GRU)"></a>Gated Recurrent Unit (GRU)</h2><ul>
+<li>LSTM과 비슷한 형태</li>
+<li>2개의 Gate(reset Gate, update Gate)가 존재하고 Cell state가 없다</li>
+<li>LSTM보다 더 적은 parameter를 가진다  </li>
+</ul>
+<center>
+
+<img src="https://user-images.githubusercontent.com/38639633/106863078-5d25ed80-670b-11eb-8be1-f0f0fc785874.png" alt="" width="300px"/>
+
+</center>
+
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+<li><a target="_blank" rel="noopener" href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">colah.github.io - RNN image</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-08T03:17:13.000Z" title="2022. 2. 8. 오후 12:17:13">2022-02-08</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-03-07T06:37:04.441Z" title="2022. 3. 7. 오후 3:37:04">2022-03-07</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">2분안에 읽기 (약 362 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/08/boostcamp/week/week4/DL-basic-5/">부스트 캠프 ai tech 4주 3일차 DL Basic (5)</a></h1><div class="content"><hr>
+<h3 id="Fully-Convolutional-Network"><a href="#Fully-Convolutional-Network" class="headerlink" title="Fully Convolutional Network"></a>Fully Convolutional Network</h3><ul>
+<li>CNN에서 마지막을 담당하던 Dense Layer를 Dense Layer Feature와 동일한 Channel수를 가진 Convolution Layer로 대체한 Network</li>
+<li>Dense Layer는 reshape을 통해서 input을 집어넣기 때문에 정해진 input size가 필요 했지만, convolution Layer의 경우 channel 이외에는 가변적이기 때문에 이미지의 크기와 상관없이 연산이 가능해졌다</li>
+<li>연산을 할 때 마다 차원이 축소되는 문제가 있다 -&gt; upsampling기법을 사용<ul>
+<li>conv transpose -&gt; checker board</li>
+<li>unpooling</li>
+</ul>
+</li>
+</ul>
+<h2 id="Object-Detection"><a href="#Object-Detection" class="headerlink" title="Object Detection"></a>Object Detection</h2><h3 id="R-CNN-계열"><a href="#R-CNN-계열" class="headerlink" title="R-CNN 계열"></a>R-CNN 계열</h3><ul>
+<li>R-CNN<ul>
+<li>Selective Search 로 BBox 2000개정도를 추출 한 뒤 각각 CNN을 돌린다</li>
+<li>CNN 연산이 2000번 반복되기 때문에 매우 느린 속도이다</li>
+</ul>
+</li>
+<li>fast R-CNN<ul>
+<li>SPP Net을 이용하여 기존 2000번 반복된 연산을 1번으로 줄임</li>
+</ul>
+</li>
+<li>Faster R-CNN<ul>
+<li>Selective Search를 Region Proposal Network로 바꾼 R-CNN</li>
+<li>Region Proposal Network : BBox도 네트워크 학습으로 뽑아내자</li>
+<li>기존에 존재하는 anchor Box(샘플한 여러 크기의 Bbox)와 이미지를 비교하여 물체가 있을법한 장소를 탐색하고, 대략적인 Bbox위치를 특정한다</li>
+</ul>
+</li>
+</ul>
+<h3 id="Yolo"><a href="#Yolo" class="headerlink" title="Yolo"></a>Yolo</h3><ul>
+<li>BBox와 Classfication이 동시에 이루어지는 1 stage 모델</li>
+<li>R-CNN 계열에 비해서 속도가 매우 빠르지만, 정확도는 조금 떨어진다</li>
+<li>실시간 물체검출이나 추적에 용이한 모델이다</li>
+</ul>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-08T02:49:47.000Z" title="2022. 2. 8. 오전 11:49:47">2022-02-08</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-03-07T06:35:31.545Z" title="2022. 3. 7. 오후 3:35:31">2022-03-07</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">2분안에 읽기 (약 294 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/08/boostcamp/week/week4/DL-basic-4/">부스트 캠프 ai tech 4주 1일차 DL Basic (4)</a></h1><div class="content"><hr>
+<h3 id="AlexNet"><a href="#AlexNet" class="headerlink" title="AlexNet"></a>AlexNet</h3><ul>
+<li>CNN으로 구성된 Network</li>
+<li>시작부분에 11 x 11의 큰 convolution Layer를 사용했다</li>
+</ul>
+<h3 id="VGGNet"><a href="#VGGNet" class="headerlink" title="VGGNet"></a>VGGNet</h3><ul>
+<li>여러장의 3 x 3의 convolution Layer와 2 x 2 MaxPooling을 사용하였다</li>
+<li>여러장의 3 x 3의 convolution Layer를 사용하면서 다음과 같은 advantage를 얻었다<ul>
+<li>큰 convolution Layer와 동일한 연산을 더 작은 Parameter로 수행할 수 있다</li>
+<li>receptive field를 크게 유지할 수 있다</li>
+<li>더 깊게 비선형적으로 Layer 추가가 가능해 진다</li>
+</ul>
+</li>
+</ul>
+<h3 id="GoogLeNet"><a href="#GoogLeNet" class="headerlink" title="GoogLeNet"></a>GoogLeNet</h3><ul>
+<li>1 x 1, 3 x 3, 5 x 5, maxpooling을 이용하여 inception module을 구성하였다</li>
+<li>1 x 1 convolution Layer를 이용해서 Channel 수를 줄여주었다  </li>
+</ul>
+<center>
+
+<img src="/img/inceptionblock.PNG" alt="" width="500px"/>
+
+</center>
+
+<ul>
+<li>Layer가 깊어지면서 Gradient Vanashing이 일어나는것을 막기위해 Auxiliary classifier를 두어서 추가적으로 Gradient를 더해주었다<ul>
+<li>inference시에는 사용되지 않는다</li>
+</ul>
+</li>
+</ul>
+<h3 id="ResNet"><a href="#ResNet" class="headerlink" title="ResNet"></a>ResNet</h3><ul>
+<li>Skip Conncetion을 두어 Gradient Vanashing을 해결하여 더 많게 레이어를 쌓은 모델이다</li>
+<li>VGGnet의 3x3을 차용하여 파라미터 수를 크게 늘리지 않으면서 레이어를 더 쌓았다</li>
+<li>channel이 변하는 구간에서는 DownSampling을 통하여 channel과 Height, weight를 맞춰주었다</li>
+</ul>
+<center>
+
+<img src="/img/resiblock.PNG" alt="" width="300px"/>
+
+</center>
+
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-08T00:55:23.000Z" title="2022. 2. 8. 오전 9:55:23">2022-02-08</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-11T14:27:14.769Z" title="2022. 2. 11. 오후 11:27:14">2022-02-11</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">3분안에 읽기 (약 391 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/08/boostcamp/week/week4/DL-basic-3/">부스트 캠프 ai tech 4주 2일차 DL Basic (3)</a></h1><div class="content"><hr>
+<h2 id="Convolution-Neural-Network-CNN"><a href="#Convolution-Neural-Network-CNN" class="headerlink" title="Convolution Neural Network (CNN)"></a>Convolution Neural Network (CNN)</h2><ul>
+<li>시각적 데이터르 분석하는데 사용되는 인공신경망</li>
+<li>CNN은 크게 Convolution Layer, Pooling Layer, (Fully Cunnect Layer)로 구성된다</li>
+</ul>
+<center>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Typical_cnn.png" alt="" width="500px"/>
+
+</center>
+
+
+<h3 id="Convolution-layer"><a href="#Convolution-layer" class="headerlink" title="Convolution layer"></a>Convolution layer</h3><ul>
+<li>합성곱 연산이 진행되는 레이어</li>
+<li>parameter의 수는 $kernel_size \times Channel_in \times Channel_out$으로 계산된다</li>
+<li>이미지 처리를 할 시에 Fully Connected Layer보다 parameter 수가 월등하게 적다</li>
+<li>실제 연산 이미지  </li>
+</ul>
+<center>
+
+<img src="/img/Convolution_schematic.gif" alt="" width="500px"/>
+
+</center>
+
+<ul>
+<li>input과 output의 크기는 아래와 같이 계산된다</li>
+<li>input : $(N, C_{in}, H_{in}, W_{in})$ </li>
+<li>output : $(N, C_{out}, H_{out}, W_{out})$</li>
+<li>stride : 연산이 이루어지는 간격</li>
+<li>padding : 차원을 확장시켜 convolution 연산후에도 크기가 일정하게 유지되도록 한다</li>
+<li>kernel : convolution 연산을 하는 주체, filter이기도 하다</li>
+<li>N : batch size</li>
+<li>C : Channel 수</li>
+<li>W : 연산될 Matrix의 가로 길이</li>
+<li>H : 연산될 Matrix의 세로 길이</li>
+</ul>
+<h3 id="Pooling-Layer"><a href="#Pooling-Layer" class="headerlink" title="Pooling Layer"></a>Pooling Layer</h3><ul>
+<li>일정 범위안의 값들을 대표하는 하나의 값으로 압축하는 down sampling 기법</li>
+<li>W와 H을 줄여서 차원을 축소하고, 연산에 필요한 parameter 수를 줄인다.</li>
+</ul>
+<center>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Max_pooling.png" alt="Max Pooling" width="500px"/>
+
+</center>
+
+<h3 id="1x1-Convolution"><a href="#1x1-Convolution" class="headerlink" title="1x1 Convolution"></a>1x1 Convolution</h3><ul>
+<li>kernel size가 1,1인 convolution 연산을 하는것</li>
+<li>input, output의 W, H는 일정하지만 channel수가 감소한다.</li>
+<li>WHY?  <ul>
+<li>channel 수를 줄여서 차원축소를 시키고, 추후에 연산에 필요한 parameter 수를 줄인다</li>
+</ul>
+</li>
+</ul>
+<p>$$<br>H_{out} = \left[ \frac{H_{in} + 2 \times \operatorname{padding[0]} - \operatorname{kernel_size[0]}}{\operatorname{stride}[0]} +1 \right]<br>$$</p>
+<p>$$<br>W_{out} = \left[ \frac{W_{in} + 2 \times \operatorname{padding[1]} - \operatorname{kernel_size[1]}}{\operatorname{stride}[1]} +1 \right]<br>$$</p>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+<li>[By Aphex34 - Own work, CC BY-SA 4.0, <a target="_blank" rel="noopener" href="https://commons.wikimedia.org/w/index.php?curid=45679374%5D">https://commons.wikimedia.org/w/index.php?curid=45679374]</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-07T02:56:12.000Z" title="2022. 2. 7. 오전 11:56:12">2022-02-07</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-08T00:56:28.320Z" title="2022. 2. 8. 오전 9:56:28">2022-02-08</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">8분안에 읽기 (약 1230 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/07/boostcamp/week/week4/DL-basic-2/">부스트 캠프 ai tech 4주 1일차 DL Basic (2)</a></h1><div class="content"><hr>
+<h2 id="들어가기-전에"><a href="#들어가기-전에" class="headerlink" title="들어가기 전에"></a>들어가기 전에</h2><h3 id="Generalization"><a href="#Generalization" class="headerlink" title="Generalization"></a>Generalization</h3><ul>
+<li>이 모델이 얼마나 일반적인지를 나타내는 지표</li>
+<li>보통 train loss와 test loss간의 차이를 말한다</li>
+<li>Generalization Gap이 작을수록 일반적인 모델이라고 한다 </li>
+</ul>
+<hr>
+<h3 id="Overfitting-amp-Underfitting"><a href="#Overfitting-amp-Underfitting" class="headerlink" title="Overfitting &amp; Underfitting"></a>Overfitting &amp; Underfitting</h3><ul>
+<li>Overfitting<ul>
+<li>과적합. 학습데이터에 대해서는 잘 예측하지만, test데이터에 대해서는 잘 예측하지 못하는 형태. </li>
+</ul>
+</li>
+<li>Underfitting<ul>
+<li>학습데이터와 test데이터 둘 다 제대로 예측하지 못하는 형태.</li>
+</ul>
+</li>
+</ul>
+<center>
+
+<img src="/img/Overfitted_Data.png" alt="" width="500px"/>
+
+</center>
+
+<hr>
+<h3 id="Cross-Vaildation"><a href="#Cross-Vaildation" class="headerlink" title="Cross Vaildation"></a>Cross Vaildation</h3><ul>
+<li>Cross vaildation<ul>
+<li>train Data를 균등하게 나눠서 학습을 시켜 최적의 hyperparameter를 찾는 방법</li>
+</ul>
+</li>
+</ul>
+<h3 id="Bias-amp-Variance"><a href="#Bias-amp-Variance" class="headerlink" title="Bias &amp; Variance"></a>Bias &amp; Variance</h3><ul>
+<li>Bias<ul>
+<li>편향</li>
+</ul>
+</li>
+<li>Variance<ul>
+<li>분산</li>
+</ul>
+</li>
+</ul>
+<h3 id="Boostrapping-기법"><a href="#Boostrapping-기법" class="headerlink" title="Boostrapping 기법"></a>Boostrapping 기법</h3><ul>
+<li>Bootstrapping<ul>
+<li>통계학적으로 resampling을 통해 표본들의 추정치를 예측하는 기법</li>
+<li>train dataset을 다시 sampling을 해서 만든 여러가지 data로 모델들을 학습시키는것을 Bootstrapping이라고 한다</li>
+</ul>
+</li>
+<li>Bagging<ul>
+<li>Bootstrapping aggregating</li>
+<li>여러 모델들을 bootstrapping을 통하여 학습시키고, 그 나온 결과값의 평균을 내는 방법</li>
+<li>일반적으로 Ensemble 이라고 부른다</li>
+</ul>
+</li>
+<li>Boosting<ul>
+<li>여러개의 모델들을 학습시켜서 Sequential하게 이어 예측하는 방법</li>
+</ul>
+</li>
+</ul>
+<center>
+
+<img src="https://miro.medium.com/max/783/0*otyOVi3MATrv1VIY.png" alt="Bootstrapping" width="600px"/>
+
+</center>
+
+<hr>
+<h3 id="Gradient-Descent-Methods"><a href="#Gradient-Descent-Methods" class="headerlink" title="Gradient Descent Methods"></a>Gradient Descent Methods</h3><ul>
+<li>(Stochastic) gradient descent<ul>
+<li>하나의 데이터 샘플로 Gradient를 업데이트 하는 방식</li>
+</ul>
+</li>
+<li>Minibatch Gradient Descent<ul>
+<li>일부의 데이터 샘플로 Gradient를 업데이트 하는 방식</li>
+</ul>
+</li>
+<li>Batch Gradient Descent<ul>
+<li>전체의 데이터로 Gradient를 업데이트 하는 방식</li>
+</ul>
+</li>
+<li>데이터의 전체 크기가 커진 현재로써 Batch Gradient는 하드웨어 한계와 연산속도가  Minibatch에 비해 느려서 현재는 대부분 Minibatch 형식으로 학습을 진행한다  </li>
+</ul>
+<h3 id="Batch-Size"><a href="#Batch-Size" class="headerlink" title="Batch Size"></a>Batch Size</h3><ul>
+<li>large batch -&gt; sharp Minimum</li>
+<li>small batch -&gt; Flat minimun</li>
+</ul>
+<center>
+
+<img src="/img/minimum.PNG" alt="Batch Size" width="600px"/>
+
+</center>
+
+<hr>
+<h2 id="Optimization"><a href="#Optimization" class="headerlink" title="Optimization"></a>Optimization</h2><ol>
+<li>(Stochastic) Gradient descent<ul>
+<li>일반적인(확률적) 경사하강법</li>
+<li>$\gamma$ : learning rate</li>
+<li>$W$ : weight</li>
+<li>$g$ : gradient<br>$$<br>W_{t+1} \leftarrow W_{t} - \gamma g_{t}<br>$$</li>
+</ul>
+</li>
+<li>Momentum<ul>
+<li>경사하강법에 관성을 부여한 방법  </li>
+<li>전에 이동한 정보를 조금 더해서 Gradient를 업데이트 하는 방법<br>$$<br>\begin{aligned}<br>a_{t+1} &amp;\leftarrow \beta a_{t} + g_{t}\\<br>W_{t+1} &amp;\leftarrow W_{t} - \gamma a_{t+1}<br>\end{aligned}<br>$$</li>
+</ul>
+</li>
+<li>Nesterov Accelerate Gradient<ul>
+<li>Momentum과 비슷하지만 순서가 다르다</li>
+<li>$a$ 방향으로 이동 한 뒤 위치에서 gradient를 계산 후 업데이트한다</li>
+<li>Momentum 보다 minimum에 수렴하는 속도가 빠르다<br>$$<br>\begin{aligned}<br>a_{t+1} &amp;\leftarrow \beta a_{t} + \nabla\mathcal{L} (W_{t} - \gamma g_{t})\\<br>W_{t+1} &amp;\leftarrow W_{t} - \gamma a_{t+1}<br>\end{aligned}<br>$$</li>
+</ul>
+</li>
+<li>Adagrad<ul>
+<li>parameter의 변한 값에 대해서 영향을 받는다</li>
+<li>$G_{t}$ : gradient 제곱합</li>
+<li>적게 변한 parameter는 크게, 크게변한 parameter는 작게 변환한다</li>
+<li>$G_{t}$ 가 계속 커지기 때문에 학습이 길어지면 잘 학습되지 않는다</li>
+<li>$G_{t}$ 또한 계속 저장해야하기 때문에 학습이 길어지면 resource 소모가 크다<br>$$<br>W_{t+1} \leftarrow W_{t} - \frac{\gamma}{\sqrt{G_{t}+\epsilon}} g_{t}<br>$$</li>
+</ul>
+</li>
+<li>Adadelta<ul>
+<li>Adagrad에서 $G_{t}$ 가 무한하게 커지는것을 방지한 학습법</li>
+<li>Weight에 관여하는 Learning rate가 존재하지 않는다<ul>
+<li>hyperparameter가 적어서 잘 사용되지 않았다</li>
+</ul>
+</li>
+<li>$G_{t}$ : EMA of gradient squares</li>
+<li>$H_{t}$ : EMA of difference squares</li>
+<li>EMA : Exponential Moving Average 지수이동평균</li>
+<li>$\alpha$ : ema 가중치  </li>
+</ul>
+</li>
+</ol>
+<p>$$<br>\begin{aligned}<br>G_{t+1} &amp;\leftarrow \alpha G_{t}  + (1-\alpha) g^{2}_{t}\\<br>W_{t+1} &amp;\leftarrow W_{t} - \frac{\sqrt{H_{t-1}+\epsilon}}{\sqrt{G_{t}+\epsilon}} g_{t}\\<br>H_{t+1} &amp;\leftarrow \alpha H_{t} + (1-\alpha)(\Delta W_{t})^2<br>\end{aligned}<br>$$</p>
+<ol start="6">
+<li>RMSprop<ul>
+<li>EMA of gradient squares + Learning rate</li>
+<li>해봤는데 잘되었다  </li>
+</ul>
+</li>
+</ol>
+<p>$$<br>\begin{aligned}<br>G_{t+1} &amp;\leftarrow \alpha G_{t}  + (1-\alpha) g^{2}_{t}\\<br>W_{t+1} &amp;\leftarrow W_{t} - \frac{\gamma}{\sqrt{G_{t}+\epsilon}} g_{t}<br>\end{aligned}<br>$$</p>
+<ol start="7">
+<li>Adam<ul>
+<li>RMSprop + Momentum</li>
+<li>현재 가장 많이 쓰이고있는 계열의 optimizer</li>
+<li>AdamW, RAdam, AdamL등 여러가지 variation이 존재한다  </li>
+</ul>
+</li>
+</ol>
+<p>$$<br>\begin{aligned}<br>m_{t+1} &amp;\leftarrow \beta_{1} m_{t}  + (1-\beta_{1}) g_{t}\\<br>v_{t+1} &amp;\leftarrow \beta_{2} m_{t}  + (1-\beta_{2}) v_{t}\\<br>W_{t+1} &amp;\leftarrow W_{t} - \frac{\gamma}{\sqrt{v_{t}+\epsilon}}\frac{\sqrt{1-\beta^{t}_{2}}}{1-\beta_{1}^{t}} g_{t}<br>\end{aligned}<br>$$</p>
+<hr>
+<h2 id="Regularzation"><a href="#Regularzation" class="headerlink" title="Regularzation"></a>Regularzation</h2><ul>
+<li>일반화가 잘 되도록 데이터나 parameter에 규제를 하는 방법</li>
+</ul>
+<ol>
+<li>Earlystopping<ul>
+<li>overfitting을 방지하기 위해서 중간에 학습을 멈추는것</li>
+<li>모델을 평가하기 위한 vaildation Dataset이 필요하다</li>
+</ul>
+</li>
+<li>Parameter norm penalty<ul>
+<li>파라미터가 일정이상 커지는것을 방지하는 기법</li>
+</ul>
+</li>
+<li>Data augmentation<ul>
+<li>데이터 수를 늘리기 위해 하는 기법</li>
+<li>데이터에 종류에 따라 augmentation을 잘 선택해서 반영해야한다</li>
+</ul>
+</li>
+<li>Noise robustness<ul>
+<li>입력 데이터나, weight에 noise를 추가하는 기법</li>
+</ul>
+</li>
+<li>Label smoothing<ul>
+<li>데이터의 경계를 흐리게 하여 강건성을 높이는 방법</li>
+<li>Mix-up<ul>
+<li>두 사진을 섞어서 섞은 비율만큼 다시 라벨링 하는 방법</li>
+</ul>
+</li>
+<li>Cutout<ul>
+<li>일부분을 잘라서 제거하는 방법</li>
+</ul>
+</li>
+<li>CutMix<ul>
+<li>일부분을 자른뒤 다른 label을 추가하는 방법</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Dropout<ul>
+<li>랜덤하게 일부 Neural을 비활성화 하는 방법</li>
+</ul>
+</li>
+<li>Batch normalization<ul>
+<li>따로 포스팅 예정</li>
+</ul>
+</li>
+</ol>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+<li><a target="_blank" rel="noopener" href="https://python.plainenglish.io/adaboost-classifier-in-python-8d34a9f20459">Bootstrapping Image</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Overfitting">Overfitting &amp; Underfitting Image</a></li>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1609.04836.pdf">On Large-Batch Training for Deep Learning: Generalization Gap and Sharp Minima</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-02-07T00:10:03.000Z" title="2022. 2. 7. 오전 9:10:03">2022-02-07</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-02-07T02:55:29.278Z" title="2022. 2. 7. 오전 11:55:29">2022-02-07</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">2분안에 읽기 (약 301 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/02/07/boostcamp/week/week4/DL-basic-1/">부스트 캠프 ai tech 4주 1일차 DL Basic (1)</a></h1><div class="content"><hr>
+<h2 id="Linear-Neural-Networks"><a href="#Linear-Neural-Networks" class="headerlink" title="Linear Neural Networks"></a>Linear Neural Networks</h2><ul>
+<li>Data $(x_{i}, y_{i})^{N}_{i=1}$ 가 존재 할 때 $x$에 대해서 $\hat{y}$ 연산하는 선형연산함수</li>
+<li>$\hat{y}=Wx + b$</li>
+<li>$x$ : 데이터, $y$ : 라벨</li>
+<li>경사하강법으로 y에 가까운 값을 계산하는 $W$와 $b$를 찾는다</li>
+</ul>
+<hr>
+<h2 id="Multi-Layer-Perceptron-MLP"><a href="#Multi-Layer-Perceptron-MLP" class="headerlink" title="Multi Layer Perceptron(MLP)"></a>Multi Layer Perceptron(MLP)</h2><ul>
+<li>위의 Neural Network가 여러층에 걸쳐서 쌓여있는 형태</li>
+<li>Layer 사이에 Non Linear transform을 한다<ul>
+<li>선형연산을 2번연속으로 하는것은 연산을 한번 하는 것과 똑같다</li>
+<li>$W_{1}W_{2}x = W_{1,2}x$</li>
+</ul>
+</li>
+<li>NonLinear transform의 역활을 해주는것이 Activation Functions이다</li>
+<li>최근에는 대부분 ReLU 계열의 Activation Function이 쓰인다</li>
+<li><a href="/2022/01/22/DL/Basic/activate-function/" title="자주 쓰이는 Activation functions">자주 쓰이는 Activation functions</a></li>
+<li>Target $y$와 출력물 $\hat{y}$의 차이를 계산하는 loss function을 문제에 따라 잘 선택하여 사용하는 테크닉 또한 필요하다</li>
+</ul>
+<hr>
+<h2 id="그-외-내용"><a href="#그-외-내용" class="headerlink" title="그 외 내용"></a>그 외 내용</h2><ul>
+<li>이론적으로 1개의 hidden layer로 대부분의 원하는 target값의 근사할 수 있다<ul>
+<li>라고 하지만 이것은 매우 어렵다</li>
+<li>그만큼 Neural Network의 표현력이 좋다라는 뜻으로 받아드리는게 더 좋다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://boostcamp.connect.or.kr/program_ai.html">Naver Connect Boostcamp - ai tech</a></li>
+</ul>
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/categories/boostcamp/week/">이전</a></div><div class="pagination-next"><a href="/categories/boostcamp/week/page/3/">다음</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/categories/boostcamp/week/">1</a></li><li><a class="pagination-link is-current" href="/categories/boostcamp/week/page/2/">2</a></li><li><a class="pagination-link" href="/categories/boostcamp/week/page/3/">3</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/categories/boostcamp/week/page/6/">6</a></li></ul></nav></div><div class="column column-left is-3-tablet is-3-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="KyuBum Shin"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">KyuBum Shin</p><p class="is-size-6 is-block">Student</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Incheon</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">110</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">22</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">41</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/KyubumShin" target="_blank" rel="noopener">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/KyubumShin"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">링크</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://github.com/KyubumShin" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Github</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Computer-Science/"><span class="level-start"><span class="level-item">Computer Science</span></span><span class="level-end"><span class="level-item tag">8</span></span></a><ul><li><a class="level is-mobile" href="/categories/Computer-Science/Database/"><span class="level-start"><span class="level-item">Database</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Computer-Science/Network/"><span class="level-start"><span class="level-item">Network</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Computer-Science/OS/"><span class="level-start"><span class="level-item">OS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Computer-Science/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/"><span class="level-start"><span class="level-item">자료구조</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/DeepLearning/"><span class="level-start"><span class="level-item">DeepLearning</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/DeepLearning/Basic/"><span class="level-start"><span class="level-item">Basic</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/DeepLearning/Pytorch-Lightning/"><span class="level-start"><span class="level-item">Pytorch Lightning</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Programming/"><span class="level-start"><span class="level-item">Programming</span></span><span class="level-end"><span class="level-item tag">4</span></span></a><ul><li><a class="level is-mobile" href="/categories/Programming/Docker/"><span class="level-start"><span class="level-item">Docker</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/Programming/Python/tip/"><span class="level-start"><span class="level-item">tip</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/boostcamp/"><span class="level-start"><span class="level-item">boostcamp</span></span><span class="level-end"><span class="level-item tag">80</span></span></a><ul><li><a class="level is-mobile" href="/categories/boostcamp/Dairy/"><span class="level-start"><span class="level-item">Dairy</span></span><span class="level-end"><span class="level-item tag">23</span></span></a></li><li><a class="level is-mobile" href="/categories/boostcamp/Peer-Session/"><span class="level-start"><span class="level-item">Peer Session</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/boostcamp/Problems/"><span class="level-start"><span class="level-item">Problems</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/boostcamp/week/"><span class="level-start"><span class="level-item">week</span></span><span class="level-end"><span class="level-item tag">53</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%EB%B0%B1%EC%97%94%EB%93%9C/"><span class="level-start"><span class="level-item">백엔드</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/%EB%B0%B1%EC%97%94%EB%93%9C/%EB%A9%94%EC%84%B8%EC%A7%80%ED%81%90/"><span class="level-start"><span class="level-item">메세지큐</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%EC%9D%BC%EC%83%81/"><span class="level-start"><span class="level-item">일상</span></span><span class="level-end"><span class="level-item tag">37</span></span></a><ul><li><a class="level is-mobile" href="/categories/%EC%9D%BC%EC%83%81/TIL/"><span class="level-start"><span class="level-item">TIL</span></span><span class="level-end"><span class="level-item tag">36</span></span></a></li><li><a class="level is-mobile" href="/categories/%EC%9D%BC%EC%83%81/%EA%B3%84%ED%9A%8D/"><span class="level-start"><span class="level-item">계획</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-16T01:11:47.000Z">2022-03-16</time></p><p class="title"><a href="/2022/03/16/boostcamp/week/week9/CNN-7/">부스트 캠프 ai tech 9주 3일차 Multi-modal Learning</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/boostcamp/week/">week</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-15T16:00:37.000Z">2022-03-16</time></p><p class="title"><a href="/2022/03/16/boostcamp/Dairy/week9-day2-review/">week9-day2-review</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/%EC%9D%BC%EC%83%81/">일상</a> / <a href="/categories/%EC%9D%BC%EC%83%81/TIL/">TIL</a> / <a href="/categories/boostcamp/Dairy/">Dairy</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-15T01:35:12.000Z">2022-03-15</time></p><p class="title"><a href="/2022/03/15/boostcamp/Dairy/Week9-Day1/">Week9 - Day 1 Review</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/%EC%9D%BC%EC%83%81/">일상</a> / <a href="/categories/%EC%9D%BC%EC%83%81/TIL/">TIL</a> / <a href="/categories/boostcamp/Dairy/">Dairy</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-14T01:15:18.000Z">2022-03-14</time></p><p class="title"><a href="/2022/03/14/boostcamp/week/week9/CNN-6/">부스트 캠프 ai tech 9주 2일차 Conditional Generative Model</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/boostcamp/week/">week</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-14T00:27:09.000Z">2022-03-14</time></p><p class="title"><a href="/2022/03/14/boostcamp/week/week9/CNN-5/">부스트 캠프 ai tech 9주 1일차 Instance &amp; Panoptic Segmantation</a></p><p class="categories"><a href="/categories/boostcamp/">boostcamp</a> / <a href="/categories/boostcamp/week/">week</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">3월 2022</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/02/"><span class="level-start"><span class="level-item">2월 2022</span></span><span class="level-end"><span class="level-item tag">34</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/01/"><span class="level-start"><span class="level-item">1월 2022</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">10월 2021</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/09/"><span class="level-start"><span class="level-item">9월 2021</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">8월 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Ai-Math/"><span class="tag">Ai Math</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ai-serving/"><span class="tag">Ai serving</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CNN/"><span class="tag">CNN</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CNN-Viz/"><span class="tag">CNN Viz</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CV/"><span class="tag">CV</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Data-visualization/"><span class="tag">Data visualization</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DeepLearning/"><span class="tag">DeepLearning</span><span class="tag">21</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Docker/"><span class="tag">Docker</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Function/"><span class="tag">Function</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GAN/"><span class="tag">GAN</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Generative-Model/"><span class="tag">Generative Model</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Instance-Segmentation/"><span class="tag">Instance Segmentation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LandMark-Detection/"><span class="tag">LandMark Detection</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Multi-modal/"><span class="tag">Multi-modal</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Object-Detection/"><span class="tag">Object Detection</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Project-product/"><span class="tag">Project product</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pytorch-Lightning/"><span class="tag">Pytorch Lightning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Semantic-Segmentation/"><span class="tag">Semantic Segmentation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Sequencial-Model/"><span class="tag">Sequencial Model</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VAE/"><span class="tag">VAE</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/backend/"><span class="tag">backend</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cs/"><span class="tag">cs</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/database/"><span class="tag">database</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/message/"><span class="tag">message</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/network/"><span class="tag">network</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/os/"><span class="tag">os</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pytorch/"><span class="tag">pytorch</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week1/"><span class="tag">week1</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week2/"><span class="tag">week2</span><span class="tag">15</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week3/"><span class="tag">week3</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week4/"><span class="tag">week4</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week5/"><span class="tag">week5</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week6/"><span class="tag">week6</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week8/"><span class="tag">week8</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/week9/"><span class="tag">week9</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EC%9D%BC%EC%83%81/"><span class="tag">일상</span><span class="tag">36</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/"><span class="tag">자료구조</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%ED%95%A0%EC%9D%BC/"><span class="tag">할일</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">업데이트 소식 받기</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="구독"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="KyuBum&#039;s Dev Blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 KyuBum Shin</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="맨 위로" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "이 웹 사이트는 귀하의 경험을 향상시키기 위해 Cookie를 사용합니다.",
+          dismiss: "무시",
+          allow: "허용",
+          deny: "거부",
+          link: "더 알아보기",
+          policy: "Cookie 정책",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="입력 하세요..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"입력 하세요...","untitled":"(제목 없음)","posts":"포스트","pages":"페이지","categories":"카테고리","tags":"태그"});
+        });</script></body></html>

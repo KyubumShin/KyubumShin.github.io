@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>부스트 캠프 ai tech 1주 3일차 Ai Math (5) - KyuBum&#039;s Dev Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="KyuBum Shin"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="KyuBum Shin"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="5. 통계학 다량의 데이터를 관찰하고 정리 분석하는 수학분야  5.0 용어정리 모집단 : 정보를 얻고자 하는 대상이 되는 집단의 전체 표본집단 : 모집단으로부터 추출한 데이터 집합 통계량 : 표본집단의 평균, 표준편차, 분산 등의 데이터를 말한다 표본분포 : 표본집단의 확률분포 표집분포 : 통계량의 확률분포  5.1 모수 모평균 모표준편차 모분산 등 모집"><meta property="og:type" content="blog"><meta property="og:title" content="부스트 캠프 ai tech 1주 3일차 Ai Math (5)"><meta property="og:url" content="https://kyubumshin.github.io/2022/01/19/boostcamp/week/week1/AIMath-5/"><meta property="og:site_name" content="KyuBum&#039;s Dev Blog"><meta property="og:description" content="5. 통계학 다량의 데이터를 관찰하고 정리 분석하는 수학분야  5.0 용어정리 모집단 : 정보를 얻고자 하는 대상이 되는 집단의 전체 표본집단 : 모집단으로부터 추출한 데이터 집합 통계량 : 표본집단의 평균, 표준편차, 분산 등의 데이터를 말한다 표본분포 : 표본집단의 확률분포 표집분포 : 통계량의 확률분포  5.1 모수 모평균 모표준편차 모분산 등 모집"><meta property="og:locale" content="ko_KR"><meta property="og:image" content="https://kyubumshin.github.io/img/og_image.png"><meta property="article:published_time" content="2022-01-19T14:39:00.000Z"><meta property="article:modified_time" content="2022-01-24T01:16:23.067Z"><meta property="article:author" content="KyuBum Shin"><meta property="article:tag" content="Ai Math"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://kyubumshin.github.io/2022/01/19/boostcamp/week/week1/AIMath-5/"},"headline":"부스트 캠프 ai tech 1주 3일차 Ai Math (5)","image":["https://kyubumshin.github.io/img/og_image.png"],"datePublished":"2022-01-19T14:39:00.000Z","dateModified":"2022-01-24T01:16:23.067Z","author":{"@type":"Person","name":"KyuBum Shin"},"publisher":{"@type":"Organization","name":"KyuBum's Dev Blog","logo":{"@type":"ImageObject","url":"https://kyubumshin.github.io/img/logo.svg"}},"description":"5. 통계학 다량의 데이터를 관찰하고 정리 분석하는 수학분야  5.0 용어정리 모집단 : 정보를 얻고자 하는 대상이 되는 집단의 전체 표본집단 : 모집단으로부터 추출한 데이터 집합 통계량 : 표본집단의 평균, 표준편차, 분산 등의 데이터를 말한다 표본분포 : 표본집단의 확률분포 표집분포 : 통계량의 확률분포  5.1 모수 모평균 모표준편차 모분산 등 모집"}</script><link rel="canonical" href="https://kyubumshin.github.io/2022/01/19/boostcamp/week/week1/AIMath-5/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="KyuBum&#039;s Dev Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-01-19T14:39:00.000Z" title="2022. 1. 19. 오후 11:39:00">2022-01-19</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-01-24T01:16:23.067Z" title="2022. 1. 24. 오전 10:16:23">2022-01-24</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">5분안에 읽기 (약 784 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile">부스트 캠프 ai tech 1주 3일차 Ai Math (5)</h1><div class="content"><hr>
+<h2 id="5-통계학"><a href="#5-통계학" class="headerlink" title="5. 통계학"></a>5. 통계학</h2><ul>
+<li>다량의 데이터를 관찰하고 정리 분석하는 수학분야</li>
+</ul>
+<h3 id="5-0-용어정리"><a href="#5-0-용어정리" class="headerlink" title="5.0 용어정리"></a>5.0 용어정리</h3><ul>
+<li>모집단 : 정보를 얻고자 하는 대상이 되는 집단의 전체</li>
+<li>표본집단 : 모집단으로부터 추출한 데이터 집합</li>
+<li>통계량 : 표본집단의 평균, 표준편차, 분산 등의 데이터를 말한다</li>
+<li>표본분포 : 표본집단의 확률분포</li>
+<li>표집분포 : 통계량의 확률분포</li>
+</ul>
+<h3 id="5-1-모수"><a href="#5-1-모수" class="headerlink" title="5.1 모수"></a>5.1 모수</h3><ul>
+<li>모평균 모표준편차 모분산 등 모집단의 데이터를 말한다.</li>
+<li>유한한 개수의 데이터를 관찰하는것으로 우리는 모집단의 분포를 <code>정확하게 파악하는것은 불가능</code>하기 때문에 근사적으로 확률분포를 추정해야한다</li>
+<li>모수적 방법론<ul>
+<li>데이터가 특정 확률분포를 따른다고 가정한 뒤 모수를 추정하는 방법</li>
+<li>보통 충분히 많은 데이터가 확보 되었을때 사용한다</li>
+</ul>
+</li>
+<li>비모수적 방법론<ul>
+<li>확률분포를 가정하지 않고 데이터에 따라 모델의 구조 및 모수의 개수가 유연하게 바뀌는경우</li>
+<li>모수의 특성을 이용하지 않는다</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-2-확률분포를-가정하는-방법"><a href="#5-2-확률분포를-가정하는-방법" class="headerlink" title="5.2 확률분포를 가정하는 방법"></a>5.2 확률분포를 가정하는 방법</h3><ul>
+<li>데이터가 2개의 값 (0 또는 1)만 가지는 경우 $\rightarrow$ 베르누이 분포</li>
+<li>데이터가 n개의 이산적인 값을 가지는 경우 $\rightarrow$ 카테고리 분포</li>
+<li>데이터가 $[0,1]$ 사이에서 값을 가지는 경우 $\rightarrow$ 베타분포</li>
+<li>데이터가 0 이상의 값을 가지는 경우 $\rightarrow$ 감마분포, 로그정규분포 등</li>
+<li>데이터가 $\mathbb{R}$ 전체에서 값을 가지는 경우 $\rightarrow$ 정규분포, 라플라스분포 등</li>
+</ul>
+<blockquote>
+<h3 id="정규분포의-모수-평균과-분산"><a href="#정규분포의-모수-평균과-분산" class="headerlink" title="정규분포의 모수 평균과 분산"></a>정규분포의 모수 평균과 분산</h3><ul>
+<li>표본집단의 데이터를 $X$ 라고할때 표본평균 $\bar{X}$ 와 표본분산 $S^2$은 다음과 같다<br>$$<br>\bar{X} = \frac{1}{N}\sum_{i=1}^{N}X_{i}\qquad S^2 = \frac{1}{N-1}\sum_{i=1}^{N}(X_{i}-\bar{X})^2<br>$$</li>
+<li>이때 모집단의 모수인 평균 $\mu$ , 분산 $\sigma^2$ 표본평균과 표본분산의 기댓값으로 추정 할 수 있다<br>$$<br>{\displaystyle \operatorname {E}[\bar{X}]=\mu\quad\operatorname{E}[S^2] = \sigma^2}<br>$$</li>
+<li>통계량의 확률분포를 표집분포라고 부르며 표본평균의 표집분포는 $N$이 커질수록 정규분포를 따른다</li>
+</ul>
+</blockquote>
+<h3 id="5-3-최대-가능도-추정법-maximum-likelihood-estimation"><a href="#5-3-최대-가능도-추정법-maximum-likelihood-estimation" class="headerlink" title="5.3 최대 가능도 추정법 maximum likelihood estimation"></a>5.3 최대 가능도 추정법 maximum likelihood estimation</h3><ul>
+<li>이론적으로 가장 가능성이 높은 모수를 추정하는 방법 중 하나</li>
+<li>어떤 상태 $\mathbf{x}$ 를 관측할 가능성이 제일 높은 모수를 추정하는 방법<br>$$<br>\hat{\theta}_{MLE} = \underset{\theta}{argmax}L(\theta; \mathbf{x}) = \underset{\theta}{argmax} P(\mathbf{x}|\theta)<br>$$</li>
+</ul>
+<h3 id="5-4-KL-divergence-쿨백-라이블러-발산"><a href="#5-4-KL-divergence-쿨백-라이블러-발산" class="headerlink" title="5.4 KL divergence 쿨백-라이블러 발산"></a>5.4 KL divergence 쿨백-라이블러 발산</h3><ul>
+<li>두 확률분포가 얼마나 떨어져 있는지를 나타낸다</li>
+<li>거리로써 사용은 불가능하다<ul>
+<li>역이 성립을 하지 않은다</li>
+</ul>
+</li>
+<li>솔직하게 여기에 정리하기에는 많이 중요한 내용이고 양도 많다</li>
+<li>많이 중요하다 따로할 예정이다 그때 링크를 추가할 예정</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>부스트 캠프 ai tech 1주 3일차 Ai Math (5)</p><p><a href="https://kyubumshin.github.io/2022/01/19/boostcamp/week/week1/AIMath-5/">https://kyubumshin.github.io/2022/01/19/boostcamp/week/week1/AIMath-5/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>KyuBum Shin</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2022-01-19</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-01-24</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Ai-Math/">Ai Math</a></div><div class="sharethis-inline-share-buttons"></div><script src="&lt;script type=&quot;text/javascript&quot; src=&quot;https://platform-api.sharethis.com/js/sharethis.js#property=612ce5f747069100121128ed&amp;product=inline-share-buttons&quot; async=&quot;async&quot;&gt;&lt;/script&gt;" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2022/01/20/boostcamp/Dairy/Day4/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Week1 - Day 4 Review</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/01/19/boostcamp/week/week1/AIMath-3/"><span class="level-item">부스트 캠프 ai tech 1주 3일차 Ai Math (2)</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">댓글</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://kyubumshin.github.io/2022/01/19/boostcamp/week/week1/AIMath-5/';
+            this.page.identifier = '2022/01/19/boostcamp/week/week1/AIMath-5/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'kyubumshin-github-io' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="KyuBum&#039;s Dev Blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 KyuBum Shin</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="맨 위로" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "이 웹 사이트는 귀하의 경험을 향상시키기 위해 Cookie를 사용합니다.",
+          dismiss: "무시",
+          allow: "허용",
+          deny: "거부",
+          link: "더 알아보기",
+          policy: "Cookie 정책",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="입력 하세요..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"입력 하세요...","untitled":"(제목 없음)","posts":"포스트","pages":"페이지","categories":"카테고리","tags":"태그"});
+        });</script></body></html>
