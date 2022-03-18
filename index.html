@@ -144,7 +144,7 @@
 <h2 id="4-미세-꿀팁"><a href="#4-미세-꿀팁" class="headerlink" title="4. 미세 꿀팁"></a>4. 미세 꿀팁</h2><ul>
 <li>torch.sort는 output으로 2개를 지정하면 value값과 indice 값을 같이 준다</li>
 </ul>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-03-16T01:11:47.000Z" title="2022. 3. 16. 오전 10:11:47">2022-03-16</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-03-17T10:19:16.235Z" title="2022. 3. 17. 오후 7:19:16">2022-03-17</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">5분안에 읽기 (약 823 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/03/16/boostcamp/week/week9/CNN-7/">부스트 캠프 ai tech 9주 3일차 Multi-modal Learning</a></h1><div class="content"><hr>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-03-16T01:11:47.000Z" title="2022. 3. 16. 오전 10:11:47">2022-03-16</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-03-18T12:09:54.684Z" title="2022. 3. 18. 오후 9:09:54">2022-03-18</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/boostcamp/">boostcamp</a><span> / </span><a class="link-muted" href="/categories/boostcamp/week/">week</a></span><span class="level-item">6분안에 읽기 (약 909 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/03/16/boostcamp/week/week9/CNN-7/">부스트 캠프 ai tech 9주 3일차 Multi-modal Learning</a></h1><div class="content"><hr>
 <h2 id="Multi-modal-Overview"><a href="#Multi-modal-Overview" class="headerlink" title="Multi-modal Overview"></a>Multi-modal Overview</h2><ul>
 <li>Unimodal : 하나의 특징 Data로 학습시키는 기법</li>
 <li>Multi-modal : 여러가지의 Data로 학습시키는 기법</li>
@@ -157,18 +157,19 @@
 </ul>
 </li>
 <li>데이터간의 Unbalance한 Feature map<ul>
-<li>ex) DallE</li>
+<li>데이터 자체의 종류가 다르기 때문에 생성하는 분포의 차이가 클 가능성이 높다</li>
+<li>학습시키기 용이하지 않음</li>
 </ul>
 </li>
 <li>항상 Multi-modal이 좋은방법은 아니다<ul>
-<li>데이터 간의 편향</li>
+<li>전체 모델에서 한 데이터에 집중하여 학습하면서 다른 데이터를 소홀히 하는 편향적인 학습이 이루어 질 가능성이 존재한다</li>
 </ul>
 </li>
 </ol>
 <h3 id="Multimodal-Learning"><a href="#Multimodal-Learning" class="headerlink" title="Multimodal Learning"></a>Multimodal Learning</h3><ul>
 <li>Matching : 두 데이터에 대해서 같은 공간으로 매칭시키도록 학습  </li>
 <li>Translating : 한 데이터를 다른 데이터로 변형 시키도록 학습  </li>
-<li>Referencing : 참조를 통한 상호보안적으로 더 좋은 결과를 내게 학습  </li>
+<li>Referencing : 참조를 통한 상호보안적으로 더 좋은 결과를 내게 학습</li>
 </ul>
 <center>
 
@@ -186,9 +187,7 @@
 
 </center>
 
-<h3 id="Word2vec"><a href="#Word2vec" class="headerlink" title="Word2vec"></a>Word2vec</h3><ul>
-<li></li>
-</ul>
+<h3 id="Word2vec"><a href="#Word2vec" class="headerlink" title="Word2vec"></a>Word2vec</h3><p>* </p>
 <h2 id="Joint-embedding"><a href="#Joint-embedding" class="headerlink" title="Joint embedding"></a>Joint embedding</h2><ul>
 <li>Matching 기법을 사용해서 만들어진 Multi-modal</li>
 <li>Pretrained unimodal Model을 합쳐서 사용하는 기법</li>
@@ -240,7 +239,7 @@
 <h2 id="Cross-modal-translation"><a href="#Cross-modal-translation" class="headerlink" title="Cross modal translation"></a>Cross modal translation</h2><ul>
 <li>Translating 기법을 사용한 모델</li>
 <li>모델에서 뽑은 Feature를 input으로 다른 모델에 넣고 변환시킨다.</li>
-<li>Data를 Feature로 바꿔주는 첫 모델을 Encoder, Feature로 Output를 뽑아내는 모델을 Decoder라고 지칭한다 </li>
+<li>Data를 Feature로 바꿔주는 첫 모델을 Encoder, Feature로 Output를 뽑아내는 모델을 Decoder라고 지칭한다</li>
 </ul>
 <center>
 
@@ -263,7 +262,7 @@
 <h3 id="Text2Image"><a href="#Text2Image" class="headerlink" title="Text2Image"></a>Text2Image</h3><ul>
 <li>Text에서 image를 생성하는 모델</li>
 <li>Conditional GAN을 통해서 구현 하였다</li>
-<li>Encoder를 통해서 Text가 Feature를 얻는다</li>
+<li>Encoder를 통해서 Text로 부터 Feature를 얻는다</li>
 <li>Feature를 Conditional Input으로 Conditional GAN을 학습시킨다</li>
 </ul>
 <center>
