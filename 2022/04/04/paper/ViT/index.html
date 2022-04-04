@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale - KyuBum&#039;s Dev Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="KyuBum Shin"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="KyuBum Shin"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="논문 링크 : https:&amp;#x2F;&amp;#x2F;arxiv.org&amp;#x2F;pdf&amp;#x2F;2010.11929.pdf  원래 이번 논문 리뷰는 Swin Transformer에 대해서 다루려고 했는데 ViT의 내용을 알지 못하면 풀어서 이야기 할수 없는 부분이 많아서 이번 논문은 CV분야를 CNN에서 transformer로 판도를 바꿔버린 ViT에 대해서 다룹니다  간단 요약 Image Dat"><meta property="og:type" content="blog"><meta property="og:title" content="An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"><meta property="og:url" content="https://kyubumshin.github.io/2022/04/04/paper/ViT/"><meta property="og:site_name" content="KyuBum&#039;s Dev Blog"><meta property="og:description" content="논문 링크 : https:&amp;#x2F;&amp;#x2F;arxiv.org&amp;#x2F;pdf&amp;#x2F;2010.11929.pdf  원래 이번 논문 리뷰는 Swin Transformer에 대해서 다루려고 했는데 ViT의 내용을 알지 못하면 풀어서 이야기 할수 없는 부분이 많아서 이번 논문은 CV분야를 CNN에서 transformer로 판도를 바꿔버린 ViT에 대해서 다룹니다  간단 요약 Image Dat"><meta property="og:locale" content="ko_KR"><meta property="og:image" content="https://kyubumshin.github.io/img/ib.png"><meta property="og:image" content="https://kyubumshin.github.io/img/Vit1.png"><meta property="og:image" content="https://kyubumshin.github.io/img/Vit2.png"><meta property="og:image" content="https://kyubumshin.github.io/img/Vit3.png"><meta property="og:image" content="https://kyubumshin.github.io/img/Vit4.png"><meta property="article:published_time" content="2022-04-04T02:30:12.000Z"><meta property="article:modified_time" content="2022-04-04T08:36:03.257Z"><meta property="article:author" content="KyuBum Shin"><meta property="article:tag" content="DeepLearning"><meta property="article:tag" content="CV"><meta property="article:tag" content="week12"><meta property="article:tag" content="Transformer"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/ib.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://kyubumshin.github.io/2022/04/04/paper/ViT/"},"headline":"An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale","image":["https://kyubumshin.github.io/img/ib.png","https://kyubumshin.github.io/img/Vit1.png","https://kyubumshin.github.io/img/Vit2.png","https://kyubumshin.github.io/img/Vit3.png","https://kyubumshin.github.io/img/Vit4.png"],"datePublished":"2022-04-04T02:30:12.000Z","dateModified":"2022-04-04T08:36:03.257Z","author":{"@type":"Person","name":"KyuBum Shin"},"publisher":{"@type":"Organization","name":"KyuBum's Dev Blog","logo":{"@type":"ImageObject","url":"https://kyubumshin.github.io/img/logo.svg"}},"description":"논문 링크 : https:&#x2F;&#x2F;arxiv.org&#x2F;pdf&#x2F;2010.11929.pdf  원래 이번 논문 리뷰는 Swin Transformer에 대해서 다루려고 했는데 ViT의 내용을 알지 못하면 풀어서 이야기 할수 없는 부분이 많아서 이번 논문은 CV분야를 CNN에서 transformer로 판도를 바꿔버린 ViT에 대해서 다룹니다  간단 요약 Image Dat"}</script><link rel="canonical" href="https://kyubumshin.github.io/2022/04/04/paper/ViT/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.0.2"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="KyuBum&#039;s Dev Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-04-04T02:30:12.000Z" title="2022. 4. 4. 오전 11:30:12">2022-04-04</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2022-04-04T08:36:03.257Z" title="2022. 4. 4. 오후 5:36:03">2022-04-04</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Paper/">Paper</a><span> / </span><a class="link-muted" href="/categories/Paper/CV/">CV</a><span> / </span><a class="link-muted" href="/categories/Paper/CV/Transformer/">Transformer</a></span><span class="level-item">8분안에 읽기 (약 1135 단어)</span></div></div><h1 class="title is-3 is-size-4-mobile">An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale</h1><div class="content"><hr>
+<p>논문 링크 : <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2010.11929.pdf">https://arxiv.org/pdf/2010.11929.pdf</a></p>
+<blockquote>
+<p>원래 이번 논문 리뷰는 Swin Transformer에 대해서 다루려고 했는데 ViT의 내용을 알지 못하면 풀어서 이야기 할수 없는 부분이 많아서 이번 논문은 CV분야를 CNN에서 transformer로 판도를 바꿔버린 ViT에 대해서 다룹니다</p>
+</blockquote>
+<h2 id="간단-요약"><a href="#간단-요약" class="headerlink" title="간단 요약"></a><strong>간단 요약</strong></h2><ul>
+<li>Image Data + Multi head Self Attention</li>
+<li>Position embedding을 통해 token에 위치 정보를 추가</li>
+<li>Cls Token을 이용한 Classification</li>
+<li>그 외의 부분은 NLP의 Transformer 구조를 그대로 가져옴</li>
+<li>학습을 위해서는 매우 많은 사전 Data가 필요하다<ul>
+<li>데이터가 많을 수록 더 robust한 모델이 만들어진다</li>
+</ul>
+</li>
+</ul>
+<br/>
+
+<h1 id="들어가기-앞서"><a href="#들어가기-앞서" class="headerlink" title="들어가기 앞서"></a><strong>들어가기 앞서</strong></h1><h2 id="Inductive-bias-귀납-편향"><a href="#Inductive-bias-귀납-편향" class="headerlink" title="Inductive bias (귀납 편향)"></a><strong>Inductive bias (귀납 편향)</strong></h2><ul>
+<li><p>Inductive bias은 Model이 접해보지 못한 input 데이터에 좋은 성능을 내기 위해 사전에 설정된 가정을 이야기한다</p>
+</li>
+<li><p>CNN 계열 : Locality</p>
+<ul>
+<li>하나의 pixel에 대하여 주변 pixel또한 비슷한 데이터를 가지고 있을것이라고 가정</li>
+<li>부분적인 데이터를 모아서 보기 때문에 Global한 영역에 대해서는 처리가 어렵다<ul>
+<li>이를 해결하기 위해 Receptive field를 넓히는 등 여러 연구가 이루어지고 있다</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>RNN 계열 : Sequentiality</p>
+<ul>
+<li>특정 정보는 비슷한 시간대에 모여있을 것이라고 가정하고 설계 된 모델</li>
+<li>순차적이지 않고 먼 뒤쪽에 연관된 데이터가 나오는경우 (ex. 대명사) 예측이 제대로 이루어 지지않음</li>
+</ul>
+</li>
+<li><p>이러한 Inductive bias가 강하게 설정 되어 있을 수록 특정 데이터에 대해서 적은 Data로도 좋은 performence를 보여줄 수 있다</p>
+<ul>
+<li>그 데이터에 특화된 모델이기 때문이다</li>
+</ul>
+</li>
+</ul>
+<center>
+
+<img src="/img/ib.png" alt="" width="500px"/>
+
+</center>
+
+<h2 id="Transformer와-Inductive-bias"><a href="#Transformer와-Inductive-bias" class="headerlink" title="Transformer와 Inductive bias"></a><strong>Transformer와 Inductive bias</strong></h2><ul>
+<li>Vision Transformer는 추후에 설명할 Positional Embedding과 Self Attention을 활용하여 이미지의 모든 정보(Global)를 활용하여 연산을 한다<ul>
+<li>부분적으로 이미지를 취합하여 예측하는 CNN보다 약한 가정이 들어갔다 볼 수 있다</li>
+</ul>
+</li>
+</ul>
+<br/>
+
+<h1 id="논문에서-제안한-Point"><a href="#논문에서-제안한-Point" class="headerlink" title="논문에서 제안한 Point"></a><strong>논문에서 제안한 Point</strong></h1><h2 id="1-Patch-분할을-통한-image-Token화"><a href="#1-Patch-분할을-통한-image-Token화" class="headerlink" title="1. Patch 분할을 통한 image Token화"></a><strong>1. Patch 분할을 통한 image Token화</strong></h2><p>ViT에서는 이미지를 Transformer에 넣기위해 다음과 같은 과정으로 Token화 시켜준다</p>
+<ol>
+<li>이미지를 Patch 사이즈로 분할한다 (2-d Matrix : $P \times P \times 3$)</li>
+<li>$P \times P \times 3$의 길이의 1-d vector로 Patch를 변환시켜준다</li>
+<li>Fully Connected Layer를 통하여 Linear Projection을 통해서 같은 차원을 가지는 Embedding Vector를 생성한다</li>
+</ol>
+<center>
+
+<img src="/img/Vit1.png" alt="" width="700px"/>
+
+</center>
+
+<h2 id="2-Transformer-for-Classification"><a href="#2-Transformer-for-Classification" class="headerlink" title="2. Transformer for Classification"></a><strong>2. Transformer for Classification</strong></h2><ul>
+<li>ViT는 Input에 Image로 부터 생성된 Token을 입력한다는 점을 제외하면 Transformer의 구조를 그대로 사용하였기 때문에 기존 NLP의 BERT와 매우 흡사한 구조를 가지고 있다</li>
+<li>BERT의 Single text Classification과 같이 Transformer를 Classfication Model로 사용하기 위해 Classfication Token을 0번에 입력한다<ul>
+<li>학습 가능한 Parameter로 생성을 하여 학습을 통해서 추후에 결정된다</li>
+</ul>
+</li>
+<li>또한 Patch의 위치 정보를 가지고 있는 Position embedding을 각 token에 더해준다<ul>
+<li>(Patch 개수 + 1) x (image token size) 의 크기를 가지는 Parameter</li>
+<li>0번은 Classfication Token에 더해지고 나머지 번호는 각각의 순서대로 Patch에 더해지게 된다</li>
+<li>Classfication Token과 마찬가지로 학습 가능한 Parameter로 생성을 하여 학습을 통해서 추후에 결정된다</li>
+<li>2차원 구조의 Position embedding을 사용했었지만, 1차원 구조보다 더 좋지않은 성능을 보여주었기 때문에 사용하지 않는다</li>
+</ul>
+</li>
+</ul>
+<center>
+
+<img src="/img/Vit2.png" alt="" width="700px"/>
+
+</center>
+
+<ul>
+<li>마지막으로 Classfication Token 위치의 출력층에 FC Layer를 두어서 분류의 대한 예측을 진행한다</li>
+</ul>
+<center>
+
+<img src="/img/Vit3.png" alt="" width="700px"/>
+
+</center>
+
+<br/>
+
+<h2 id="3-ViT-Transformer-Encoder"><a href="#3-ViT-Transformer-Encoder" class="headerlink" title="3. ViT Transformer Encoder"></a><strong>3. ViT Transformer Encoder</strong></h2><ul>
+<li>Multi Head Attention 전에 Layer Normalization을 진행한다</li>
+<li>자세한 이유는 아래의 논문을 참고<ul>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1906.01787.pdf">https://arxiv.org/pdf/1906.01787.pdf</a></li>
+</ul>
+</li>
+</ul>
+<center>
+
+<img src="/img/Vit4.png" alt="" width="400px"/>
+
+</center>
+
+
+<h1 id="ViT의-한계"><a href="#ViT의-한계" class="headerlink" title="ViT의 한계"></a><strong>ViT의 한계</strong></h1><ul>
+<li>Inductive Bias가 작기 때문에 충분한 데이터를 확보하지 못한 경우에는 성능이 떨어지게 된다<ul>
+<li>Transformer의 고질적인 문제</li>
+</ul>
+</li>
+<li>Image의 사이즈가 커질수록 만들어지는 Patch의 개수가 늘어나기 때문에 모델에 필요한 Parameter가 기하급수적으로 증가한다</li>
+</ul>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://sgfin.github.io/2020/06/22/Induction-Intro/">Induction-Intro</a></li>
+<li><a target="_blank" rel="noopener" href="https://robot-vision-develop-story.tistory.com/29">Inductive Bias - BaeMI의 잡다한 개발 스토리</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=bgsYOGhpxDc&ab_channel=%E2%80%8D%EA%B9%80%EC%84%B1%EB%B2%94%5B%EC%86%8C%EC%9E%A5/%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EA%B3%B5%ED%95%99%EC%97%B0%EA%B5%AC%EC%86%8C%5D">[DMQA Open Seminar] Transformer in Computer Vision</a></li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale</p><p><a href="https://kyubumshin.github.io/2022/04/04/paper/ViT/">https://kyubumshin.github.io/2022/04/04/paper/ViT/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>KyuBum Shin</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2022-04-04</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-04-04</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/DeepLearning/">DeepLearning</a><a class="link-muted mr-2" rel="tag" href="/tags/CV/">CV</a><a class="link-muted mr-2" rel="tag" href="/tags/week12/">week12</a><a class="link-muted mr-2" rel="tag" href="/tags/Transformer/">Transformer</a></div><div class="sharethis-inline-share-buttons"></div><script src="&lt;script type=&quot;text/javascript&quot; src=&quot;https://platform-api.sharethis.com/js/sharethis.js#property=612ce5f747069100121128ed&amp;product=inline-share-buttons&quot; async=&quot;async&quot;&gt;&lt;/script&gt;" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/04/01/boostcamp/Dairy/Week11-Day-5-Review/"><span class="level-item">Week11 - Day 5 Review</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">댓글</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://kyubumshin.github.io/2022/04/04/paper/ViT/';
+            this.page.identifier = '2022/04/04/paper/ViT/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'kyubumshin-github-io' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="KyuBum&#039;s Dev Blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 KyuBum Shin</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="맨 위로" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "이 웹 사이트는 귀하의 경험을 향상시키기 위해 Cookie를 사용합니다.",
+          dismiss: "무시",
+          allow: "허용",
+          deny: "거부",
+          link: "더 알아보기",
+          policy: "Cookie 정책",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.js" defer></script><script>window.addEventListener("load", function() {
+            document.querySelectorAll('[role="article"] > .content').forEach(function(element) {
+                renderMathInElement(element);
+            });
+        });</script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="입력 하세요..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"입력 하세요...","untitled":"(제목 없음)","posts":"포스트","pages":"페이지","categories":"카테고리","tags":"태그"});
+        });</script></body></html>
